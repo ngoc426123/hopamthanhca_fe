@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title index
+    meta(charset="utf-8")
+    meta(http-equiv="Content-type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    meta(property="og:title" content="" )
+    meta(property="og:url" content="http://domain.namespace" )
+    meta(property="og:image" content="http://domain.namespace/logo.jpg" )
+    meta(property="og:type" content="website" )
+    meta(property="og:description" content="Lorem ispum loremisque is pummer hokaidom" )
+
+    meta(name="google" content="nositelinkssearchbox")
+    meta(name="description" content="Lorem ispum loremisque is pummer hokaidom")
+    meta(name="keywords" content="Website")
+    meta(name="robots" content="nofollow")
+    meta(name="googlebot" content="nofollow")
+
+    link(href="images/favicon.ico" rel="icon" sizes="64x64" type="image/ico")
+    link(href='css/app.css' rel="stylesheet")
+
+  body
+    .page
+      include ../_components/_header.pug
+
+      block main-content
+      
+      include ../_components/_footer.pug
+    
+  script(src='js/app.min.js' type="text/javascript")

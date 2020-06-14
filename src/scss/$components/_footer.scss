@@ -1,0 +1,48 @@
+.footer{
+  padding: 45px 0 35px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq(991) {
+      flex-direction: column;
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-black-6;
+
+    @include mq(991) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__social {
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 20px;
+      line-height: 28px;
+      color: $color-gray-2;
+
+      &:hover {
+        color: $color-black-2;
+      }
+    }
+  }
+}

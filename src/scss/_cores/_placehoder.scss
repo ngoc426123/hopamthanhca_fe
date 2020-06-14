@@ -1,0 +1,35 @@
+%prr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+%pll {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+%pcc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%box-design-white {
+  background-color: $color-white-1;
+  box-shadow: 0 3px 8px 0 $color-shadow-black;
+}
+
+%box-design-blue {
+  background-color: $color-blue-1;
+  box-shadow: 0 4px 20px 0 $color-shadow-black, 0 7px 10px -5px $color-shadow-blue;
+}
+
+%font-icon {
+  font-family: 'FontAwesome';
+  font-weight: 900;
+}
