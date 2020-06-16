@@ -1,0 +1,339 @@
+.song-share {
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+
+    span {
+      background: $color-black-6;
+      color: $color-white-1;
+      border-radius: 5px;
+      font-size: 12px;
+      line-height: 12px;
+      padding: 5px;
+      margin-left: 10px;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-right: solid 5px $color-black-6;
+        border-top: solid 5px transparent;
+        border-bottom: solid 5px transparent;
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: #006193;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 3px;
+
+    &.fac {
+      background: #3b5998;
+    }
+
+    &.goo {
+      background: #de2523;
+    }
+
+    &.twi {
+      background: #62c0f3;
+    }
+
+    &.love{
+      background: #666666;
+
+      &.active {
+        background: #e91e63;
+      }
+    }
+  }
+}
+
+.song-content {
+  column-count: 2;
+  column-gap: 30px;
+  font-size: 16px;
+  line-height: 190%;
+
+  @include mq(991) {
+    margin-top: 25px;
+  }
+
+  @include mq(767) {
+    column-count: unset;
+  }
+
+  .chordOC {
+    color: $color-blue-1;
+    margin-right: 3px;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  &__lahubalahu {
+    line-height: 400%;
+
+    .chordOC {
+      position: absolute;
+      margin-top: -20px;
+    }
+
+    .chordPer {
+      display: none;
+    }
+  }
+
+  &__hulabanahill {
+    .chordOC {
+      display: none;
+    }
+  }
+
+  &__nuhanahinu {
+    column-count: unset;
+  }
+}
+
+.song-tools {
+  $element: &;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__group {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    @extend %box-design-blue;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+
+    label {
+      margin-bottom: 0;
+      color: $color-white-1;
+      cursor: pointer;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    border: none;
+    color: $color-white-1;
+    padding: 0;
+    border: solid 1px $color-white-3;
+    border-top: none;
+    border-bottom: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input {
+    height: 35px;
+    width: 50px;
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    color: $color-white-1;
+  }
+
+  &__text {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 3px;
+    padding-left: 50px;
+    padding-right: 15px;
+
+    &::before {
+      content: "";
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      @extend %pll;
+      border-right: solid 1px $color-white-3;
+    }
+
+    &::after {
+      display: none;
+      content: "\f00c";
+      @extend %font-icon;
+      @extend %pll;
+      font-size: 18px;
+      font-weight: 500;
+      left: 12px;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + #{$element}__text {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+
+.song-list-chord {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .chord {
+    margin: 0 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.song-more {
+  $element: &;
+
+  display: block;
+  position: relative;
+  margin-bottom: 25px;
+
+  @include mq(991) {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+
+  &__toggle {
+    border: solid 1px $color-black-3;
+    border-bottom: none;
+    border-radius: 6px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 15px 25px 10px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background-color: $color-white-1;
+    z-index: 1;
+    margin-bottom: -2px;
+    cursor: pointer;
+
+    span {
+      padding-right: 15px;
+      position: relative;
+
+      &:before {
+        content: "\f0d7";
+        @extend %font-icon;
+        @extend %prr;
+        top: 45%;
+      }
+    }
+  }
+
+  &--active {
+    #{$element}__toggle {
+      span {
+        &:before {
+          content: "\f0d8";
+        }
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+  }
+
+  &__wrap {
+    border: solid 1px $color-black-3;
+    padding: 20px 25px;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    background-color: $color-white-1;
+  }
+}
+
+.song-info {
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  &__att {
+    display: block;
+    color: $color-black-6;
+    width: 90px;
+    font-size: 13px;
+    line-height: 21px;
+    font-style: italic;
+  }
+
+  &__ats {
+    display: block;
+    color: $color-black-8;
+    font-weight: 600;
+    min-height:22px;
+    margin-top: -2px;
+    overflow: hidden;
+  }
+
+  &--up {
+    text-transform: capitalize;
+  }
+}
+
+.song-intro {
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  &__att {
+    display: block;
+    color: $color-black-6;
+    width: 100px;
+    margin-right: 10px;
+  }
+
+  &__ats {
+    display: block;
+    color: $color-black-8;
+    font-weight: 600;
+    min-height:22px;
+    overflow: hidden;
+  }
+}

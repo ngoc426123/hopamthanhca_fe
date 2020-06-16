@@ -1,4 +1,6 @@
 .box {
+  $element: &;
+
   @extend %box-design-white;
   margin-bottom: 45px;
 
@@ -26,6 +28,24 @@
       line-height: 22px;
       color: $color-gray-2;
       margin-top: 5px;
+    }
+  }
+
+  &.detail {
+    #{$element}-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include mq(767) {
+        display: block;
+      }
+
+      h1 {
+        @include mq(767) {
+          margin-bottom: 15px;
+        }
+      }
     }
   }
 }

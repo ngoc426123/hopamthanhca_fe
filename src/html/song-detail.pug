@@ -3,4 +3,174 @@ extends _layout/_layout
 block main-content
   .main-content
     .wrapper
-      
+      .box.padding.detail
+        .box-title
+          h1 Ca vang tình yêu Chúa
+          .song-share
+            ul
+              li
+                a.fac.share-facebook(href='javascript:void(0)')
+                  i.fa.fa-facebook
+              li
+                a.goo(href='' onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600,hl=vi');return false;")
+                  i.fa.fa-google
+              li
+                a.twi(href='')
+                  i.fa.fa-twitter
+              li
+                a.love(href='' data-post-id='706')
+                  i.fa.fa-heart
+                span 0
+        .box-content
+          .song-tools
+            .song-tools__group
+              button.song-tools__btn#chordDown b
+              input.song-tools__input.chord_ipt(value=`Am`)
+              button.song-tools__btn#chordUp #
+            .song-tools__group
+              button.song-tools__btn#fontDown -
+              input.song-tools__input.font_ipt(value=`16px`)
+              button.song-tools__btn#fontUp +
+            .song-tools__group
+              label(for="chiacot")
+                input.song-tools__checkbox(type="checkbox" id="chiacot" checked)
+                .song-tools__text Chia cột
+            .song-tools__group
+              label(for="gopdong")
+                input.song-tools__checkbox(type="checkbox" id="gopdong" checked)
+                .song-tools__text Tách dòng
+            .song-tools__group
+              label(for="anhopam")
+                input.song-tools__checkbox(type="checkbox" id="anhopam")
+                .song-tools__text Ẩn hợp âm
+          .song-more
+            .song-more__toggle
+              span Thêm thông tin
+            .song-more__dropdown
+              .song-more__wrap
+                .row
+                  .col-12.col-lg-6
+                    .song-info
+                      ul
+                        li
+                          span.song-info__att Tác giả :
+                          span.song-info__ats.song-info--up Đinh Công Huỳnh
+                        li
+                          span.song-info__att Người đăng :
+                          span.song-info__ats Hoàng Minh Ngọc
+                        li
+                          span.song-info__att Ngày đăng :
+                          span.song-info__ats April 26, 2020
+                        li
+                          span.song-info__att Lượt xem :
+                          span.song-info__ats 81
+                        li
+                          span.song-info__att Tone chính :
+                          span.song-info__ats Am
+                        li
+                          span.song-info__att Điệu bài hát :
+                          span.song-info__ats Slow
+                        li
+                          span.song-info__att Chuyên mục :
+                          span.song-info__ats.song-info--up Mùa Thường Niên
+                  .col-12.col-lg-6
+                    .song-intro.d-none.d-lg-block
+                      ul
+                        li
+                          span.song-intro__att
+                            img(src="images/print.png", alt="")
+                          span.song-intro__ats.song-intro--up In bài hát
+                        li
+                          span.song-intro__att
+                            img(src="images/right.png", alt="")
+                          span.song-intro__ats.song-intro--up Thăng 1/2 note
+                        li
+                          span.song-intro__att
+                            img(src="images/left.png", alt="")
+                          span.song-intro__ats.song-intro--up Giáng 1/2 note
+                        li
+                          span.song-intro__att
+                            img(src="images/up.png", alt="")
+                          span.song-intro__ats.song-intro--up Tăng 1 font size
+                        li
+                          span.song-intro__att
+                            img(src="images/down.png", alt="")
+                          span.song-intro__ats.song-intro--up giảm 1 font size
+                  .col-12.col-lg-6
+                    
+
+          .row
+            .col-12.col-xl-8
+              .song-content.song-content__lahubalahu
+                | <p style="text-align: left;">1. Ngài  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Am</span><span class="chordPer">]</span></span>là ánh dương soi  <span class="chordOC"><span class="chordPer">[</span><span class="chord">G#</span><span class="chordPer">]</span></span>đường dọi  <span class="chordOC"><span class="chordPer">[</span><span class="chord">G</span><span class="chordPer">]</span></span>vào giữa nơi đêm  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Dm</span><span class="chordPer">]</span></span>trường. Ngài  <span class="chordOC"><span class="chordPer">[</span><span class="chord">F</span><span class="chordPer">]</span></span>là bóng cây cao  <span class="chordOC"><span class="chordPer">[</span><span class="chord">F</span><span class="chordPer">]</span></span>rộng phủ  <span class="chordOC"><span class="chordPer">[</span><span class="chord">E7</span><span class="chordPer">]</span></span>rợp biết bao tâm  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Am</span><span class="chordPer">]</span></span>hồn.<br> Tình Chúa như ánh trăng  <span class="chordOC"><span class="chordPer">[</span><span class="chord">E</span><span class="chordPer">]</span></span>thanh tỏa  <span class="chordOC"><span class="chordPer">[</span><span class="chord">D7</span><span class="chordPer">]</span></span>lan trên khắp dương  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Dm</span><span class="chordPer">]</span></span>gian. Ngàn  <span class="chordOC"><span class="chordPer">[</span><span class="chord">F</span><span class="chordPer">]</span></span>năm theo bước chân  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Bm</span><span class="chordPer">]</span></span>con và  <span class="chordOC"><span class="chordPer">[</span><span class="chord">E7</span><span class="chordPer">]</span></span>luôn ôm ấp đỡ  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Am</span><span class="chordPer">]</span></span>nâng.</p>
+                | <p style="text-align: left;">ĐK. Con luôn ca  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Am</span><span class="chordPer">]</span></span>vang ân tình Thiên Chúa luôn yêu thương  <span class="chordOC"><span class="chordPer">[</span><span class="chord">C</span><span class="chordPer">]</span></span>con như là mẫu  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Dm</span><span class="chordPer">]</span></span>thân. Cho bao gian  <span class="chordOC"><span class="chordPer">[</span><span class="chord">F</span><span class="chordPer">]</span></span>nan Ngài vẫn ngay  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Bm</span><span class="chordPer">]</span></span>bên nâng niu con  <span class="chordOC"><span class="chordPer">[</span><span class="chord">E</span><span class="chordPer">]</span></span>thơ bằng tình yêu  <span class="chordOC"><span class="chordPer">[</span><span class="chord">E</span><span class="chordPer">]</span></span>mến.  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Am</span><span class="chordPer">]</span></span><br> Vang câu tri ân muôn đời cảm mến qua bao ơn  <span class="chordOC"><span class="chordPer">[</span><span class="chord">C</span><span class="chordPer">]</span></span>thiêng do Ngài khấng  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Dm</span><span class="chordPer">]</span></span>ban. Ra đi muôn  <span class="chordOC"><span class="chordPer">[</span><span class="chord">F</span><span class="chordPer">]</span></span>nơi làm chứng giữa  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Bm</span><span class="chordPer">]</span></span>đời loan tin yêu  <span class="chordOC"><span class="chordPer">[</span><span class="chord">E</span><span class="chordPer">]</span></span>thương về Chúa chí  <span class="chordOC"><span class="chordPer">[</span><span class="chord">Am</span><span class="chordPer">]</span></span>nhân.</p>
+                | <p style="text-align: left;">2. Đường trần Chúa ơi bao lần miệt mài cuốn theo danh vọng. Một ngày bước chân rã rời tìm về náu nương bên Ngài.<br>
+                | Tình Chúa đưa lối con đi vượt qua bao nỗi gian nguy. Ngài luôn kiên nhẫn bên con dù con năm tháng hoang đàng.</p>
+                | <p style="text-align: left;">3. Tìm về suối thiêng dạt dào là nguồn phúc ân ngọt ngào. Một đời sống trong ân tình thỏa lòng sướng vui êm đềm.<br>
+                | Tình Chúa nuôi dưỡng tâm linh dạy cho con lớn khôn thêm. Miệng con không ngớt ca khen tình yêu Thiên Chúa vững bền.</p>
+            .col-12.col-xl-4
+              .song-list-chord
+      .row.justify-content-center
+        .col-lg-6
+          .box-title 
+            h3 Cùng tác giả Đinh Công Huỳnh
+          .box.padding
+            .box-content
+              .list-song
+                .song
+                  .song__title
+                    a(href="") Ca vang tình yêu Chúa 4
+                      span Đinh Minh Hoàng
+                  .song__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
+                  .song__info
+                .song
+                  .song__title
+                    a(href="") Ca vang tình yêu Chúa 3
+                      span Đinh Công Huỳnh
+                  .song__desc Dòng suối êm đềm êm trôi, êm trôi như ân tình Chúa. Mùa xuân tinh khôi tô điểm cho đời thắm tươi rực rỡ. Dừng bước gian trần cho tâm can con nghỉ ngơi trong Ngài. Một phút bình yên tim con lâng lâng ngất ngây đêm ngày.
+                .song
+                  .song__title
+                    a(href="") đoàn con đến đây
+                      span Hoài Chiên
+                  .song__desc Ðoàn con đến đây dâng lời ước nguyện. Ngày đêm mến cha cho trọn khối tình con. Ðược yêu mến Cha bao là êm đềm. Hồn con sướng vui tháng năm hết ưu phiền.
+                .song
+                  .song__title
+                    a(href="") lòng Chúa ái tuất
+                      span Nguyễn Bang Hanh
+                  .song__desc Đây lòng Chúa ái tuất không bến bờ, Thương loài nhân thế đang vướng tội nhơ. Đem trót Máu Thịt nuôi dưỡng xác hồn. Ngày đêm ban xuống cho muôn ngàn ơn.
+                .song
+                  .song__title
+                    a(href="") Phút Linh Thiêng
+                      span Thành Tâm
+                  .song__desc Người ơi nào mau tới thờ lạy Chúa, quỳ dâng lòng tôn kính Chúa trên cao. Linh thiêng, ôi phút giây giờ đây khi đoàn con được chiêm ngắm nhan thánh Chúa chí nhân quyền uy.
+        .col-lg-6 
+          .box-title 
+            h3 Cùng chuyên mục mùa thường niên
+          .box.padding 
+            .box-content
+              .list-song
+                .song
+                  .song__title
+                    a(href="") Ca vang tình yêu Chúa 4
+                      span Đinh Minh Hoàng
+                  .song__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
+                .song
+                  .song__title
+                    a(href="") Ca vang tình yêu Chúa 3
+                      span Đinh Công Huỳnh
+                  .song__desc Dòng suối êm đềm êm trôi, êm trôi như ân tình Chúa. Mùa xuân tinh khôi tô điểm cho đời thắm tươi rực rỡ. Dừng bước gian trần cho tâm can con nghỉ ngơi trong Ngài. Một phút bình yên tim con lâng lâng ngất ngây đêm ngày.
+                .song
+                  .song__title
+                    a(href="") đoàn con đến đây
+                      span Hoài Chiên
+                  .song__desc Ðoàn con đến đây dâng lời ước nguyện. Ngày đêm mến cha cho trọn khối tình con. Ðược yêu mến Cha bao là êm đềm. Hồn con sướng vui tháng năm hết ưu phiền.
+                .song
+                  .song__title
+                    a(href="") lòng Chúa ái tuất
+                      span Nguyễn Bang Hanh
+                  .song__desc Đây lòng Chúa ái tuất không bến bờ, Thương loài nhân thế đang vướng tội nhơ. Đem trót Máu Thịt nuôi dưỡng xác hồn. Ngày đêm ban xuống cho muôn ngàn ơn.
+                .song
+                  .song__title
+                    a(href="") Phút Linh Thiêng
+                      span Thành Tâm
+                  .song__desc Người ơi nào mau tới thờ lạy Chúa, quỳ dâng lòng tôn kính Chúa trên cao. Linh thiêng, ôi phút giây giờ đây khi đoàn con được chiêm ngắm nhan thánh Chúa chí nhân quyền uy.
