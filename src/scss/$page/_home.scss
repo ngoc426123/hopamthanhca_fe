@@ -143,6 +143,21 @@
     border-left: none;
     padding: 0px 4px;
   }
+
+  &__downloadsheet {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      max-width: 35px;
+    }
+  }
+
+  .pdf & {
+    padding-right: 45px;
+    position: relative;
+  }
 }
 
 .list-category {

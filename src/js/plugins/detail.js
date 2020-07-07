@@ -166,5 +166,12 @@ $(() => {
       $(`.song-more`).removeClass(`song-more--active`);
       $(`.song-more__dropdown`).stop().slideUp();
     }
-  })
+  });
+
+  $(`.song-pdf__file a`).fancybox({
+    type:'iframe',
+    height: '80%',
+    margin: 0,
+    autoSize: true,
+  });
 });

@@ -219,6 +219,10 @@
     &:last-child {
       margin-right: 0;
     }
+
+    svg {
+      width: 80px;
+    }
   }
 }
 
@@ -286,6 +290,10 @@
 }
 
 .song-info {
+  @include mq(991) {
+    margin-bottom: 20px;
+  }
+
   li {
     display: flex;
     align-items: center;
@@ -336,4 +344,73 @@
     min-height:22px;
     overflow: hidden;
   }
+}
+
+.song-pdf {
+  @include mq(991) {
+    padding-left: 65px;
+    position: relative;
+  }
+
+  &__file {
+    margin-bottom: 10px;
+
+    @include mq(991) {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      margin-bottom: 0;
+    }
+
+    img {
+      max-width: 50px;
+    }
+  }
+
+  &__note {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-black-6;
+
+    span,
+    a {
+      display: inline-block;
+      color: $color-blue-1;
+    }
+  }
+}
+
+@media print {
+body {
+  background: #ffffff;
+}
+.main-content {
+  margin: 0;
+}
+header,
+.song-tools,
+.song-more,
+.song-share,
+.song-other,
+footer{
+  display: none;
+}
+
+.song-content {
+  column-count: unset;
+  font-size: 18px;
+  line-height: 300%;
+}
+
+.box{
+  &-title {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+  }
+}
+}
+@page {
+	margin: 0.55cm;
 }

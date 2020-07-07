@@ -5,12 +5,27 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const bulkSass = require('gulp-sass-bulk-import');
 const cssnano = require('gulp-cssnano');
-// JS
-
+const rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
 // WEBPACK
 const webpack = require('webpack-stream');
+const optionWebpack = {
+  mode: 'none',
+  output:{
+    filename : 'app.min.js'
+  },
+  optimization: {
+    minimize: true
+  },
+};
 // BROWER SYNC
 const browserSync = require('browser-sync');
+// DEL
+const del = require('del');
+
+gulp.task('clean', function() {
+  return del('build/');
+})
 
 gulp.task('html', function() {
   return gulp
@@ -21,25 +36,18 @@ gulp.task('html', function() {
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.stream());
 });
+
 gulp.task('sass', function() {
   return gulp
     .src('src/scss/app.scss')
     .pipe(bulkSass())
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(autoprefixer())
     .pipe(cssnano())
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
 });
-
-const optionWebpack = {
-  mode: 'none',
-  output:{
-    filename : 'app.min.js'
-  },
-  optimization: {
-    minimize: true
-  },
-};
 
 gulp.task('js', function() {
   return gulp
@@ -51,7 +59,7 @@ gulp.task('js', function() {
 
 gulp.task('font', function() {
   return gulp 
-    .src(['node_modules/font-awesome/fonts/*', 'src/fonts/**'])
+    .src(['node_modules/@fortawesome/fontawesome-free/webfonts/*', 'src/fonts/**'])
     .pipe(gulp.dest('build/fonts/'))
     .pipe(browserSync.stream());
 });
@@ -87,3 +95,5 @@ gulp.task('watch',function(){
 });
 
 gulp.task('default', gulp.series('html', 'sass', 'js', 'font','images', 'data', 'watch'));
+
+gulp.task('build', gulp.series('clean', 'html', 'sass', 'js', 'font','images', 'data'))

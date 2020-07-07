@@ -49,7 +49,7 @@ block main-content
             .song-more__dropdown
               .song-more__wrap
                 .row
-                  .col-12.col-lg-6
+                  .col-12.col-lg-4
                     .song-info
                       ul
                         li
@@ -73,7 +73,7 @@ block main-content
                         li
                           span.song-info__att Chuyên mục :
                           span.song-info__ats.song-info--up Mùa Thường Niên
-                  .col-12.col-lg-6
+                  .col-12.col-lg-4
                     .song-intro.d-none.d-lg-block
                       ul
                         li
@@ -96,9 +96,13 @@ block main-content
                           span.song-intro__att
                             img(src="images/down.png", alt="")
                           span.song-intro__ats.song-intro--up giảm 1 font size
-                  .col-12.col-lg-6
-                    
-
+                  .col-12.col-lg-4
+                    .song-pdf
+                      .song-pdf__file
+                        a(href="http://www.dinh.dk/pdf/kinhlayCha-tmh.pdf" data-src="http://www.dinh.dk/pdf/kinhlayCha-tmh.pdf" data-fancybox target="_blank")
+                          img(src="images/pdf.svg", alt="")
+                      .song-pdf__note (Click vào hình để xem cũng như tải file sheet nhạc)
+                      .song-pdf__note Xin cảm ơn tác giả, cũng là chủ của trang web <a href="http://www.thuvienamnhac.org/" terget="_blank">Thư viện âm nhạc</a>, tác giả <span>Đinh Công Huỳnh</span> Đã cho phép trang web sử dụng file PDF từ trang.
           .row
             .col-12.col-xl-8
               .song-content.song-content__lahubalahu
@@ -110,7 +114,7 @@ block main-content
                 | Tình Chúa nuôi dưỡng tâm linh dạy cho con lớn khôn thêm. Miệng con không ngớt ca khen tình yêu Thiên Chúa vững bền.</p>
             .col-12.col-xl-4
               .song-list-chord
-      .row.justify-content-center
+      .row.justify-content-center.song-other
         .col-lg-6
           .box-title 
             h3 Cùng tác giả Đinh Công Huỳnh
