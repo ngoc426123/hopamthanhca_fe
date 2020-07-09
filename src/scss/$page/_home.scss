@@ -259,7 +259,7 @@
       position: relative;
 
       &::before {
-        font-family: FontAwesome;
+        @extend %font-icon;
         position: absolute;
         left: 0;
         top: 50%;
@@ -328,7 +328,7 @@
       position: relative;
 
       &::before{
-        font-family: FontAwesome;
+        @extend %font-icon;
         position: absolute;
         left: 0;
         top: 50%;
