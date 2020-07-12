@@ -74,6 +74,8 @@
     }
 
     input {
+      position: relative;
+      z-index: 12;
       width: 100%;
       height: 65px;
       border: none;
@@ -81,7 +83,6 @@
       font-size: 16px;
       line-height: 24px;
       padding-left: 15px;
-      margin-bottom: 20px;
       
       @include mq(991) {
         height: 50px;
@@ -114,6 +115,58 @@
       p {
         padding: 0;
         margin: 0;
+      }
+    }
+
+    &--form {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    &--suggess {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      z-index: 11;
+
+      ul {
+        margin-top: -30px;
+        padding-top: 20px;
+        border-top: 1px solid $color-gray-1;
+        @extend %box-design-white;
+      }
+      
+      li {
+        border-bottom: 1px solid $color-gray-1;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:first-child {
+          a {
+            padding-top: 18px;
+          }
+        }
+
+        &.input-focus {
+          a {
+            background-color: $color-gray-3;
+          }
+        }
+      }
+
+      a {
+        display: block;
+        font-size: 12px;
+        line-height: 20px;
+        color: $color-black-8;
+        padding: 8px 15px;
+
+        &:hover {
+          background-color: $color-gray-3;
+        }
       }
     }
   }

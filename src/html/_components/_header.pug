@@ -94,13 +94,10 @@ header.header
     .wrapper
       form(action="search.html" method="get")
         .header__search--title Cùng tìm kiếm bài hát bạn thích nhất
-        input(type="text" id="searchDesktop" placeholder="Nhập tên bài hát, từ khóa tìm kiếm...")
+        .header__search--form(data-search-form)
+          input(type="text" id="searchDesktop" autocomplete="off" placeholder="Nhập tên bài hát, từ khóa tìm kiếm..." data-search data-url="/data/searchsong.js")
+          .header__search--suggess
+            ul(data-suggess)
         .header__search--note
           p Tìm với tên bài hát : Ca vang tình yêu Chúa, Tình yêu Thiên Chúa
           p  Nhập bài hát đầy đủ dấu và chữ, không ghi tắt.
-  //- .header__notification
-  //-   .wrapper
-  //-     .header__notification__slide
-  //-       .item Các vị trí hợp âm đều dựa vào file sheet, một vài hợp âm thêm vào để hay hơn.
-  //-       .item Mọi thắc mắc, đóng góp ý kiến xin liên hệ vào email: minhngoc.ith@gmai.com.
-  //-       .item Các bài hát yêu cầu hợp âm xin gởi về địa chỉ email vừa rồi hoặc facebook cùa trang.

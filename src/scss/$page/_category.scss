@@ -100,6 +100,7 @@
 
     &__sp {
       margin-bottom: 5px;
+      text-transform: capitalize;
     }
 
     &__title {
@@ -107,6 +108,7 @@
       font-size: 18px;
       line-height: 26px;
       margin-bottom: 5px;
+      text-transform: capitalize;
 
       @include mq(991) {
         font-size: 16px;

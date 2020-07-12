@@ -75,7 +75,12 @@
           <div class="wrapper">
             <form action="search.html" method="get">
               <div class="header__search--title">Cùng tìm kiếm bài hát bạn thích nhất</div>
-              <input type="text" id="searchDesktop" placeholder="Nhập tên bài hát, từ khóa tìm kiếm...">
+              <div class="header__search--form" data-search-form>
+                <input type="text" id="searchDesktop" autocomplete="off" placeholder="Nhập tên bài hát, từ khóa tìm kiếm..." data-search data-url="/data/searchsong.js">
+                <div class="header__search--suggess">
+                  <ul data-suggess></ul>
+                </div>
+              </div>
               <div class="header__search--note">
                 <p>Tìm với tên bài hát : Ca vang tình yêu Chúa, Tình yêu Thiên Chúa</p>
                 <p> Nhập bài hát đầy đủ dấu và chữ, không ghi tắt.</p>
@@ -917,9 +922,9 @@
             <div class="footer__copyright">@ Copyright 2020 by Hợp âm thánh ca</div>
             <div class="footer__social">
               <ul>
-                <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                <li><a href=""><i class="fa fa-youtube"></i></a></li>
-                <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
               </ul>
             </div>
           </div>
