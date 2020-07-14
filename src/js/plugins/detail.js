@@ -174,4 +174,32 @@ $(() => {
     margin: 0,
     autoSize: true,
   });
+
+  // SONG LOVE
+  const love = $(`.song-share .love`);
+  love
+    .off(`click.detail`)
+    .on(`click.detail`, (event) => {
+      event.preventDefault();
+
+      const id = love.data(`post-id`);
+      const url = love.data(`url`);
+      const count = love.data(`love`);
+      
+      $.ajax({
+        url: url,
+        async: true,
+        type: 'POST',
+        data: {
+          id: id,
+          love: count
+        },
+        success: function(data) {
+          const dat = JSON.parse(data);
+          love.next(`span`).text(dat.love);
+          love.attr(`data-love`, dat.love);
+        }
+      });
+      ;
+    })
 });
