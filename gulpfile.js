@@ -66,7 +66,7 @@ gulp.task('font', function() {
 
 gulp.task('images', function() {
   return gulp 
-    .src(['src/images/**'])
+    .src(['src/images/**', 'node_modules/fancybox/dist/img/*'])
     .pipe(gulp.dest('build/images/'))
     .pipe(browserSync.stream());
 });
