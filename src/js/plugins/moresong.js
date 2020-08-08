@@ -10,14 +10,20 @@ $(() => {
                 <div class="item__title"><a href="${prop.permalink}">${prop.title}</a></div>
                 <div class="item__desc">${prop.excerpt}</div>
               </div>
+              <div class="item__attribute">
+                <div class="item__attitem"><span>Tác giả</span><span>Đinh Công Huỳnh</span></div>
+                <div class="item__attitem"><span>Chuyên mục</span><span>mùa thường niên</span></div>
+              </div>
             </div>`;
   }
 
   btnMore.off(`click`).on(`click`, (event) => {
     event.preventDefault();
-    const offset = $(event.currentTarget).data(`offset`);
-    const limit  = $(event.currentTarget).data(`limit`);
-    const url = $(event.currentTarget).data(`url`);
+    const ele = $(event.currentTarget);
+    const offset = parseInt($(event.currentTarget).attr(`data-offset`));
+    const limit  = parseInt($(event.currentTarget).attr(`data-limit`));
+    const url = $(event.currentTarget).attr(`data-url`);
+    const new_offset = limit + offset;
 
     new Promise(() => {
       fetch(url, {
@@ -38,6 +44,7 @@ $(() => {
           $(`#render-more`).append(`<div class="col">${render_item_more_song(element)}</div>`)
         });
         data.more && btnMore.remove();
+        ele.attr(`data-offset`, new_offset);
       })
     })
   })

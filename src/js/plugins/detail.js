@@ -170,9 +170,7 @@ $(() => {
 
   $(`.song-pdf__file a`).fancybox({
     type:'iframe',
-    height: '80%',
     margin: 0,
-    autoSize: true,
   });
 
   // SONG LOVE
