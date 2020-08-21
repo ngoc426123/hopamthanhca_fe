@@ -7,6 +7,9 @@ import 'fancybox';
 // slick
 import 'slick-carousel';
 
+// jquery ui
+import 'jquery-ui/ui/widgets/autocomplete';
+
 // jtab
 import jtab from 'jtab';
 

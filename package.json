@@ -6,7 +6,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
     "bootstrap": "^4.5.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "del": "^5.1.0",
     "fancybox": "^3.0.1",
     "font-awesome": "^4.7.0",
@@ -21,11 +21,15 @@
     "gulp-sass-bulk-import": "^1.0.1",
     "gulp-sass-unicode": "^1.0.5",
     "jquery": "^3.5.1",
+    "jquery-ui-dist": "^1.12.1",
+    "jquery-ui-sass": "0.0.1",
     "jtab": "^1.3.2",
     "slick-carousel": "^1.8.1",
     "webpack-stream": "^5.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jquery-ui": "^1.12.1"
+  },
   "scripts": {
     "start": "gulp",
     "build": "gulp build"

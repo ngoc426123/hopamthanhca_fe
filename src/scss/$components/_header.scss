@@ -79,7 +79,6 @@
       width: 100%;
       height: 65px;
       border: none;
-      border-radius: 8px;
       font-size: 16px;
       line-height: 24px;
       padding-left: 15px;
@@ -121,53 +120,6 @@
     &--form {
       position: relative;
       margin-bottom: 20px;
-    }
-
-    &--suggess {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      left: 0;
-      z-index: 11;
-
-      ul {
-        margin-top: -30px;
-        padding-top: 20px;
-        border-top: 1px solid $color-gray-1;
-        @extend %box-design-white;
-      }
-      
-      li {
-        border-bottom: 1px solid $color-gray-1;
-        
-        &:last-child {
-          border-bottom: none;
-        }
-
-        &:first-child {
-          a {
-            padding-top: 18px;
-          }
-        }
-
-        &.input-focus {
-          a {
-            background-color: $color-gray-3;
-          }
-        }
-      }
-
-      a {
-        display: block;
-        font-size: 12px;
-        line-height: 20px;
-        color: $color-black-8;
-        padding: 8px 15px;
-
-        &:hover {
-          background-color: $color-gray-3;
-        }
-      }
     }
   }
 
@@ -490,5 +442,37 @@
     box-shadow: 0 4px 20px 0 $color-shadow-black, 0 7px 10px -5px $color-shadow-black;
     padding: 10px 0;
     color: #ffffff;
+  }
+}
+
+.ui-autocomplete {
+  border: none;
+
+  li {
+    border: none;
+    border-bottom: 1px solid $color-gray-1;
+    padding: 0;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  a {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-black-8;
+    padding: 8px 15px;
+    transition: none;
+
+    &:hover {
+      background-color: $color-gray-3;
+    }
+  }
+
+  .ui-state-active {
+    border: none;
+    background-color: $color-blue-2;
   }
 }
