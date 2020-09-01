@@ -168,11 +168,6 @@ $(() => {
     }
   });
 
-  $(`.song-pdf__file a`).fancybox({
-    type:'iframe',
-    margin: 0,
-  });
-
   // SONG LOVE
   const love = $(`.song-share .love`);
   love
