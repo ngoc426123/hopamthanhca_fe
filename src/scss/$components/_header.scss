@@ -82,6 +82,8 @@
       font-size: 16px;
       line-height: 24px;
       padding-left: 15px;
+      box-sizing: border-box;
+      transition: all 0.2s;
       
       @include mq(991) {
         height: 50px;
@@ -89,6 +91,7 @@
 
       &:focus {
         outline: none;
+        @extend %input-design-white;
       }
     }
 
@@ -447,6 +450,7 @@
 
 .ui-autocomplete {
   border: none;
+  @extend %input-design-white;
 
   li {
     border: none;
@@ -469,10 +473,21 @@
     &:hover {
       background-color: $color-gray-3;
     }
+
+    span {
+      font-size: 10px;
+      line-height: 20px;
+      font-style: italic;
+      color: $color-black-6;
+    }
   }
 
   .ui-state-active {
     border: none;
     background-color: $color-blue-2;
+
+    span {
+      color: $color-white-1;
+    }
   }
 }
