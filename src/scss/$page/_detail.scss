@@ -83,7 +83,6 @@
 
   .chordOC {
     color: $color-blue-1;
-    margin-right: 3px;
   }
 
   p {
@@ -94,8 +93,13 @@
     line-height: 400%;
 
     .chordOC {
+      position: relative;
+    }
+
+    .chord {
       position: absolute;
       margin-top: -20px;
+      margin-left: 1px;
     }
 
     .chordPer {
