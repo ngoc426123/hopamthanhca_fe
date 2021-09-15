@@ -64,13 +64,9 @@
     }
 
     .wrapper {
-      width: 100%;
-    }
-
-    form {
+      margin: 0 auto;
       width: 100%;
       max-width: 580px;
-      margin: 0 auto;
     }
 
     input {
@@ -448,46 +444,55 @@
   }
 }
 
-.ui-autocomplete {
+.autocomplete {
   border: none;
   @extend %input-design-white;
+  z-index: 13;
 
-  li {
-    border: none;
+  &__item {
+    padding: 8px 15px;
     border-bottom: 1px solid $color-gray-1;
-    padding: 0;
+    position: relative;
     
     &:last-child {
       border-bottom: none;
     }
+
+    &.selected {
+      border: none;
+      background-color: $color-blue-2;
+    }
   }
 
-  a {
-    display: block;
-    font-size: 12px;
-    line-height: 20px;
+  &__song {
+    font-size: 13px;
+    line-height: 21px;
     color: $color-black-8;
-    padding: 8px 15px;
-    transition: none;
-
-    &:hover {
-      background-color: $color-gray-3;
-    }
 
     span {
       font-size: 10px;
       line-height: 20px;
-      font-style: italic;
-      color: $color-black-6;
+    }
+
+    .selected & {
+      font-size: 14px;
+      font-weight: 600;
+      color: $color-white-1;
     }
   }
 
-  .ui-state-active {
-    border: none;
-    background-color: $color-blue-2;
+  &__excerpt {
+    font-size: 10px;
+    line-height: 20px;
+    font-style: italic;
+    color: $color-black-6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
-    span {
-      color: $color-white-1;
+    .selected & {
+      font-size: 11px;
+      color: $color-gray-3;
     }
   }
 }

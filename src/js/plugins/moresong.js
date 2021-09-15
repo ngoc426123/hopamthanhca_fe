@@ -1,6 +1,7 @@
 $(() => {
   const btnMore = $(`.load-more-song`).find(`a`);
   const render_item_more_song = (prop) => {
+    console.log(prop);
     return `<div class="item">
               <div class="item__top">
                 <div class="item__att"><span class="fa-eye">${prop.meta.luotxem}</span></div>
@@ -11,8 +12,8 @@ $(() => {
                 <div class="item__desc">${prop.excerpt}</div>
               </div>
               <div class="item__attribute">
-                <div class="item__attitem"><span>Tác giả</span><span>Đinh Công Huỳnh</span></div>
-                <div class="item__attitem"><span>Chuyên mục</span><span>mùa thường niên</span></div>
+                <div class="item__attitem"><span>Tác giả</span><span>${prop.cat["tac-gia"][0].cat_name}</span></div>
+                <div class="item__attitem"><span>Chuyên mục</span><span>${prop.cat["chuyen-muc"][0].cat_name}</span></div>
               </div>
             </div>`;
   }

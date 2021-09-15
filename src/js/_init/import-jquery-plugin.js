@@ -5,7 +5,7 @@ import $ from "jquery";
 import 'slick-carousel';
 
 // jquery ui
-import 'jquery-ui/ui/widgets/autocomplete';
+import autocomplete from "autocompleter";
 
 // jtab
 import jtab from 'jtab';
@@ -13,3 +13,4 @@ import jtab from 'jtab';
 window.$ = $;
 window.jQuery = $;
 window.jtab = jtab;
+window.autocomplete = autocomplete;
