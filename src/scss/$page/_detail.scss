@@ -70,14 +70,12 @@
 .song-content {
   column-count: 2;
   column-gap: 30px;
+  column-rule: dashed 2px $color-gray-3;
   font-size: 16px;
   line-height: 190%;
 
   @include mq(991) {
     margin-top: 25px;
-  }
-
-  @include mq(767) {
     column-count: unset;
   }
 
@@ -98,8 +96,7 @@
 
     .chord {
       position: absolute;
-      margin-top: -20px;
-      margin-left: 1px;
+      transform: translateY(-20px);
     }
 
     .chordPer {
@@ -115,6 +112,14 @@
 
   &__nuhanahinu {
     column-count: unset;
+  }
+
+  &__slipt {
+    border-right: dashed 2px $color-gray-3;
+
+    @include mq(1200) {
+      border-right: none;
+    }
   }
 }
 
@@ -234,10 +239,11 @@
 
   display: block;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 
   @include mq(991) {
-    margin-top: 50px;
+    padding-top: 50px;
+    margin-top: 10px;
     margin-bottom: 0;
   }
 
@@ -255,6 +261,12 @@
     z-index: 1;
     margin-bottom: -2px;
     cursor: pointer;
+
+    @include mq(991) {
+      margin-top: 3px;
+      top: 0;
+      bottom: auto;
+    }
 
     span {
       padding-right: 15px;
@@ -382,38 +394,4 @@
       color: $color-blue-1;
     }
   }
-}
-
-@media print {
-body {
-  background: #ffffff;
-}
-.main-content {
-  margin: 0;
-}
-header,
-.song-tools,
-.song-more,
-.song-share,
-.song-other,
-footer{
-  display: none;
-}
-
-.song-content {
-  column-count: unset;
-  font-size: 18px;
-  line-height: 300%;
-}
-
-.box{
-  &-title {
-    margin-bottom: 50px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #000;
-  }
-}
-}
-@page {
-	margin: 0.55cm;
 }

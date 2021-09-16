@@ -43,6 +43,9 @@
       }
 
       h1 {
+        font-size: 30px;
+        line-height: 40px;
+
         @include mq(767) {
           margin-bottom: 15px;
         }
