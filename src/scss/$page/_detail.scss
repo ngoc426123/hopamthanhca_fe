@@ -80,6 +80,7 @@
   }
 
   .chordOC {
+    margin-right: 3px;
     color: $color-blue-1;
   }
 
@@ -88,7 +89,8 @@
   }
 
   &__lahubalahu {
-    line-height: 400%;
+    font-size: 15px;
+    line-height: 350%;
 
     .chordOC {
       position: relative;
