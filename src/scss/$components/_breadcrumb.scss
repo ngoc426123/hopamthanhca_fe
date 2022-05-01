@@ -1,0 +1,64 @@
+.breadcrumb {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+  background-color: transparent;
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    color: $color-white-1;
+    position: relative;
+
+    @include mq(991) {
+      display: none;
+    }
+
+    &:first-child {
+      @include mq(991) {
+        display: block;
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    &:last-child {
+      @include mq(991) {
+        display: block;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+      padding-right: 15px;
+
+      &::before {
+        content: '\f105';
+        @extend %font-icon;
+        @extend %prr;
+        right: -3px;
+      }
+    }
+  }
+
+  i {
+    margin-right: 10px;
+
+    @include mq(991) {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-white-1;
+    font-weight: 300;
+  }
+}

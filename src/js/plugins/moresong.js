@@ -13,7 +13,7 @@ $(() => {
               </div>
               <div class="item__attribute">
                 <div class="item__attitem"><span>Tác giả</span><span>${prop.cat["tac-gia"][0].cat_name}</span></div>
-                <div class="item__attitem"><span>Chuyên mục</span><span>${prop.cat["chuyen-muc"][0].cat_name}</span></div>
+                <div class="item__attitem"><span>Chuyên mụcc</span><span>${prop.cat["chuyen-muc"][0].cat_name}</span></div>
               </div>
             </div>`;
   }
