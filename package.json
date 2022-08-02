@@ -29,7 +29,7 @@
     "webpack-stream": "^5.2.1"
   },
   "devDependencies": {
-    "jquery-ui": "^1.13.0"
+    "jquery-ui": "^1.13.2"
   },
   "scripts": {
     "start": "gulp",
