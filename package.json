@@ -7,7 +7,7 @@
     "@fortawesome/fontawesome-free": "^5.13.1",
     "autocompleter": "^6.1.2",
     "bootstrap": "^4.5.0",
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.27.11",
     "del": "^5.1.0",
     "fancybox": "^3.0.1",
     "font-awesome": "^4.7.0",
