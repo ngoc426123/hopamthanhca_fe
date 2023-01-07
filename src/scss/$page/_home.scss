@@ -8,15 +8,11 @@
     padding: 20px;
   }
 
-  &-title {
+  &-heading {
     margin-bottom: 20px;
+  }
 
-    * {
-      font-size: 20px;
-      line-height: 34px;
-      padding: 0;
-    }
-
+  &-title {
     h1 {
       font-size: 28px;
       line-height: 36px;
@@ -33,7 +29,7 @@
   }
 
   &.detail {
-    #{$element}-title {
+    #{$element}-heading {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -41,13 +37,37 @@
       @include mq(767) {
         display: block;
       }
+    }
+
+    #{$element}-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: bold;
+
+      @include mq(767) {
+        margin-bottom: 15px;
+      }
 
       h1 {
-        font-size: 30px;
-        line-height: 40px;
+        padding: 0;
+        margin-right: 5px;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+        color: $color-blue-1;
+      }
+      
+      a {
+        margin-left: 5px;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
 
-        @include mq(767) {
-          margin-bottom: 15px;
+        &:hover {
+          color: $color-blue-1;
         }
       }
     }
