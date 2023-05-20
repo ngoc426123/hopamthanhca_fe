@@ -17,9 +17,10 @@ p {
   padding-bottom: 5px;
 }
 
-a{
+a {
   color: $color-black-2;
   transition: all .3s linear;
+  text-decoration: none;
 
   &:hover,
   &:focus,

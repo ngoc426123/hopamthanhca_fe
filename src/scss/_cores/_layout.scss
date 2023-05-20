@@ -1,14 +1,18 @@
+html {
+	border: none !important;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
-    color: $color-black-2;
-    font-size: $font-size-default;
-    line-height: $line-height-default;
-    background-color: $color-gray-3;
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	color: $color-black-2;
+	font-size: $font-size-default;
+	line-height: $line-height-default;
+	background-color: $color-gray-3;
 }
 
 .main-content {
-    margin-top: -110px;
-    position: relative;
-    z-index: 10;
+	margin-top: -110px;
+	position: relative;
+	z-index: 10;
 }

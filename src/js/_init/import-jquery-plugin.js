@@ -1,9 +1,6 @@
 // jquery
 import $ from "jquery";
 
-// slick
-import 'slick-carousel';
-
 // jquery ui
 import autocomplete from "autocompleter";
 
