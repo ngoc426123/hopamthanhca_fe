@@ -10,7 +10,7 @@
     font-size: 24px;
     line-height: 32px;
     font-weight: bold;
-    color: $color-blue-1;
+    color: $color-blue-2;
   }
 
   &__list {
@@ -26,6 +26,7 @@
       &::before {
         content: "\f0da";
         @extend %font-icon;
+        color: $color-blue-2;
         position: absolute;
         top: 0;
         left: 0;
@@ -65,15 +66,13 @@
 
   &__phase {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     
     @include mq(650) {
       display: block;
     }
     
     &:not(:last-child) {
-      padding-bottom: 25px;
-      margin-bottom: 30px;
       border-bottom: solid 1px rgba($color-black-1, 0.1);
     }
 
@@ -82,14 +81,19 @@
     }
   }
 
+  &__phase-wrap {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
   &__phase-name {
     width: 230px;
-    padding-right: 25px;
-    font-size: 20px;
-    line-height: 28px;
+    padding: 15px 20px;
+    font-size: 18px;
+    line-height: 26px;
     font-weight: bold;
-    color: $color-blue-1;
-    text-align: right;
+    color: $color-white-1;
+    background-color: $color-blue-2;
     flex-shrink: 0;
 
     @include mq(768) {
@@ -97,13 +101,14 @@
     }
 
     @include mq(650) {
-      margin-bottom: 10px;
-      text-align: left;
+      width: 100%;
     }
   }
 
   &__phase-detail {
     width: 100%;
+    padding: 15px;
+    padding-left: 20px;
   }
 
   &__phase-song {
@@ -127,25 +132,6 @@
   &__phase-song-desc {
     font-size: 13px;
     line-height: 20px;
-    font-style: italic;
-    color: $color-black-6;
-  }
-
-  &__phase-other {
-    max-width: 350px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  &__phase-other-title {
-    font-size: 25px;
-    line-height: 35px;
-    font-weight: bold;
-    color: $color-blue-2;
-  }
-
-  &__phase-other-desc {
     font-style: italic;
     color: $color-black-6;
   }
