@@ -2,17 +2,6 @@
   @extend %box-design-blue;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 150px;
-    background: linear-gradient(180deg, $color-black-4 0%, rgba(255,255,255,0) 100%);
-    pointer-events: none;
-  }
-
   &__main {
     position: relative;
     padding: 25px 0 0;
@@ -205,6 +194,7 @@
       display: block;
       font-size: 14px;
       line-height: 20px;
+      font-weight: bold;
       text-transform: uppercase;
       color: $color-white-1;
       padding: 10px 20px;
