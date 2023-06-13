@@ -82,6 +82,7 @@
   .chordOC {
     margin-right: 3px;
     color: $color-blue-1;
+    font-weight: 500;
   }
 
   p {
@@ -93,6 +94,7 @@
     line-height: 350%;
 
     .chordOC {
+      margin-left: 3px;
       position: relative;
     }
 
@@ -136,8 +138,8 @@
     display: flex;
     align-items: center;
     margin-right: 10px;
-    @extend %box-design-blue;
-    border-radius: 6px;
+    background-color: $color-blue-2;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
     margin-bottom: 10px;
@@ -198,7 +200,7 @@
       content: "\f00c";
       @extend %font-icon;
       @extend %pll;
-      font-size: 18px;
+      font-size: 15px;
       left: 12px;
     }
   }
@@ -323,7 +325,6 @@
     width: 90px;
     font-size: 13px;
     line-height: 21px;
-    font-style: italic;
   }
 
   &__ats {
