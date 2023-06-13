@@ -95,7 +95,6 @@
 
     .chordOC {
       margin-right: 0;
-      margin-left: 3px;
       position: relative;
     }
 
@@ -106,6 +105,16 @@
 
     .chordPer {
       display: none;
+    }
+
+    .chordStuck {
+      margin-right: 3px;
+
+      .chord {
+        display: inline-block;
+        transform: translateY(-20px);
+        position: relative;
+      }
     }
   }
 
