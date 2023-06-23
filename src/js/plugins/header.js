@@ -21,6 +21,8 @@ $(async () => {
   }
   const data = await callApi(dataUrl);
 
+  console.log(data);
+
   autocomplete({
     input: dataSearch[0],
     minLength: 2,
@@ -48,7 +50,7 @@ $(async () => {
     },
     onSelect: (item) => {
       _ITEMSEARCH = item;
-      window.location.href = item.permalink;
+      window.location.href = `${BASE_URL}/bai-hat/${item.slug}`;
     }
   });
 
@@ -56,9 +58,7 @@ $(async () => {
     .off('keyup')
     .on('keyup', (event) => {
       if ( event.key === 'Enter' ) {
-        if ( _ITEMSEARCH ) {
-          return;
-        }
+        if (_ITEMSEARCH) return;
 
         const linkAction = dataSearch.data('action');
         const value = dataSearch.val();
