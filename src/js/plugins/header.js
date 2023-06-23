@@ -19,7 +19,7 @@ $(async () => {
       });
     })
   }
-  const _data = await callApi(dataUrl);
+  const data = await callApi(dataUrl);
 
   autocomplete({
     input: dataSearch[0],
@@ -27,13 +27,12 @@ $(async () => {
     disableAutoSelect: true,
     fetch: (text, update) => {
       const _text = text.toLowerCase();
-      const { data } = _data;
       const suggestion = data.filter(item => {
-        const { label, excerpt } = item;
-        const _label = label.toLowerCase();
+        const { title, excerpt } = item;
+        const _title = title.toLowerCase();
         const _excerpt = excerpt.toLowerCase();
         const regex = new RegExp(`(${_text})`);
-        const isTitle = regex.test(_label);
+        const isTitle = regex.test(_title);
         const isExcerpt = regex.test(_excerpt);
 
         return isTitle || isExcerpt;
@@ -43,7 +42,7 @@ $(async () => {
     },
     render: (item) => {
       return $(`<div class="autocomplete__item">
-        <div class="autocomplete__song">${item.label} - <span>${item.author}</span></div>
+        <div class="autocomplete__song">${item.title} - <span>${item.cat['tac-gia'][0].cat_name}</span></div>
         <div class="autocomplete__excerpt">${item.excerpt}</<span></div>
       </div>`)[0];
     },
