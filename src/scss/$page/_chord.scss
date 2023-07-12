@@ -1,80 +1,80 @@
 .chord {
-    &__text {
-        text-align: center;
-        font-size: 26px;
-        line-height: 34px;
-        margin-bottom: 25px;
-    }
+	&__text {
+		text-align: center;
+		font-size: 26px;
+		line-height: 34px;
+		margin-bottom: 25px;
+	}
 
-    &__circle {
-        text-align: center;
-        margin-bottom: 55px;
-        
-        img {
-            width: 100%;
-            max-width: 550px;
-        }
-    }
+	&__circle {
+		text-align: center;
+		margin-bottom: 55px;
 
-    &__list {
-        margin-bottom: 30px;
+		img {
+			width: 100%;
+			max-width: 550px;
+		}
+	}
 
-        ul{
-            margin: 0 -5px;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            
-            &::after{
-                content: "";
-                display: block;
-                clear: both;
-            }
-        }
+	&__list {
+		margin-bottom: 30px;
 
-        li {
-            padding:0 5px;
-            margin-bottom: 10px;
+		ul {
+			margin: 0 -5px;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
 
-            &.active {
-                a {
-                    @extend %box-design-blue;
-                    color:#ffffff;
-                }
-            }
-        }
+			&::after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+		}
 
-        a{
-            display: block;
-            width: 50px;
-            font-size:16px;
-            line-height: 26px;
-            text-transform: capitalize;
-            cursor: pointer;
-            @extend %box-design-white;
-            text-align: center;
-            padding: 5px 10px;
-        }
-    }
+		li {
+			padding: 0 5px;
+			margin-bottom: 10px;
 
-    &__result {
-        ul{
-            display: -webkit-box;
-            display: -moz-box;
-            display: -ms-flexbox;
-            display: flex;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            margin: 0 -10px;
-        }
+			&.active {
+				a {
+					@extend %box-design-blue;
+					color: #ffffff;
+				}
+			}
+		}
 
-        li{
-            padding: 0 10px;
-            margin-bottom: 10px;
-        }
-    }
+		a {
+			display: block;
+			width: 50px;
+			font-size: 16px;
+			line-height: 26px;
+			text-transform: capitalize;
+			cursor: pointer;
+			@extend %box-design-white;
+			text-align: center;
+			padding: 5px 10px;
+		}
+	}
+
+	&__result {
+		ul {
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+		}
+
+		li {
+			padding: 0 10px;
+			margin-bottom: 10px;
+		}
+	}
 }

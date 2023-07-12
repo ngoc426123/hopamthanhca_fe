@@ -80,7 +80,7 @@
   }
 
   .chordOC {
-    margin-right: 3px;
+    display: inline-flex;
     color: $color-blue-1;
     font-weight: 500;
   }
@@ -94,6 +94,7 @@
     line-height: 350%;
 
     .chordOC {
+      display: inline;
       margin-right: 0;
       position: relative;
     }
@@ -143,6 +144,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  font-size: 13px;
 
   &__group {
     display: flex;
@@ -177,6 +179,10 @@
 
     &:focus {
       outline: none;
+    }
+
+    img {
+      transform: translateY(-2px);
     }
   }
 
