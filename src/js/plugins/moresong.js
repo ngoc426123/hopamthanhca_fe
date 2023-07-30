@@ -1,7 +1,6 @@
 $(() => {
   const btnMore = $(`.load-more-song`).find(`a`);
   const render_item_more_song = (prop) => {
-    console.log(prop);
     return `<div class="item">
               <div class="item__top">
                 <div class="item__att"><span class="fa-eye">${prop.meta.luotxem}</span></div>

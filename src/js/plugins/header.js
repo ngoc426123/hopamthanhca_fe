@@ -21,8 +21,6 @@ $(async () => {
   }
   const data = await callApi(dataUrl);
 
-  console.log(data);
-
   autocomplete({
     input: dataSearch[0],
     minLength: 2,
