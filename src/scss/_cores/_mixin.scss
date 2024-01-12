@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin mqa($breakpoint1, $breakpoint2) {
+  @media screen and (max-width: #{$breakpoint1}px) and (min-width: #{$breakpoint2}px) {
+    @content;
+  }
+}
