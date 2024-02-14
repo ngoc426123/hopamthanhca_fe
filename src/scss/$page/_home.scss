@@ -75,17 +75,9 @@
     }
   }
 
-  &.spring {
+  &.season {
     #{$element}-title {
       padding: 20px;
-
-      h3 {
-        color: $color-yellow-3;
-      }
-
-      span {
-        color: $color-black-6;
-      }
     }
 
     .list-song {
@@ -133,7 +125,53 @@
           left: 0;
           transition: all .2s linear;
         }
+
+        &.more {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      
+        &__text-more {
+          text-align: center;
+        }
     
+        &__title,
+        &__author,
+        &__desc {
+          position: relative;
+        }
+    
+        &__desc {
+          height: 42px;
+          overflow: hidden;
+        }
+    
+        &__link {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  &.spring {
+    #{$element}-title {
+      h3 {
+        color: $color-yellow-3;
+      }
+
+      span {
+        color: $color-black-6;
+      }
+    }
+
+    .list-song {
+      .song {
         @include mqa(9999, 1201) {
           &:nth-child(2n+1) {
             background-color: $color-yellow-1;
@@ -247,35 +285,135 @@
             background-color: $color-white-1;
           }
         }
+      }
+    }
+  }
 
-        &.more {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      
-        &__text-more {
-          text-align: center;
+  &.lent {
+    #{$element}-title {
+      h3 {
+        color: $color-purple-3;
+      }
+
+      span {
+        color: $color-black-6;
+      }
+    }
+
+    .list-song {
+      .song {
+        @include mqa(9999, 1201) {
+          &:nth-child(2n+1) {
+            background-color: $color-purple-1;
+    
+            .song__author {
+              color: $color-purple-2;
+            }
+          }
+    
+          &:nth-child(2n+2) {
+            background-color: $color-white-1;
+          }
+    
+          &:nth-child(2n+7) {
+            background-color: $color-white-1;
+          }
+    
+          &:nth-child(2n+8) {
+            background-color: $color-purple-1;
+    
+            .song__author {
+              color: $color-purple-2;
+            }
+          }
         }
     
-        &__title,
-        &__author,
-        &__desc {
-          position: relative;
+        @include mqa(1200, 992) {
+          &:nth-child(4n+1) {
+            background-color: $color-white-1;
+          }
+    
+          &:nth-child(4n+2) {
+            background-color: $color-purple-1;
+    
+            
+          }
+    
+          &:nth-child(4n+3) {
+            background-color: $color-white-1;
+          }
+    
+          &:nth-child(4n+4) {
+            background-color: $color-purple-1;
+    
+            
+          }
+    
+          &:nth-child(5n+5) {
+            background-color: $color-purple-1;
+    
+            
+          }
+    
+          &:nth-child(5n+6) {
+            background-color: $color-white-1;
+          }
+    
+          &:nth-child(5n+7) {
+            background-color: $color-purple-1;
+    
+            
+          }
+    
+          &:nth-child(5n+8) {
+            background-color: $color-white-1;
+          }
         }
     
-        &__desc {
-          height: 42px;
-          overflow: hidden;
+        @include mqa(991, 769) {
+          &:nth-child(2n+1) {
+            background-color: $color-white-1;
+          }
+    
+          &:nth-child(2n+2) {
+            background-color: $color-purple-1;
+    
+            
+          }
         }
     
-        &__link {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          z-index: 1;
+        @include mqa(768, 540) {
+          &:nth-child(4n+1) {
+            background-color: $color-white-1;
+          }
+    
+          &:nth-child(4n+2) {
+            background-color: $color-purple-1;
+    
+            
+          }
+    
+          &:nth-child(4n+3) {
+            background-color: $color-purple-1;
+    
+            
+          }
+    
+          &:nth-child(4n+4) {
+            background-color: $color-white-1;
+          }
+        }
+    
+        @include mq(540) {
+          &:nth-child(2n+1) {
+            background-color: $color-purple-1;
+    
+            
+          }
+    
+          &:nth-child(2n+2) {
+            background-color: $color-white-1;
+          }
         }
       }
     }
