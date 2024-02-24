@@ -1,13 +1,12 @@
-// jquery
+// JQUERY
 import $ from "jquery";
 
-// jquery ui
+// JQUERY UI
 import autocomplete from "autocompleter";
 
-// jtab
-import jtab from 'jtab';
+// GUITAR CHORD
+import "../_libs/guitar-chord.min.js";
 
 window.$ = $;
 window.jQuery = $;
-window.jtab = jtab;
 window.autocomplete = autocomplete;

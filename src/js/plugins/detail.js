@@ -52,7 +52,16 @@ $(() => {
 		}
 		$(".song-list-chord").html(content_list_song);
 		$(".song-list-chord").find(`.chord`).each(function(i,e) {
-			jtab.render($(e)[0], $(e).text());
+			GuitarChord.render($(e)[0], $(e).text(), {
+        canvasWidth: 110,
+        canvasHeight: 150,
+        padding: 7,
+        offsetLimitHeight: 45,
+        noteRadian: 7,
+        nodeFont: '12px Arial',
+        titleFont: '14px Arial',
+        titleHeight: 20,
+      });
 		});
   }
 
