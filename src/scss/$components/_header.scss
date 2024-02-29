@@ -32,12 +32,13 @@
     max-width: 130px;
     margin-right: 15px;
 
-    @include mq(991) {
-      max-width: 100px;
-    }
-
+    
     img {
-      width: 100%;
+      height: 80px;
+
+      @include mq(991) {
+        height: 60px;
+      }
     }
   }
 
