@@ -4,7 +4,7 @@ const { src_data, build_data } = require('../config/directories');
 
 const data = function () {
   return gulp 
-    .src(src_data)
+    .src(src_data, { encoding: false })
     .pipe(gulp.dest(build_data))
     .pipe(browserSync.stream());
 }

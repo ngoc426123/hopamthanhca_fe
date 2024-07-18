@@ -4,7 +4,7 @@ const { src_fonts, build_fonts } = require('../config/directories');
 
 const font = function () {
   return gulp 
-    .src(src_fonts)
+    .src(src_fonts, { encoding: false })
     .pipe(gulp.dest(build_fonts))
     .pipe(browserSync.stream());
 }

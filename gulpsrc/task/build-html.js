@@ -6,9 +6,7 @@ const { src_html, build_html } = require('../config/directories');
 const html = function () {
   return gulp
     .src(src_html)
-    .pipe(pug({
-      pretty: true
-    }))
+    .pipe(pug({ pretty: true }))
     .pipe(gulp.dest(build_html))
     .pipe(browserSync.stream());
 }

@@ -24,7 +24,7 @@ app.post('/*.html', (req, res) => {
 // SETTER
 app.set('views', viewsSrc);
 app.set('view engine', 'pug');
-app.use(express.static(staticPath))
+app.use(express.static(staticPath));
 
 // LISTEN
 app.listen(STATIC_PORT, console.log(`_____The Site run on: http://localhost:${STATIC_PORT}_____`));

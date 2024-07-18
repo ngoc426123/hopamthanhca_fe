@@ -7,7 +7,10 @@ const staticPath = 'static';
 const distPath = 'build';
 
 // DIRECTORIES SOURCE
-const src_html = '/html/*.pug';
+const src_html = [
+  `${srcPath}/html/**/*.pug`,
+  `!${srcPath}/html/_**/*.pug`,
+];
 const src_style = '/scss/app.scss';
 const src_style_customs = '/scss/customs.scss';
 const src_script = '/js/all.js';
@@ -27,7 +30,7 @@ const build_fonts = '/fonts';
 
 // MODULE EXPORT
 exports.src = srcPath;
-exports.src_html = srcPath + src_html;
+exports.src_html = src_html;
 exports.src_style = srcPath + src_style;
 exports.src_style_customs = srcPath + src_style_customs;
 exports.src_script = srcPath + src_script;

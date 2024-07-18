@@ -4,7 +4,7 @@ const { src_images, build_images } = require('../config/directories');
 
 const images = function () {
   return gulp 
-    .src(src_images)
+    .src(src_images, { encoding: false })
     .pipe(gulp.dest(build_images))
     .pipe(browserSync.stream());
 }
