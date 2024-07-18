@@ -1,0 +1,31 @@
+.comp-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  /**************
+  **** MODIFY ***
+  **************/
+  .header__main & {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__search & {
+    margin: 0 auto;
+    margin-top: -70px;
+    width: 100%;
+    max-width: 580px;
+  }
+
+  .footer__main & {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    @include mq('lg') {
+      display: block;
+    }
+  }
+}

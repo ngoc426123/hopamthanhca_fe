@@ -1,0 +1,10 @@
+mixin songItem(data)
+  .comp-song-item
+    .comp-song-item__title
+      a(href!=data.link)!=data.title
+        span!=data.author
+    .comp-song-item__desc!=data.desc
+    if data.date || data.chord
+      .comp-song-item__info
+        .comp-song-item__date!=data.date
+        .comp-song-item__chord!=data.chord

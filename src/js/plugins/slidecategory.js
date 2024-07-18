@@ -2,9 +2,9 @@ import Swiper from 'swiper'
 import { Autoplay, Navigation } from 'swiper/modules';
 
 $(() => {
-  const $slideCategory = $('.slide-category .swiper');
-  const $prev = $('.slide-category .--prev');
-  const $next = $('.slide-category .--next');
+  const $slideCategory = $('.comp-slide-category .swiper');
+  const $prev = $('.comp-slide-category__arrow.--prev');
+  const $next = $('.comp-slide-category__arrow.--next');
   new Swiper($slideCategory[0], {
     modules: [Autoplay, Navigation],
     slidesPerView: 1,

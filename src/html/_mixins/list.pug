@@ -1,0 +1,18 @@
+mixin list(items = [])
+  ul
+    each item in items
+      li(class=item.cls)
+        if item.childs
+          if item.href
+            +link(item.href, item.title)
+          else
+            span!=item.text 
+          +list(item.childs)
+        else 
+          +list-item(item)
+          
+mixin list-item(item)
+  if item.href
+    +link(item.href, item.title)
+  else
+    span!=item.text 

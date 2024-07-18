@@ -1,0 +1,90 @@
+.comp-song-item {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $color-gray-3;
+
+  // TITLE
+  &__title {
+    a {
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: capitalize;
+
+      span {
+        font-size: 12px;
+        line-height: 20px;
+        color: $color-blue-1;
+        margin-left: 5px;
+
+        &:before {
+          content: "- ";
+        }
+      }
+
+      &:hover {
+        color: $color-blue-2;
+      }
+    }
+  }
+
+  // AUTHOR
+  &__author {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-blue-1;
+  }
+
+  // DESC
+  &__desc {
+    font-size: 13px;
+    line-height: 21px;
+    height: 42px;
+    overflow: hidden;
+  }
+
+  // INFO
+  &__info {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 21px;
+    color: $color-gray-2;
+  }
+
+  // DATE
+  &__date {
+    margin-right: 10px;
+  }
+
+  // CHORD
+  &__chord {
+    font-size: 13px;
+    line-height: 18px;
+    background-color: $color-white-2;
+    border: solid 1px $color-gray-2;
+    border-radius: 3px;
+    border-top: none;
+    border-left: none;
+    padding: 0px 4px;
+  }
+
+  // DOWNLOAD SHEET
+  &__downloadsheet {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    img {
+      max-width: 35px;
+    }
+  }
+
+  /**************
+  **** MODIFY ***
+  **************/
+  .pdf & {
+    padding-right: 45px;
+    position: relative;
+  }
+}

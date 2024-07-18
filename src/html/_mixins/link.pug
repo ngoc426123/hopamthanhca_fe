@@ -1,0 +1,6 @@
+mixin link(href, text, title = text)
+  a(href=href title=title)&attributes(attributes)
+    if block 
+      block 
+    else
+      span!=text

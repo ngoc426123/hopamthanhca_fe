@@ -1,5 +1,11 @@
-@mixin mq($breakpoint) {
-  @media screen and (max-width: #{$breakpoint}px) {
+@mixin mq($breakpoint, $type: 'max') {
+  $width: map-get($grid-breakpoints, $breakpoint);
+
+  @if $type == 'min' {
+    $width: $width - 1;
+  }
+
+  @media screen and (max-width: #{$width}) {
     @content;
   }
 }

@@ -1,0 +1,402 @@
+.comp-box {
+  $this: &;
+
+  @extend %box-design-white;
+  margin-bottom: 75px;
+
+  @include mq('lg') {
+    margin-bottom: 55px;
+  }
+
+  // HEADING
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+  // TITLE
+  &__title {
+    margin-bottom: 15px;
+
+    h1 {
+      font-size: 28px;
+      line-height: 36px;
+      text-transform: capitalize;
+    }
+
+    small {
+      display: block;
+      font-size: 14px;
+      line-height: 22px;
+      color: $color-gray-2;
+      margin-top: 5px;
+    }
+  }
+
+  /**************
+  **** MODIFY ***
+  **************/
+  &.\--transparent {
+    background-color: transparent;
+  }
+
+  &.\--padding {
+    padding: 20px;
+  }
+
+  &.\--detail {
+    #{$this}__heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include mq('md') {
+        display: block;
+      }
+    }
+
+    #{$this}__title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: bold;
+
+      @include mq('md') {
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        padding: 0;
+        margin-right: 5px;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+        color: $color-blue-1;
+      }
+      
+      a {
+        margin-left: 5px;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+
+        &:hover {
+          color: $color-blue-1;
+        }
+      }
+    }
+  }
+
+  &.\--season {
+    #{$this}__title {
+      padding: 20px;
+    }
+
+    .list-song {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+    
+      .comp-song-item {
+        width: 16.666667%;
+        padding: 25px;
+        margin: 0;
+        border-bottom: none;
+        flex-grow: 1;
+        position: relative;
+        transition: all .2s linear;
+    
+        @include mq('xl') {
+          width: 25%;
+        }
+    
+        @include mq('lg') {
+          width: 33.333333%;
+        }
+    
+        @include mq('md') {
+          width: 50%;
+        }
+    
+        @include mq('sm') {
+          width: 100%;
+        }
+    
+        &:hover {
+          z-index: 1;
+          transform: scale(1.05);
+          box-shadow: 0 3px 8px 0 $color-shadow-black;
+        }
+    
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          transition: all .2s linear;
+        }
+
+        &.--more {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      
+        &__text-more {
+          text-align: center;
+        }
+    
+        &__title,
+        &__author,
+        &__desc {
+          position: relative;
+        }
+    
+        &__desc {
+          height: 42px;
+          overflow: hidden;
+        }
+    
+        &__link {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  &.\--spring {
+    #{$this}__title {
+      h3 {
+        color: $color-yellow-3;
+      }
+
+      span {
+        color: $color-black-6;
+      }
+    }
+
+    .list-song {
+      .comp-song-item {
+        @include mqa(9999, 1201) {
+          &:nth-child(2n+1) {
+            background-color: $color-yellow-1;
+
+            .song__author {
+              color: $color-yellow-2;
+            }
+          }
+
+          &:nth-child(2n+2) {
+            background-color: $color-white-1;
+          }
+    
+          &:nth-child(2n+7) {
+            background-color: $color-white-1;
+          }
+    
+          &:nth-child(2n+8) {
+            background-color: $color-yellow-1;
+    
+            .song__author {
+              color: $color-yellow-2;
+            }
+          }
+        }
+
+        @include mqa(1200, 992) {
+          &:nth-child(4n+1) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(4n+2) {
+            background-color: $color-yellow-1;
+          }
+
+          &:nth-child(4n+3) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(4n+4) {
+            background-color: $color-yellow-1;
+          }
+
+          &:nth-child(5n+5) {
+            background-color: $color-yellow-1;
+          }
+
+          &:nth-child(5n+6) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(5n+7) {
+            background-color: $color-yellow-1;
+          }
+
+          &:nth-child(5n+8) {
+            background-color: $color-white-1;
+          }
+        }
+
+        @include mqa(991, 769) {
+          &:nth-child(2n+1) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(2n+2) {
+            background-color: $color-yellow-1;
+          }
+        }
+
+        @include mqa(768, 540) {
+          &:nth-child(4n+1) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(4n+2) {
+            background-color: $color-yellow-1;
+          }
+
+          &:nth-child(4n+3) {
+            background-color: $color-yellow-1;
+          }
+
+          &:nth-child(4n+4) {
+            background-color: $color-white-1;
+          }
+        }
+
+        @include mq('sm') {
+          &:nth-child(2n+1) {
+            background-color: $color-yellow-1;
+          }
+
+          &:nth-child(2n+2) {
+            background-color: $color-white-1;
+          }
+        }
+      }
+    }
+  }
+
+  &.\--lent {
+    #{$this}__title {
+      h3 {
+        color: $color-purple-3;
+      }
+
+      span {
+        color: $color-black-6;
+      }
+    }
+
+    .list-song {
+      .comp-song-item {
+        @include mqa(9999, 1201) {
+          &:nth-child(2n+1) {
+            background-color: $color-purple-1;
+
+            .song__author {
+              color: $color-purple-2;
+            }
+          }
+
+          &:nth-child(2n+2) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(2n+7) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(2n+8) {
+            background-color: $color-purple-1;
+
+            .song__author {
+              color: $color-purple-2;
+            }
+          }
+        }
+
+        @include mqa(1200, 992) {
+          &:nth-child(4n+1) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(4n+2) {
+            background-color: $color-purple-1;
+          }
+
+          &:nth-child(4n+3) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(4n+4) {
+            background-color: $color-purple-1;
+          }
+
+          &:nth-child(5n+5) {
+            background-color: $color-purple-1;
+          }
+
+          &:nth-child(5n+6) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(5n+7) {
+            background-color: $color-purple-1;
+          }
+
+          &:nth-child(5n+8) {
+            background-color: $color-white-1;
+          }
+        }
+
+        @include mqa(991, 769) {
+          &:nth-child(2n+1) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(2n+2) {
+            background-color: $color-purple-1;
+          }
+        }
+
+        @include mqa(768, 540) {
+          &:nth-child(4n+1) {
+            background-color: $color-white-1;
+          }
+
+          &:nth-child(4n+2) {
+            background-color: $color-purple-1;
+          }
+
+          &:nth-child(4n+3) {
+            background-color: $color-purple-1;
+          }
+
+          &:nth-child(4n+4) {
+            background-color: $color-white-1;
+          }
+        }
+
+        @include mq('sm') {
+          &:nth-child(2n+1) {
+            background-color: $color-purple-1;
+          }
+
+          &:nth-child(2n+2) {
+            background-color: $color-white-1;
+          }
+        }
+      }
+    }
+  }
+}
