@@ -3,238 +3,212 @@ extends _layout/_layout
 block main-content
   .main-content
     .comp-wrapper
-      .breadcrumb
-        ul 
-          li
-            a(href='##')
-              i.fa.fa-home
-              span Trang chủ
-          li 
-            a(href='##')
-              span Chuyên mục
-          li 
-            a(href='##')
-              span Danh mục con
-          li 
-            a(href='##')
-              span Bài viết
+      include _components/_breadcrumb.pug
       .row
         .col-12.col-lg-8
-          .box.padding
-            .box-title
+          .comp-box.--padding
+            .comp-box__title
               h1 Mùa thường niên
               small Bài hát được tổng hợp theo mùa thường niên, thuận tiện các việc tìm kiếm các bài hát theo từng chủ đề.
-            .box-content
-              .list-song
-                .song
-                  .song__title
-                    a(href="song-detail.html") Ca vang tình yêu Chúa 4
-                      span Đinh Minh Hoàng
-                  .song__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
-                  .song__info
-                    .song__date 25/05/2020
-                    .song__chord Am
-                .song
-                  .song__title
-                    a(href="song-detail.html") Ca vang tình yêu Chúa 3
-                      span Đinh Công Huỳnh
-                  .song__desc Dòng suối êm đềm êm trôi, êm trôi như ân tình Chúa. Mùa xuân tinh khôi tô điểm cho đời thắm tươi rực rỡ. Dừng bước gian trần cho tâm can con nghỉ ngơi trong Ngài. Một phút bình yên tim con lâng lâng ngất ngây đêm ngày.
-                  .song__info
-                    .song__date 25/05/2020
-                    .song__chord Am
-                .song
-                  .song__title
-                    a(href="song-detail.html") đoàn con đến đây
-                      span Hoài Chiên
-                  .song__desc Ðoàn con đến đây dâng lời ước nguyện. Ngày đêm mến cha cho trọn khối tình con. Ðược yêu mến Cha bao là êm đềm. Hồn con sướng vui tháng năm hết ưu phiền.
-                  .song__info
-                    .song__date 25/05/2020
-                    .song__chord Am
-                .song
-                  .song__title
-                    a(href="song-detail.html") lòng Chúa ái tuất
-                      span Nguyễn Bang Hanh
-                  .song__desc Đây lòng Chúa ái tuất không bến bờ, Thương loài nhân thế đang vướng tội nhơ. Đem trót Máu Thịt nuôi dưỡng xác hồn. Ngày đêm ban xuống cho muôn ngàn ơn.
-                  .song__info
-                    .song__date 25/05/2020
-                    .song__chord Am
-                .song
-                  .song__title
-                    a(href="song-detail.html") Phút Linh Thiêng
-                      span Thành Tâm
-                  .song__desc Người ơi nào mau tới thờ lạy Chúa, quỳ dâng lòng tôn kính Chúa trên cao. Linh thiêng, ôi phút giây giờ đây khi đoàn con được chiêm ngắm nhan thánh Chúa chí nhân quyền uy.
-                  .song__info
-                    .song__date 25/05/2020
-                    .song__chord Am
-                .song
-                  .song__title
-                    a(href="song-detail.html") Thờ Lạy Chúa
-                      span Hoài Đức
-                  .song__desc Thờ lạy Chúa ! Thờ lạy Chúa ! Uy quyền khả ái trong hình bánh náu thân. Thờ lạy Chúa ! Thờ lạy Chúa ! Uy quyền khả ái nương mình dưới thế trần.
-                  .song__info
-                    .song__date 25/05/2020
-                    .song__chord Am
-                .song
-                  .song__title
-                    a(href="song-detail.html") Giêsu Ở Cùng Con
-                      span Chưa Rõ Tác Giả
-                  .song__desc Giêsu ơi ở cùng con luôn mãi. Chúa lìa con, con biết đâu nương nhờ? Nơi dương gian con giá lạnh hôm mai. Hãy ở lại trong cõi lòng con thơ.
-                  .song__info
-                    .song__date 25/05/2020
-                    .song__chord Am
-                .song
-                  .song__title
-                    a(href="song-detail.html") Dâng
-                      span Nguyễn Duy
-                  .song__desc Nguyện dâng Chúa lễ tình yêu chân thành, này tấm bánh đây rượu nho thơm ngát. Nguyện dâng Chúa đôi bàn tay con hiến, Chúa thương chấp nhận ban phước lành tháng năm.
-                  .song__info
-                    .song__date 25/05/2020
-                    .song__chord Am
-                .song
-                  .song__title
-                    a(href="song-detail.html") Con Mến Yêu
-                      span Chưa Rõ Tác Giả
-                  .song__desc Con mến yêu tin thờ trong lòng. Cùng chút tình ngây thơ ngắm trông, trong Thánh Thể Chúa cả càn khôn, hằng náu thân tù hãm vì con.
-                  .song__info
-                    .song__date 25/05/2020
-                    .song__chord Am
+            .comp-box__content
+              +songItem({
+                title: 'Ca vang tình yêu Chúa 4',
+                author: 'Đinh Công Huỳnh',
+                desc: 'Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Ca vang tình yêu Chúa 3',
+                author: 'Đinh Công Huỳnh',
+                desc: 'Dòng suối êm đềm êm trôi, êm trôi như ân tình Chúa. Mùa xuân tinh khôi tô điểm cho đời thắm tươi rực rỡ. Dừng bước gian trần cho tâm can con nghỉ ngơi trong Ngài. Một phút bình yên tim con lâng lâng ngất ngây đêm ngày.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'đoàn con đến đây',
+                author: 'Hoài Chiên',
+                desc: 'Ðoàn con đến đây dâng lời ước nguyện. Ngày đêm mến cha cho trọn khối tình con. Ðược yêu mến Cha bao là êm đềm. Hồn con sướng vui tháng năm hết ưu phiền.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'lòng Chúa ái tuất',
+                author: 'Nguyễn Bang Hanh',
+                desc: 'Đây lòng Chúa ái tuất không bến bờ, Thương loài nhân thế đang vướng tội nhơ. Đem trót Máu Thịt nuôi dưỡng xác hồn. Ngày đêm ban xuống cho muôn ngàn ơn.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Phút Linh Thiêng',
+                author: 'Thành Tâm',
+                desc: 'Người ơi nào mau tới thờ lạy Chúa, quỳ dâng lòng tôn kính Chúa trên cao. Linh thiêng, ôi phút giây giờ đây khi đoàn con được chiêm ngắm nhan thánh Chúa chí nhân quyền uy.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Thờ Lạy Chúa',
+                author: 'Hoài Đức',
+                desc: 'Thờ lạy Chúa ! Thờ lạy Chúa ! Uy quyền khả ái trong hình bánh náu thân. Thờ lạy Chúa ! Thờ lạy Chúa ! Uy quyền khả ái nương mình dưới thế trần.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Giêsu Ở Cùng Con',
+                author: 'Chưa Rõ Tác Giả',
+                desc: 'Giêsu ơi ở cùng con luôn mãi. Chúa lìa con, con biết đâu nương nhờ? Nơi dương gian con giá lạnh hôm mai. Hãy ở lại trong cõi lòng con thơ.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Dâng',
+                author: 'Nguyễn Duy',
+                desc: 'Nguyện dâng Chúa lễ tình yêu chân thành, này tấm bánh đây rượu nho thơm ngát. Nguyện dâng Chúa đôi bàn tay con hiến, Chúa thương chấp nhận ban phước lành tháng năm.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Con Mến Yêu',
+                author: 'Chưa Rõ Tác Giả',
+                desc: 'Con mến yêu tin thờ trong lòng. Cùng chút tình ngây thơ ngắm trông, trong Thánh Thể Chúa cả càn khôn, hằng náu thân tù hãm vì con.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Tâm Tình Với Chúa',
+                author: 'Giang Tâm',
+                desc: 'Lặng quỳ bên Chúa, ôi Chúa Giêsu thánh thể, hồn tràn niềm vui chẳng biết nói sao nên lời. Vì mến thương con Chúa đã hiện hữu nơi đây, nguồn suối ơn thiêng, nuôi dưỡng tháng ngày đời chúng con.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
                 .song
                   .song__title
                     a(href="song-detail.html") Tâm Tình Với Chúa
                       span Giang Tâm
                   .song__desc Lặng quỳ bên Chúa, ôi Chúa Giêsu thánh thể, hồn tràn niềm vui chẳng biết nói sao nên lời. Vì mến thương con Chúa đã hiện hữu nơi đây, nguồn suối ơn thiêng, nuôi dưỡng tháng ngày đời chúng con.
                   .song__info
-                    .song__date 25/05/2020
+                    .song__date 
                     .song__chord Am
-              .pagination
-                ul
-                  li
-                    a(href="")
-                      span 1
-                  li.active
-                    a(href="")
-                      span 2
-                  li
-                    a(href="")
-                      span 3
-                  li
-                    a(href="")
-                      span 4
-                  li
-                    a(href="")
-                      span 5
-                  li
-                    a(href="")
-                      span 6
+              include _components/_pagination.pug
         .col-12.col-lg-4
-          .box.padding
-            .list-category.sidebar
+          .comp-box.--padding.--small-spacing
+            .comp-category-tag
               ul
-                li 
-                  a(href="")
-                    span Ân Đức (25)
-                li 
-                  a(href="")
-                    span Cao Huy Hoàng (25)
-                li 
-                  a(href="")
-                    span Dấu Chân (25)
-                li 
-                  a(href="")
-                    span Duy Tân (25)
-                li 
-                  a(href="")
-                    span Duy Thiên (25)
-                li 
-                  a(href="")
-                    span Gia Ân (25)
-                li 
-                  a(href="")
-                    span Giang Ân (25)
-                li 
-                  a(href="")
-                    span Giang Tâm (25)
-                li 
-                  a(href="")
-                    span Hạ Đăng (25)
-                li 
-                  a(href="")
-                    span Hải Linh (25)
-                li 
-                  a(href="")
-                    span Hoài Bắc (25)
-                li 
-                  a(href="")
-                    span Hoài Chiên (25)
-                li 
-                  a(href="")
-                    span Hoài Đức (25)
-                li 
-                  a(href="")
-                    span Hoàng Nam (25)
-                li 
-                  a(href="")    
-                    span Hoàng Phúc (25)
                 li
                   a(href="")
-                    span Hùng Lân (25)
-                li 
+                    span Ân Đức
+                li
                   a(href="")
-                    span Huyền Linh (25)
-                li 
+                    span Cao Huy Hoàng
+                li
                   a(href="")
-                    span Huỳnh Minh Kỳ (25)
-                li 
+                    span Dấu Chân
+                li
                   a(href="")
-                    span Kim Long (25)
-                li 
+                    span Duy Tân
+                li
                   a(href="")
-                    span Lâm Sơn Hải (25)
-                li 
+                    span Duy Thiên
+                li
                   a(href="")
-                    span Lê Huy (25)
-                li 
+                    span Gia Ân
+                li
                   a(href="")
-                    span Lê Phú Hải (25)
-                li 
+                    span Giang Ân
+                li
                   a(href="")
-                    span Lê Quốc (25)
-                li 
+                    span Giang Tâm
+                li
                   a(href="")
-                    span Lê Đức Hùng (25)
-                li 
+                    span Hạ Đăng
+                li
                   a(href="")
-                    span Mai Khanh (25)
-                li 
+                    span Hải Linh
+                li
                   a(href="")
-                    span Mai Nguyên Vũ (25)
-                li 
+                    span Hoài Bắc
+                li
                   a(href="")
-                    span Matinô (25)
-                li 
+                    span Hoài Chiên
+                li
                   a(href="")
-                    span Mi Trầm (25)
+                    span Hoài Đức
+                li
+                  a(href="")
+                    span Hoàng Nam
+                li
+                  a(href="")    
+                    span Hoàng Phúc
+                li
+                  a(href="")
+                    span Hùng Lân
+                li
+                  a(href="")
+                    span Huyền Linh
+                li
+                  a(href="")
+                    span Huỳnh Minh Kỳ
+                li
+                  a(href="")
+                    span Kim Long
+                li
+                  a(href="")
+                    span Lâm Sơn Hải
+                li
+                  a(href="")
+                    span Lê Huy
+                li
+                  a(href="")
+                    span Lê Phú Hải
+                li
+                  a(href="")
+                    span Lê Quốc
+                li
+                  a(href="")
+                    span Lê Đức Hùng
+                li
+                  a(href="")
+                    span Mai Khanh
+                li
+                  a(href="")
+                    span Mai Nguyên Vũ
+                li
+                  a(href="")
+                    span Matinô
+                li
+                  a(href="")
+                    span Mi Trầm
                 li
                   a(href="")
                     span Nhiều hơn ...
-          .box.padding
+          .comp-box.--padding
             .box-content
-              .songhome
-                .songhome__wrap
-                  .songhome__title
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
                     h3
                       a(href='') Ca vang tình yêu Chúa  
                           span Đinh Công Huỳnh
-                  .songhome__info Hoàng Minh Ngọc - March 23, 2020
-                  .songhome__df
-                    .songhome__att
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
                       span.fa-eye 9125
-                    .songhome__att
+                    .comp-song-home__attr-item
                       span.fa-heart 0
-                .songhome__content
+                .comp-song-home__content
                   p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
                   p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
                   p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
                   p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
-                .songhome__link
+                .comp-song-home__link
                   a(href='') Xem chi tiết

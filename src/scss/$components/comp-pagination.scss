@@ -1,0 +1,47 @@
+.comp-pagination {
+  display: block;
+  margin-top: 30px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  li {
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      a {
+        @extend %box-design-blue;
+        color: $color-white-1;
+
+        &:hover {
+          background-color: $color-blue-2;
+        }
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    min-width: 40px;
+    height: 35px;
+    color: $color-black-1;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $color-black-9;
+    }
+  }
+}

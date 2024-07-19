@@ -18,6 +18,7 @@
 
   // TITLE
   &__title {
+    display: block;
   }
 
   // TITLE TEXT
@@ -27,6 +28,7 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
+    color: $color-black-2;
     text-transform: capitalize;
   }
 
@@ -44,7 +46,6 @@
 
   // DESC
   &__desc {
-    height: 42px;
     font-size: 13px;
     line-height: 21px;
     overflow: hidden;
@@ -104,16 +105,266 @@
     position: relative;
   }
 
-  .comp-box.\--season & {
+  .\--song-fix-desc & {
+    #{$this}__desc {
+      height: 42px;
+    }
+  }
+
+  .\--season & {
+    width: 16.666667%;
+    padding: 25px;
+    margin: 0;
     border: none;
     border-radius: 0;
+    flex-grow: 1;
+    position: relative;
+    transition: all .2s linear;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $color-white-1;
+      @extend %timing;
+    }
+
+    @include mq('xl') {
+      width: 25%;
+    }
+
+    @include mq('lg') {
+      width: 33.333333%;
+    }
+
+    @include mq('md') {
+      width: 50%;
+    }
+
+    @include mq('sm') {
+      width: 100%;
+    }
+
+    &:hover {
+      z-index: 1;
+
+      &::before {
+        transform: scale(1.1);
+        box-shadow: 0 3px 8px 0 $color-shadow-black;
+      }
+    }
+
+    &.--more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #{$this}__title-text,
+    #{$this}__author,
+    #{$this}__desc,
+    #{$this}__text-more {
+      position: relative;
+    }
+
+    #{$this}__title-text {
+      color: $color-black-2;
+    }
 
     #{$this}__author {
+      color: $color-black-6;
       display: block;
       margin-left: 0;
 
       &::before {
         content: unset;
+      }
+    }
+
+    #{$this}__desc {
+      height: 42px;
+      overflow: hidden;
+    }
+
+    #{$this}__text-more {
+      text-align: center;
+    }
+
+    #{$this}__link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  .\--spring & {
+    &:nth-child(12n+1),
+    &:nth-child(12n+3),
+    &:nth-child(12n+5),
+    &:nth-child(12n+8),
+    &:nth-child(12n+10),
+    &:nth-child(12n+12) {
+      &::before {
+        @include mq('xl', 'min') {
+          background-color: $color-yellow-1;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mq('xl', 'min') {
+          color: $color-white-1;
+        }
+      }
+    }
+
+    &:nth-child(8n+1),
+    &:nth-child(8n+3),
+    &:nth-child(8n+6),
+    &:nth-child(8n+8) {
+      &::before {
+        @include mqa('xl', 'lg') {
+          background-color: $color-yellow-1;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('xl', 'lg') {
+          color: $color-white-1;
+        }
+      }
+    }
+
+    &:nth-child(2n+1) {
+      &::before {
+        @include mqa('lg', 'md') {
+          background-color: $color-yellow-1;
+        }
+  
+        @include mq('sm') {
+          background-color: $color-yellow-1;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('lg', 'md') {
+          color: $color-white-1;
+        }
+
+        @include mq('sm') {
+          color: $color-white-1;
+        }
+      }
+    }
+
+    &:nth-child(4n+1),
+    &:nth-child(4n+4) {
+      &::before {
+        @include mqa('md', 'sm') {
+          background-color: $color-yellow-1;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('md', 'sm') {
+          color: $color-white-1;
+        }
+      }
+    }
+  }
+
+  .\--lent & {
+    &:nth-child(12n+1),
+    &:nth-child(12n+3),
+    &:nth-child(12n+5),
+    &:nth-child(12n+8),
+    &:nth-child(12n+10),
+    &:nth-child(12n+12) {
+      &::before {
+        @include mq('xl', 'min') {
+          background-color: $color-purple-1;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mq('xl', 'min') {
+          color: $color-white-1;
+        }
+      }
+    }
+
+    &:nth-child(8n+1),
+    &:nth-child(8n+3),
+    &:nth-child(8n+6),
+    &:nth-child(8n+8) {
+      &::before {
+        @include mqa('xl', 'lg') {
+          background-color: $color-purple-1;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('xl', 'lg') {
+          color: $color-white-1;
+        }
+      }
+    }
+
+    &:nth-child(2n+1) {
+      &::before {
+        @include mqa('lg', 'md') {
+          background-color: $color-purple-1;
+        }
+  
+        @include mq('sm') {
+          background-color: $color-purple-1;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('lg', 'md') {
+          color: $color-white-1;
+        }
+
+        @include mq('sm') {
+          color: $color-white-1;
+        }
+      }
+    }
+
+    &:nth-child(4n+1),
+    &:nth-child(4n+4) {
+      &::before {
+        @include mqa('md', 'sm') {
+          background-color: $color-purple-1;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('md', 'sm') {
+          color: $color-white-1;
+        }
       }
     }
   }

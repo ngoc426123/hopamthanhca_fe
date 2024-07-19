@@ -1,0 +1,5 @@
+mixin categoryBanner(data)
+  .comp-category-banner(class=[data.cls])
+    +link(data.link, data.title) 
+      +img(data.image, data.title)
+      span!=data.title

@@ -3,21 +3,7 @@ extends _layout/_layout
 block main-content
   .main-content
     .comp-wrapper
-      .comp-breadcrumb
-        ul 
-          li
-            a(href='##')
-              i.fa.fa-home
-              span Trang chủ
-          li 
-            a(href='##')
-              span Chuyên mục
-          li 
-            a(href='##')
-              span Danh mục con
-          li 
-            a(href='##')
-              span Bài viết
+      include _components/_breadcrumb.pug
       .comp-box.--padding
         .comp-box__title
           h1 Bảng chữ cái

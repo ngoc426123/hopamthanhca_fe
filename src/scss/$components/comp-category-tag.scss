@@ -1,0 +1,29 @@
+.comp-category-tag {
+  ul {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 0 -2px;
+  }
+
+  li {
+    padding: 0 2px;
+    margin-bottom: 4px;
+    flex-grow: 1;
+  }
+
+  a {
+    display: block;
+    height: auto;
+    padding: 10px 15px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    background-color: $color-blue-2;
+    border-radius: 4px;
+    
+    &:hover {
+      background-color: $color-blue-1;
+    }
+  }
+}

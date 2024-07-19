@@ -1,5 +1,8 @@
-mixin categoryHome(data)
-  .comp-category-item(class=[data.cls])
-    +link(data.link, data.title) 
-      +img(data.image, data.title)
-      span!=data.title
+mixin categoryItem(data)
+  .comp-category-item
+    .comp-category-item__title Tác giả
+    .comp-category-item__name!=data.name
+    .comp-category-item__count
+      span!=data.count
+      | bài
+    a(href="list-song.html").comp-category-item__link
