@@ -1,45 +1,52 @@
 .comp-song-item {
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid $color-gray-3;
+  $this: &;
+
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid $color-gray-3;
+  border-radius: 7px;
+  @extend %timing;
+  position: relative;
+
+  &:hover {
+    border-color: $color-blue-2;
+
+    #{$this}__title-text {
+      color: $color-blue-2;
+    }
+  }
 
   // TITLE
   &__title {
-    a {
-      display: block;
-      font-size: 16px;
-      line-height: 24px;
-      text-transform: capitalize;
+  }
 
-      span {
-        font-size: 12px;
-        line-height: 20px;
-        color: $color-blue-1;
-        margin-left: 5px;
-
-        &:before {
-          content: "- ";
-        }
-      }
-
-      &:hover {
-        color: $color-blue-2;
-      }
-    }
+  // TITLE TEXT
+  &__title-text {
+    display: inline-block;
+    padding: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    text-transform: capitalize;
   }
 
   // AUTHOR
   &__author {
+    margin-left: 5px;
     font-size: 12px;
     line-height: 20px;
     color: $color-blue-1;
+
+    &:before {
+      content: "- ";
+    }
   }
 
   // DESC
   &__desc {
+    height: 42px;
     font-size: 13px;
     line-height: 21px;
-    height: 42px;
     overflow: hidden;
   }
 
@@ -59,6 +66,7 @@
 
   // CHORD
   &__chord {
+    padding: 0px 4px;
     font-size: 13px;
     line-height: 18px;
     background-color: $color-white-2;
@@ -66,7 +74,6 @@
     border-radius: 3px;
     border-top: none;
     border-left: none;
-    padding: 0px 4px;
   }
 
   // DOWNLOAD SHEET
@@ -80,11 +87,34 @@
     }
   }
 
+  // LINK
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
   /**************
   **** MODIFY ***
   **************/
   .pdf & {
     padding-right: 45px;
     position: relative;
+  }
+
+  .comp-box.\--season & {
+    border: none;
+    border-radius: 0;
+
+    #{$this}__author {
+      display: block;
+      margin-left: 0;
+
+      &::before {
+        content: unset;
+      }
+    }
   }
 }
