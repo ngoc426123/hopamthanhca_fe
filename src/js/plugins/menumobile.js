@@ -1,38 +1,55 @@
-$(() => {
-  const clsHtmlOpenmenu = `openmenu`;
-  const clsOpenMenuToggle = `header__menuToggle--openmenu`;
-  const clsOpenMenuOverlay = `header__menuOverlay--openmenu`;
-  const clsOpenMenuDropdown = `header__menuDropdown--openmenu`;
-
-  const html = $(`html`);
-  const toggle = $(`.header__menuToggle`);
-  const overlay = $(`.header__menuOverlay`);
-  const dropdrown = $(`.header__menuDropdown`);
-
-  const openMenu = () => {
-    html.addClass(clsHtmlOpenmenu);
-    toggle.addClass(clsOpenMenuToggle);
-    overlay.addClass(clsOpenMenuOverlay);
-    dropdrown.addClass(clsOpenMenuDropdown);
+@Plugin({
+  options: {
+    dataMenuToggle: '[data-menumobile-toggle]',
+    dataMenuOverlay: '[data-menumobile-overlay]',
+    dataMenuDropdown: '[data-menumobile-toggle]',
+    clsOpen: '--openmenu',
+    clsFreeze: '--freeze',
+  }
+})
+export default class Menumobile {
+  init () {
+    this.initDOM();
+    this.handleEvent();
   }
 
-  const closeMenu = () => {
-    html.removeClass(clsHtmlOpenmenu);
-    toggle.removeClass(clsOpenMenuToggle);
-    overlay.removeClass(clsOpenMenuOverlay);
-    dropdrown.removeClass(clsOpenMenuDropdown);
+  initDOM () {
+    const {
+      dataMenuToggle,
+      dataMenuOverlay,
+      dataMenuDropdown,
+    } = this.options;
+
+    this.$toggle = this.$element.find(dataMenuToggle);
+    this.$overlay = this.$element.find(dataMenuOverlay);
+    this.$dropdown = this.$element.find(dataMenuDropdown);
   }
 
-  toggle.off(`click`).on(`click`, (event) => {
-    const isOpenmenu = $(event.target).hasClass(clsOpenMenuToggle);
-    if ( !isOpenmenu ) {
-      openMenu();
-    } else {
-      closeMenu();
-    }
-  });
+  handleEvent () {
+    const { PluginName } = this.options;
 
-  overlay.off(`click`).on(`click`, () => {
-    closeMenu();
-  });
-});
+    this.addEvent(this.$toggle, 'click', this.handleEventToggleMenumobile, {
+      nameSpace: PluginName,
+    });
+
+    this.addEvent(this.$overlay, 'click', this.handleEventOverlay, {
+      nameSpace: PluginName,
+    });
+  }
+
+  handleEventToggleMenumobile() {
+    const { clsOpen, clsFreeze } = this.options;
+    const isOpen = this.$element.hasClass(clsOpen);
+
+    $('html')[isOpen ? 'removeClass': 'addClass'](clsFreeze);
+    this.$element[isOpen ? 'removeClass': 'addClass'](clsOpen);
+  }
+
+  handleEventOverlay(e) {
+    const { clsOpen, clsFreeze } = this.options;
+    e.stopPropagation();
+
+    $('html')['removeClass'](clsFreeze);
+    this.$element['removeClass'](clsOpen);
+  }
+}

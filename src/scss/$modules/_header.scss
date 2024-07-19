@@ -1,11 +1,14 @@
 .header {
+  $this: &;
+
   @extend %box-design-blue;
   position: relative;
 
+  // MAIN
   &__main {
-    position: relative;
     padding: 25px 0 0;
     padding-right: 0;
+    position: relative;
     z-index: 20;
 
     @include mq('lg') {
@@ -13,6 +16,7 @@
     }
   }
 
+  // LEFT
   &__left {
     display: flex;
     align-items: center;
@@ -22,11 +26,11 @@
     }
   }
 
+  // LOGO
   &__logo {
     max-width: 130px;
     margin-right: 15px;
 
-    
     img {
       height: 80px;
 
@@ -36,6 +40,7 @@
     }
   }
 
+  // search
   &__search {
     display: flex;
     align-items: center;
@@ -48,16 +53,16 @@
     }
 
     input {
+      padding-left: 15px;
+      font-size: 16px;
+      line-height: 24px;
+      border: none;
+      box-sizing: border-box;
       position: relative;
       z-index: 12;
       width: 100%;
       height: 65px;
-      border: none;
-      font-size: 16px;
-      line-height: 24px;
-      padding-left: 15px;
-      box-sizing: border-box;
-      transition: all 0.2s;
+      @extend %timing;
       
       @include mq('lg') {
         height: 50px;
@@ -70,12 +75,12 @@
     }
 
     &--title {
-      color: $color-white-1;
+      margin-bottom: 20px;
       font-size: 25px;
       line-height: 33px;
-      margin-bottom: 20px;
       text-align: center;
       font-weight: 600;
+      color: $color-white-1;
 
       @include mq('lg') {
         font-size: 20px;
@@ -95,33 +100,67 @@
     }
 
     &--form {
-      position: relative;
       margin-bottom: 20px;
+      position: relative;
     }
   }
 
+  // TOOLS
   &__tools {
     display: flex;
     align-items: center;
   }
 
+  // MENU DROPDOWN
+  &__menu {
+    &.\--openmenu {
+      #{$this}__menuToggle {
+        span {
+          transition: top .2s ease, transform .2s ease .3s, opacity 0.2s ease;
+          &:nth-child(1) {
+            top: 15px;
+            transform: translateX(-50%) rotate(45deg);
+          }
+    
+          &:nth-child(2) {
+            opacity: 0;
+          }
+    
+          &:nth-child(3) {
+            top: 15px;
+            transform: translateX(-50%) rotate(-45deg);
+          }
+        }
+      }
+
+      #{$this}__menuDropdown {
+        @include mq('lg') {
+          transform: translateX(0%);
+        }
+      }
+
+      #{$this}__menuOverlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+  }
+
   &__menuDropdown {
+    @extend %timing;
+
     @include mq('lg') {
       height: 100%;
+      background-color: $color-white-2;
       position: fixed;
       top: 0;
       right: 0;
       bottom: 0;
       width: 350px;
       z-index: 1234;
-      transition: all .2s ease;
       transform: translateX(100%);
-      background-color: $color-white-2;
       overflow: hidden;
-
-      &--openmenu {
-        transform: translateX(0%);
-      }
     }
 
     ul {
@@ -230,7 +269,7 @@
       background-color: $color-black-4;
       opacity: 0;
       visibility: hidden;
-      transition: all .3s linear;
+      @extend %timing;
       pointer-events: none;
 
       @include mq('lg') {
@@ -279,9 +318,12 @@
         @include mq('lg') {
           padding: 10px 20px;
           padding-left: 35px;
+          font-weight: normal;
+          text-transform: none;
         }
       }
     }
+
     ul.menuMega {
       width: auto;
       display: flex;
@@ -345,10 +387,10 @@
     position: relative;
 
     span {
-      position: absolute;
       width: 30px;
       height: 2px;
       background-color: $color-white-1;
+      position: absolute;
       left: 50%;
       transform: translateX(-50%);
       transition: transform .2s ease, top .2s ease .3s, opacity 0.2s ease;
@@ -369,37 +411,17 @@
     @include mq('lg') {
       display: block;
     }
-
-    &--openmenu {
-      span {
-        transition: top .2s ease, transform .2s ease .3s, opacity 0.2s ease;
-        &:nth-child(1) {
-          top: 15px;
-          transform: translateX(-50%) rotate(45deg);
-          
-        }
-  
-        &:nth-child(2) {
-          opacity: 0;
-        }
-  
-        &:nth-child(3) {
-          top: 15px;
-          transform: translateX(-50%) rotate(-45deg);
-        }
-      }
-    }
   }
 
   &__menuOverlay {
     display: none;
+    background-color: $color-black-4;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 10;
-    background-color: $color-black-4;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -407,14 +429,9 @@
     @include mq('lg') {
       display: block;
     }
-
-    &--openmenu {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
   }
 
+  // NOTIFICATION
   &__notification {
     background-color: $color-black-2;
     box-shadow: 0 4px 20px 0 $color-shadow-black, 0 7px 10px -5px $color-shadow-black;

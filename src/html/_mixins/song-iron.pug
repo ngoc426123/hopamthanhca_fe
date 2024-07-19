@@ -1,0 +1,12 @@
+mixin songIron(data)
+  .comp-song-iron(class=[data.cls])
+    .comp-song-iron__star
+    .comp-song-iron__title
+      h3
+        +link(data.link, data.title)
+          span!=data.title
+    .comp-song-iron__attr
+      .comp-song-iron__attr-item
+        span.fa-eye!=data.eye
+      .comp-song-iron__attr-item
+        span.fa-heart!=data.heart

@@ -2,6 +2,7 @@
   $this: &;
 
   margin-bottom: 75px;
+  border-radius: 10px;
   @extend %box-design-white;
 
   @include mq('lg') {
@@ -32,6 +33,24 @@
     font-size: 28px;
     line-height: 36px;
     text-transform: capitalize;
+
+    @include mq('md') {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  // CONTENT
+  &__content {
+    border-radius: 10px;
+
+    &.\--background {
+      background-color: $color-white-1;
+    }
+
+    &.\--padding {
+      padding: 20px;
+    }
   }
 
   /**************
@@ -388,5 +407,9 @@
         }
       }
     }
+  }
+
+  &.\--song-home {
+    margin-bottom: 25px;
   }
 }

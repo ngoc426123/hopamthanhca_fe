@@ -1,0 +1,8 @@
+.comp-slide-category {
+  margin-bottom: 75px;
+  position: relative;
+
+  @include mq('lg') {
+    margin-bottom: 55px;
+  }
+}

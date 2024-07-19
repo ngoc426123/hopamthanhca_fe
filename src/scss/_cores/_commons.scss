@@ -1,5 +1,7 @@
-html.openmenu {
-  overflow: hidden !important;
+html {
+  &.\--freeze {
+    overflow: hidden !important;
+  }
 }
 
 h1,

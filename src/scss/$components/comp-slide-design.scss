@@ -1,16 +1,10 @@
-.comp-slide-category {
-  margin-bottom: 75px;
-  position: relative;
-
-  @include mq('lg') {
-    margin-bottom: 55px;
-  }
-
+.comp-slide-design {
   &__arrow {
     width: 65px;
     height: 65px;
     background-color: rgba($color-white-1, 0.78);
     border: none;
+    border-radius: 10px;
     outline: none;
     position: absolute;
     top: 50%;

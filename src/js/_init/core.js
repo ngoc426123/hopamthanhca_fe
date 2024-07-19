@@ -17,7 +17,7 @@ export default function Plugin (Param) {
           const eventName = `${event}.${nameSpace}`;
   
           $ele
-            .off(eventName, delegate)
+            .off(eventName)
             .on(eventName, delegate, callback.bind(plugin));
         };
 
