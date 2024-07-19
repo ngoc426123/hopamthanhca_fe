@@ -1,0 +1,18 @@
+mixin songMore(data)
+  .comp-song-more
+    .comp-song-more__title
+      h3.comp-song-more__title-text!=data.title
+    .comp-song-more__attr
+      .comp-song-more__attr-item
+        span.fa-eye!=data.eye
+      .comp-song-more__attr-item
+        span.fa-heart!=data.heart
+    .comp-song-more__desc!=data.desc
+    .comp-song-more__info
+      .comp-song-more__info-item
+        span Tác giả
+        span!=data.author
+      .comp-song-more__info-item
+        span Chuyên mục
+        span!=data.category
+    +link('song-detail.html').comp-song-more__link

@@ -1,0 +1,99 @@
+.comp-song-more {
+  $this: &;
+
+  display: block;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: solid 1px $color-black-3;
+  position: relative;
+  @extend %timing;
+
+  &:hover {
+    border-color: $color-blue-1;
+
+    #{$this}__title-text {
+      color: $color-blue-1;
+    }
+  }
+
+  // TITLE
+  &__title {
+    display: block;
+  }
+
+  &__title-text {
+    display: block;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  // ATTRIBUTES
+  &__attr {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  &__attr-item {
+    padding-right: 10px;
+    font-size: 10px;
+    line-height: 18px;
+    color: $color-blue-1;
+
+    span {
+      padding-left: 15px;
+      position: relative;
+
+      &::before {
+        @extend %font-icon;
+        @extend %pll;
+      }
+    }
+  }
+
+  // DESC
+  &__desc {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  // INFO
+  &__info {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-black-6;
+  }
+
+  &__info-item {
+    display: flex;
+
+    span {
+      &:first-child {
+        width: 80px;
+        margin-right: 5px;
+        padding-right: 5px;
+        flex-shrink: 0;
+
+        &::before {
+          content: ":";
+          float: right;
+        }
+      }
+    }
+  }
+
+  // LINK
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

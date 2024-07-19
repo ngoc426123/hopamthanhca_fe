@@ -3,172 +3,93 @@ extends _layout/_layout
 block main-content
   .main-content
     .comp-wrapper
-      .breadcrumb
-        ul 
-          li
-            a(href='##')
-              i.fa.fa-home
-              span Trang chủ
-          li 
-            a(href='##')
-              span Chuyên mục
-          li 
-            a(href='##')
-              span Danh mục con
-          li 
-            a(href='##')
-              span Bài viết
-      .box.padding
-        .box-title
+      include _components/_breadcrumb.pug
+      .comp-box.--padding
+        .comp-box__title
           h1 Danh sách bài hát
           small Bài hát được tổng hợp toàn bộ ở đây để người dùng dễ dàng tìm kiếm hoặc muốn xem được toàn bộ bài hát của trang web
-        .box-content
-          .list-song
-            #render-more.grid
-              .col
-                .item
-                  .item__top
-                    .item__att
-                      span.fa-eye 68
-                    .item__att
-                      span.fa-heart 0
-                  .item__info
-                    .item__title
-                      a(href='') ca vang tình yêu Chúa 4
-                    .item__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
-                  .item__attribute
-                    .item__attitem
-                      span Tác giả
-                      span Đinh Công Huỳnh
-                    .item__attitem
-                      span Chuyên mụcc
-                      span mùa thường niên
-              .col
-                .item
-                  .item__top
-                    .item__att
-                      span.fa-eye 68
-                    .item__att
-                      span.fa-heart 0
-                  .item__info
-                    .item__title
-                      a(href='') ca vang tình yêu Chúa 4
-                    .item__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
-                  .item__attribute
-                    .item__attitem
-                      span Tác giả
-                      span Đinh Công Huỳnh
-                    .item__attitem
-                      span Chuyên mụcc
-                      span mùa thường niên
-              .col
-                .item
-                  .item__top
-                    .item__att
-                      span.fa-eye 68
-                    .item__att
-                      span.fa-heart 0
-                  .item__info
-                    .item__title
-                      a(href='') ca vang tình yêu Chúa 4
-                    .item__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
-                  .item__attribute
-                    .item__attitem
-                      span Tác giả
-                      span Đinh Công Huỳnh
-                    .item__attitem
-                      span Chuyên mụcc
-                      span mùa thường niên
-              .col
-                .item
-                  .item__top
-                    .item__att
-                      span.fa-eye 68
-                    .item__att
-                      span.fa-heart 0
-                  .item__info
-                    .item__title
-                      a(href='') ca vang tình yêu Chúa 4
-                    .item__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
-                  .item__attribute
-                    .item__attitem
-                      span Tác giả
-                      span Đinh Công Huỳnh
-                    .item__attitem
-                      span Chuyên mụcc
-                      span mùa thường niên
-              .col
-                .item
-                  .item__top
-                    .item__att
-                      span.fa-eye 68
-                    .item__att
-                      span.fa-heart 0
-                  .item__info
-                    .item__title
-                      a(href='') ca vang tình yêu Chúa 4
-                    .item__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
-                  .item__attribute
-                    .item__attitem
-                      span Tác giả
-                      span Đinh Công Huỳnh
-                    .item__attitem
-                      span Chuyên mụcc
-                      span mùa thường niên
-              .col
-                .item
-                  .item__top
-                    .item__att
-                      span.fa-eye 68
-                    .item__att
-                      span.fa-heart 0
-                  .item__info
-                    .item__title
-                      a(href='') ca vang tình yêu Chúa 4
-                    .item__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
-                  .item__attribute
-                    .item__attitem
-                      span Tác giả
-                      span Đinh Công Huỳnh
-                    .item__attitem
-                      span Chuyên mụcc
-                      span mùa thường niên
-              .col
-                .item
-                  .item__top
-                    .item__att
-                      span.fa-eye 68
-                    .item__att
-                      span.fa-heart 0
-                  .item__info
-                    .item__title
-                      a(href='') ca vang tình yêu Chúa 4
-                    .item__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
-                  .item__attribute
-                    .item__attitem
-                      span Tác giả
-                      span Đinh Công Huỳnh
-                    .item__attitem
-                      span Chuyên mụcc
-                      span mùa thường niên
-              .col
-                .item
-                  .item__top
-                    .item__att
-                      span.fa-eye 68
-                    .item__att
-                      span.fa-heart 0
-                  .item__info
-                    .item__title
-                      a(href='') ca vang tình yêu Chúa 4
-                    .item__desc Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.
-                  .item__attribute
-                    .item__attitem
-                      span Tác giả
-                      span Đinh Công Huỳnh
-                    .item__attitem
-                      span Chuyên mụcc
-                      span mùa thường niên
+        .comp-box__content
+          .row 
+            .col-md-4.col-lg-3
+              +songMore({
+                title: 'Ca vang tình yêu Chúa 4',
+                author: 'Đinh Công Huỳnh',
+                category: 'Mùa thường niên',
+                desc: 'Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.',
+                eye: '68',
+                chord: '1',
+                link: 'song-detail.html',
+              })
+            .col-md-4.col-lg-3
+              +songMore({
+                title: 'Ca vang tình yêu Chúa 3',
+                author: 'Đinh Công Huỳnh',
+                category: 'Mùa thường niên',
+                desc: 'Dòng suối êm đềm êm trôi, êm trôi như ân tình Chúa. Mùa xuân tinh khôi tô điểm cho đời thắm tươi rực rỡ. Dừng bước gian trần cho tâm can con nghỉ ngơi trong Ngài. Một phút bình yên tim con lâng lâng ngất ngây đêm ngày.',
+                eye: '68',
+                chord: '1',
+                link: 'song-detail.html',
+              })
+            .col-md-4.col-lg-3
+              +songMore({
+                title: 'đoàn con đến đây',
+                author: 'Hoài Chiên',
+                category: 'Mùa thường niên',
+                desc: 'Ðoàn con đến đây dâng lời ước nguyện. Ngày đêm mến cha cho trọn khối tình con. Ðược yêu mến Cha bao là êm đềm. Hồn con sướng vui tháng năm hết ưu phiền',
+                eye: '68',
+                chord: '1',
+                link: 'song-detail.html',
+              })
+            .col-md-4.col-lg-3
+              +songMore({
+                title: 'lòng Chúa ái tuất',
+                author: 'Nguyễn Bang Hanh',
+                category: 'Mùa thường niên',
+                desc: 'Đây lòng Chúa ái tuất không bến bờ, Thương loài nhân thế đang vướng tội nhơ. Đem trót Máu Thịt nuôi dưỡng xác hồn. Ngày đêm ban xuống cho muôn ngàn ơn',
+                eye: '68',
+                chord: '1',
+                link: 'song-detail.html',
+              })
+            .col-md-4.col-lg-3
+              +songMore({
+                title: 'Phút Linh Thiêng',
+                author: 'Thành Tâm',
+                category: 'Mùa thường niên',
+                desc: 'Người ơi nào mau tới thờ lạy Chúa, quỳ dâng lòng tôn kính Chúa trên cao. Linh thiêng, ôi phút giây giờ đây khi đoàn con được chiêm ngắm nhan thánh Chúa chí nhân quyền uy.',
+                eye: '68',
+                chord: '1',
+                link: 'song-detail.html',
+              })
+            .col-md-4.col-lg-3
+              +songMore({
+                title: 'Thờ Lạy Chúa',
+                author: 'Hoài Đức',
+                category: 'Mùa thường niên',
+                desc: 'Thờ lạy Chúa ! Thờ lạy Chúa ! Uy quyền khả ái trong hình bánh náu thân. Thờ lạy Chúa ! Thờ lạy Chúa ! Uy quyền khả ái nương mình dưới thế trần.',
+                eye: '68',
+                chord: '1',
+                link: 'song-detail.html',
+              })
+            .col-md-4.col-lg-3
+              +songMore({
+                title: 'Con Mến Yêu',
+                author: 'Chưa Rõ Tác Giả',
+                category: 'Mùa thường niên',
+                desc: 'Con mến yêu tin thờ trong lòng. Cùng chút tình ngây thơ ngắm trông, trong Thánh Thể Chúa cả càn khôn, hằng náu thân tù hãm vì con.',
+                eye: '68',
+                chord: '1',
+                link: 'song-detail.html',
+              })
+            .col-md-4.col-lg-3
+              +songMore({
+                title: 'Dâng',
+                author: 'Nguyễn Duy',
+                category: 'Mùa thường niên',
+                desc: 'Nguyện dâng Chúa lễ tình yêu chân thành, này tấm bánh đây rượu nho thơm ngát. Nguyện dâng Chúa đôi bàn tay con hiến, Chúa thương chấp nhận ban phước lành tháng năm.',
+                eye: '68',
+                chord: '1',
+                link: 'song-detail.html',
+              })
           .load-more-song
             a(href='' data-url='/data/moresong.json' data-offset='16' data-limit='16')
               span load thêm
