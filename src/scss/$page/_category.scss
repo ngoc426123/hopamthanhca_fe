@@ -1,59 +1,3 @@
-.category-list-alphabet {
-  ul {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  li {
-    margin-bottom: 15px;
-    width: 10%;
-    border-right: solid 1px $color-black-3;
-
-    @include mq(991) {
-      width: 16.666666%;
-
-      &:nth-child(10n + 10) {
-        border-right: solid 1px $color-black-3;
-      }
-
-      &:nth-child(6n + 6) {
-        border-right: none;
-      }
-    }
-
-    @include mq(645) {
-      width: 20%;
-
-      &:nth-child(6n + 6) {
-        border-right: solid 1px $color-black-3;
-      }
-
-      &:nth-child(5n + 5) {
-        border-right: none;
-      }
-    }
-
-    &:nth-child(10n + 10) {
-      border-right: none;
-    }
-  }
-
-  a {
-    display: block;
-    padding-top: 100%;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  span {
-    position: absolute;
-    @extend %pcc;
-  }
-}
-
 .category-list-cat {
   margin-bottom: 35px;
 
@@ -91,23 +35,28 @@
     border-radius: 6px;
     padding: 15px 25px;
     text-align: center;
+    @extend %timing;
 
     &:hover {
+      border-color: $color-blue-2;
+
       .item__title {
         color: $color-blue-1;
       }
     }
 
     &__sp {
-      margin-bottom: 5px;
+      font-size: 12px;
+      line-height: 20px;
       text-transform: capitalize;
+      font-weight: 300;
     }
 
     &__title {
       display: block;
       font-size: 18px;
       line-height: 26px;
-      margin-bottom: 5px;
+      font-weight: 500;
       text-transform: capitalize;
 
       @include mq(991) {

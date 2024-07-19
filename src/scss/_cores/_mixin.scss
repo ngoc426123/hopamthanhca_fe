@@ -5,13 +5,16 @@
     $width: $width - 1;
   }
 
-  @media screen and (max-width: #{$width}) {
+  @media screen and (#{$type}-width: #{$width}) {
     @content;
   }
 }
 
 @mixin mqa($breakpoint1, $breakpoint2) {
-  @media screen and (max-width: #{$breakpoint1}px) and (min-width: #{$breakpoint2}px) {
+  $width1: map-get($grid-breakpoints, $breakpoint1);
+  $width2: map-get($grid-breakpoints, $breakpoint2);
+
+  @media screen and (max-width: #{$width1}) and (min-width: #{$width2}) {
     @content;
   }
 }

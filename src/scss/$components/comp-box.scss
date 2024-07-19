@@ -203,7 +203,7 @@
     }
 
     .comp-song-item {
-      @include mqa(9999, 1201) {
+      @include mq('xl', 'min') {
         &:nth-child(2n+1) {
           background-color: $color-yellow-1;
 
@@ -229,7 +229,7 @@
         }
       }
 
-      @include mqa(1200, 992) {
+      @include mqa('xl', 'lg') {
         &:nth-child(4n+1) {
           background-color: $color-white-1;
         }
@@ -263,7 +263,7 @@
         }
       }
 
-      @include mqa(991, 769) {
+      @include mqa('lg', 'md') {
         &:nth-child(2n+1) {
           background-color: $color-white-1;
         }
@@ -273,7 +273,7 @@
         }
       }
 
-      @include mqa(768, 540) {
+      @include mqa('md', 'sm') {
         &:nth-child(4n+1) {
           background-color: $color-white-1;
         }
@@ -309,7 +309,7 @@
     }
 
     .comp-song-item {
-      @include mqa(9999, 1201) {
+      @include mq('xl', 'min') {
         &:nth-child(2n+1) {
           background-color: $color-purple-1;
 
@@ -335,7 +335,7 @@
         }
       }
 
-      @include mqa(1200, 992) {
+      @include mqa('xl', 'lg') {
         &:nth-child(4n+1) {
           background-color: $color-white-1;
         }
@@ -369,7 +369,7 @@
         }
       }
 
-      @include mqa(991, 769) {
+      @include mqa('lg', 'md') {
         &:nth-child(2n+1) {
           background-color: $color-white-1;
         }
@@ -379,7 +379,7 @@
         }
       }
 
-      @include mqa(768, 540) {
+      @include mqa('md', 'sm') {
         &:nth-child(4n+1) {
           background-color: $color-white-1;
         }
