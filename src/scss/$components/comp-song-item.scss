@@ -167,7 +167,7 @@
 
       &::before {
         transform: scale(1.1);
-        box-shadow: 0 3px 8px 0 $color-shadow-black;
+        box-shadow: 0 3px 8px 0 rgba($color-black-1, 0.45);
       }
     }
 
@@ -189,7 +189,7 @@
     }
 
     #{$this}__author {
-      color: $color-black-6;
+      color: $color-black-3;
       display: block;
       margin-left: 0;
 

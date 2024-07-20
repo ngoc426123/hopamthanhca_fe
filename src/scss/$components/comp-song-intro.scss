@@ -1,0 +1,23 @@
+.comp-song-intro {
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  // ATTRIBUTES
+  &__att {
+    display: block;
+    width: 100px;
+    margin-right: 10px;
+    color: $color-black-3;
+  }
+
+  &__ats {
+    display: block;
+    min-height: 22px;
+    font-weight: 600;
+    color: $color-black-4;
+    overflow: hidden;
+  }
+}

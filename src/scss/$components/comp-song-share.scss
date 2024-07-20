@@ -1,0 +1,68 @@
+.comp-song-share {
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+
+    span {
+      background: $color-black-3;
+      color: $color-white-1;
+      border-radius: 5px;
+      font-size: 12px;
+      line-height: 12px;
+      padding: 5px;
+      margin-left: 10px;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-right: solid 5px $color-black-3;
+        border-top: solid 5px transparent;
+        border-bottom: solid 5px transparent;
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background: $color-blue-1;
+    color: $color-white-1;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    padding-top: 3px;
+
+    &.fac {
+      background: #3b5998;
+    }
+
+    &.goo {
+      background: #de2523;
+    }
+
+    &.twi {
+      background: #62c0f3;
+    }
+
+    &.love{
+      background: $color-black-4;
+
+      &.\--active {
+        background: $color-pink-1;
+      }
+    }
+  }
+}

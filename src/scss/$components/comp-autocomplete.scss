@@ -1,7 +1,7 @@
 .autocomplete {
   border: none;
   background-color: $color-white-1;
-  box-shadow: 0 3px 15px 0 $color-shadow-black;
+  box-shadow: 0 3px 15px 0 rgba($color-black-1, 0.45);
   z-index: 15;
 
   &__item {
@@ -22,7 +22,7 @@
   &__song {
     font-size: 13px;
     line-height: 21px;
-    color: $color-black-8;
+    color: $color-black-4;
 
     span {
       font-size: 10px;
@@ -40,7 +40,7 @@
     font-size: 10px;
     line-height: 20px;
     font-style: italic;
-    color: $color-black-6;
+    color: $color-black-3;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

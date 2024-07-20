@@ -33,7 +33,7 @@
       a {
         @include mq('xl', 'min'){
           color: $color-white-1;
-          background-color: $color-black-8;
+          background-color: $color-black-4;
         }
       }
     }
@@ -48,7 +48,7 @@
       a {
         @include mqa('xl', 'lg'){
           color: $color-white-1;
-          background-color: $color-black-8;
+          background-color: $color-black-4;
         }
       }
     }
@@ -62,7 +62,7 @@
       a {
         @include mqa('lg', 'md'){
           color: $color-white-1;
-          background-color: $color-black-8;
+          background-color: $color-black-4;
         }
       }
     }
@@ -71,7 +71,7 @@
       a {
         @include mq('md'){
           color: $color-white-1;
-          background-color: $color-black-8;
+          background-color: $color-black-4;
         }
       }
     }

@@ -1,0 +1,36 @@
+.comp-song-info {
+  @include mq(991) {
+    margin-bottom: 20px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  // ATTRIBUTES
+  &__att {
+    display: block;
+    color: $color-black-3;
+    width: 90px;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  &__ats {
+    display: block;
+    color: $color-black-4;
+    font-weight: 600;
+    min-height:22px;
+    margin-top: -2px;
+    overflow: hidden;
+  }
+
+  /**************
+  **** MODIFY ***
+  **************/
+  &.\--up {
+    text-transform: capitalize;
+  }
+}

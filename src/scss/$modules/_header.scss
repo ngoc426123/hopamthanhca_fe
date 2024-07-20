@@ -200,7 +200,7 @@
 
       &:hover {
         > a {
-          background-color: $color-blue-2;
+          background-color: $color-blue-3;
 
           @include mq('lg') {
             background-color: transparent;
@@ -268,7 +268,7 @@
       top: 100%;
       right: 0;
       z-index: 1;
-      background-color: $color-black-4;
+      background-color: $color-blue-3;
       opacity: 0;
       visibility: hidden;
       @extend %timing;
@@ -285,7 +285,7 @@
       
       li {
         border: none;
-        border-bottom: 1px solid $color-white-3;
+        border-bottom: 1px solid rgba($color-white-1, .1);
 
         &:last-child {
           border-bottom: none;
@@ -298,7 +298,7 @@
             top: 0;
             bottom: 0;
             left: 20px;
-            border-left: 1px dashed $color-black-5;
+            border-left: 1px dashed rgba($color-black-1, .45);
           }
         }
 
@@ -309,7 +309,13 @@
             top: 50%;
             left: 21px;
             width: 13px;
-            border-bottom: 1px dashed $color-black-5;
+            border-bottom: 1px dashed rgba($color-black-1, .45);
+          }
+        }
+
+        &:hover {
+          a {
+            background-color: $color-blue-4;
           }
         }
       }
@@ -417,7 +423,7 @@
 
   &__menuOverlay {
     display: none;
-    background-color: $color-black-4;
+    background-color: rgba($color-black-1, .55);
     position: fixed;
     top: 0;
     right: 0;
@@ -436,7 +442,7 @@
   // NOTIFICATION
   &__notification {
     background-color: $color-black-2;
-    box-shadow: 0 4px 20px 0 $color-shadow-black, 0 7px 10px -5px $color-shadow-black;
+    box-shadow: 0 4px 20px 0 rgba($color-black-1, 0.45), 0 7px 10px -5px rgba($color-black-1, 0.45);
     padding: 10px 0;
     color: #ffffff;
   }
