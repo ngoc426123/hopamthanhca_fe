@@ -8,8 +8,8 @@ block main-content
         .comp-box__title
           h1 Danh sách bài hát
           small Bài hát được tổng hợp toàn bộ ở đây để người dùng dễ dàng tìm kiếm hoặc muốn xem được toàn bộ bài hát của trang web
-        .comp-box__content
-          .row 
+        .comp-box__content(data-more-song)
+          .row(data-list-song)
             .col-md-4.col-lg-3
               +songMore({
                 title: 'Ca vang tình yêu Chúa 4',
@@ -91,5 +91,5 @@ block main-content
                 link: 'song-detail.html',
               })
           .load-more-song
-            a(href='' data-url='/data/moresong.json' data-offset='16' data-limit='16')
+            +link('', 'load thêm')(data-cta data-url='/data/moresong.json' data-offset='16' data-limit='16')
               span load thêm
