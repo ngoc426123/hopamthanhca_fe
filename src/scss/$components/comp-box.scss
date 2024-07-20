@@ -11,23 +11,30 @@
 
   // HEADING
   &__heading {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   // TITLE
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
+  }
 
-    small {
-      display: block;
-      margin-top: 5px;
-      font-size: 14px;
-      line-height: 22px;
-      color: $color-gray-2;
+  &__title-small {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color-gray-2;
+
+    a {
+      color: $color-blue-1;
+
+      &:hover {
+        color: $color-blue-2;
+      }
     }
   }
 
-  // TITLE TEXT
   &__title-text {
     padding: 0;
     font-size: 28px;
@@ -112,6 +119,7 @@
   &.\--season {
     #{$this}__title {
       padding: 20px;
+      margin-bottom: 0;
 
       span {
         color: $color-black-6;

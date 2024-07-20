@@ -1,8 +1,15 @@
-.header__search
+.header__search(data-search)
   .comp-wrapper
     .header__search--title Cùng tìm kiếm bài hát bạn thích nhất
     .header__search--form(data-search-form)
-      input(type="text" id="searchDesktop" autocomplete="off" placeholder="Nhập tên bài hát, từ khóa tìm kiếm..." data-search data-action="http://localhost:3000/search.html" data-url="/data/searchsong.json")
+      input(
+        type="text"
+        id="searchDesktop"
+        autocomplete="off"
+        placeholder="Nhập tên bài hát, từ khóa tìm kiếm..."
+        data-search-input
+        data-url="/data/searchsong.json"
+      )
       .header__search--suggess
         ul(data-suggess)
     .header__search--note

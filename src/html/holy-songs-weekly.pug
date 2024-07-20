@@ -3,120 +3,111 @@ extends _layout/_layout
 block main-content
   .main-content
     .comp-wrapper
-      .breadcrumb
-        ul 
-          li
-            a(href='##')
-              i.fa.fa-home
-              span Trang chủ
-          li 
-            a(href='##')
-              span Thánh ca hàng tuần
-      .box.padding
-        .box-title
-          h1 Thánh ca hàng tuần
-          small Soạn bài hát thánh lễ các mùa phụng vụ, các lễ riêng, lễ đặc biệt.
-        .box-content
-          .holy-songs-weekly
-            .row
-              .col-12
-                .holy-songs-weekly__group
-                  .holy-songs-weekly__title LỄ RIÊNG - ĐẶC BIỆT
-                  .holy-songs-weekly__list.--vertical
-                    ul 
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ các thánh
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ các thánh tử đạo Việt Nam
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ Chúa Ba Ngôi
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ Chúa Giêsu lên trời (Lễ thăng thiên)
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ Chúa Thánh Thần hiện xuống
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ các thánh
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ các thánh tử đạo Việt Nam
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ Chúa Ba Ngôi
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ Chúa Giêsu lên trời (Lễ thăng thiên)
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ Chúa Thánh Thần hiện xuống
-              .col-lg-4
-                .holy-songs-weekly__group
-                  .holy-songs-weekly__title NĂM A
-                  .holy-songs-weekly__list
-                    ul 
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật I
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật II
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật III
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật IV
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ Giáng sinh
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa chay - Lễ tro
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật I
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật II
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật I
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật II
-              .col-lg-4
-                .holy-songs-weekly__group
-                  .holy-songs-weekly__title NĂM B
-                  .holy-songs-weekly__list
-                    ul 
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật I
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật II
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật III
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật IV
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ Giáng sinh
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa chay - Lễ tro
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật I
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật II
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật I
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật II
-              .col-lg-4
-                .holy-songs-weekly__group
-                  .holy-songs-weekly__title NĂM C
-                  .holy-songs-weekly__list
-                    ul 
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật I
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật II
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật III
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật IV
-                      li 
-                        a(href="holy-song-weekly-detail.html") Lễ Giáng sinh
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa chay - Lễ tro
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật I
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật II
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật I
-                      li 
-                        a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật II
-            
+      include _components/_breadcrumb.pug
+      .comp-box.--padding
+        .comp-box__heading
+          h1.comp-box__title-text Thánh ca hàng tuần
+          small.comp-box__title-small Soạn bài hát thánh lễ các mùa phụng vụ, các lễ riêng, lễ đặc biệt.
+        .comp-box__content
+          .row
+            .col-12
+              .comp-holy-weekly.--vertical
+                .comp-holy-weekly__title LỄ RIÊNG - ĐẶC BIỆT
+                .comp-holy-weekly__list
+                  ul 
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ các thánh
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ các thánh tử đạo Việt Nam
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ Chúa Ba Ngôi
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ Chúa Giêsu lên trời (Lễ thăng thiên)
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ Chúa Thánh Thần hiện xuống
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ các thánh
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ các thánh tử đạo Việt Nam
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ Chúa Ba Ngôi
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ Chúa Giêsu lên trời (Lễ thăng thiên)
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ Chúa Thánh Thần hiện xuống
+            .col-lg-6.col-xxl-4
+              .comp-holy-weekly
+                .comp-holy-weekly__title NĂM A
+                .comp-holy-weekly__list
+                  ul 
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật I
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật II
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật III
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật IV
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ Giáng sinh
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa chay - Lễ tro
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật I
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật II
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật I
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật II
+            .col-lg-6.col-xxl-4
+              .comp-holy-weekly
+                .comp-holy-weekly__title NĂM B
+                .comp-holy-weekly__list
+                  ul 
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật I
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật II
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật III
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật IV
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ Giáng sinh
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa chay - Lễ tro
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật I
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật II
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật I
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật II
+            .col-lg-6.col-xxl-4
+              .comp-holy-weekly
+                .comp-holy-weekly__title NĂM C
+                .comp-holy-weekly__list
+                  ul 
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật I
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật II
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật III
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa vọng - Chúa nhật IV
+                    li 
+                      a(href="holy-song-weekly-detail.html") Lễ Giáng sinh
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa chay - Lễ tro
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật I
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa chay - Chúa nhật II
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật I
+                    li 
+                      a(href="holy-song-weekly-detail.html") Mùa thường niên - Chúa nhật II
+          

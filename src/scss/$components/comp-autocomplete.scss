@@ -1,0 +1,53 @@
+.autocomplete {
+  border: none;
+  @extend %input-design-white;
+  box-shadow: 0 3px 15px 0 $color-shadow-black;
+  z-index: 15;
+
+  &__item {
+    padding: 8px 15px;
+    border-bottom: 1px solid $color-gray-1;
+    position: relative;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.selected {
+      border: none;
+      background-color: $color-blue-2;
+    }
+  }
+
+  &__song {
+    font-size: 13px;
+    line-height: 21px;
+    color: $color-black-8;
+
+    span {
+      font-size: 10px;
+      line-height: 20px;
+    }
+
+    .selected & {
+      font-size: 14px;
+      font-weight: 600;
+      color: $color-white-1;
+    }
+  }
+
+  &__excerpt {
+    font-size: 10px;
+    line-height: 20px;
+    font-style: italic;
+    color: $color-black-6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .selected & {
+      font-size: 11px;
+      color: $color-gray-3;
+    }
+  }
+}

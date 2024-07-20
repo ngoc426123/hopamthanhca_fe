@@ -3,8 +3,7 @@ import './_init/import-jquery-plugin'
 import './_init/core'
 
 // PLUGIN
-import './plugins/header'
-import './plugins/main'
+import './plugins/search'
 import './plugins/menumobile'
 import './plugins/more-song'
 import './plugins/detail'
