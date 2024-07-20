@@ -3,7 +3,7 @@
 
   margin-bottom: 75px;
   border-radius: 10px;
-  @extend %box-design-white;
+  background-color: $color-white-1;
 
   @include mq('lg') {
     margin-bottom: 50px;

@@ -23,7 +23,8 @@
     border-radius: 4px;
     
     &:hover {
-      background-color: $color-blue-1;
+      color: $color-blue-1;
+      background-color: rgba($color-blue-2, 0.05);
     }
   }
 }

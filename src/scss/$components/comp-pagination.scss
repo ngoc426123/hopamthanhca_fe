@@ -19,8 +19,8 @@
 
     &.active {
       a {
-        @extend %box-design-blue;
         color: $color-white-1;
+        background-color: $color-blue-1;
 
         &:hover {
           background-color: $color-blue-2;
@@ -41,7 +41,7 @@
     border-radius: 4px;
 
     &:hover {
-      background-color: $color-black-9;
+      background-color: rgba($color-blue-2, 0.05);
     }
   }
 }

@@ -1,7 +1,7 @@
 .header {
   $this: &;
 
-  @extend %box-design-blue;
+  background-color: $color-blue-1;
   position: relative;
 
   // MAIN
@@ -72,7 +72,7 @@
 
       &:focus {
         outline: none;
-        @extend %input-design-white;
+        background-color: $color-white-1;
       }
     }
 

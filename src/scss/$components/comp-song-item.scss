@@ -10,6 +10,7 @@
 
   &:hover {
     border-color: $color-blue-2;
+    background-color: rgba($color-blue-2, 0.05);
 
     #{$this}__title-text {
       color: $color-blue-2;

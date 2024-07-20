@@ -1,6 +1,6 @@
 .autocomplete {
   border: none;
-  @extend %input-design-white;
+  background-color: $color-white-1;
   box-shadow: 0 3px 15px 0 $color-shadow-black;
   z-index: 15;
 
