@@ -82,9 +82,22 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
+
+    a {
+      display: block;
+      padding: 15px;
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
 
     img {
       max-width: 35px;
+      @extend %timing;
     }
   }
 
@@ -100,8 +113,8 @@
   /**************
   **** MODIFY ***
   **************/
-  .pdf & {
-    padding-right: 45px;
+  &.\--pdf {
+    padding-right: 65px;
     position: relative;
   }
 

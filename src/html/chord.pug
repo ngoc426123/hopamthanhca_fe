@@ -3,28 +3,14 @@ extends _layout/_layout
 block main-content
   .main-content
     .comp-wrapper
-      .breadcrumb
-        ul 
-          li
-            a(href='##')
-              i.fa.fa-home
-              span Trang chủ
-          li 
-            a(href='##')
-              span Chuyên mục
-          li 
-            a(href='##')
-              span Danh mục con
-          li 
-            a(href='##')
-              span Bài viết
-      .box.padding
-        .chord
-          .chord__text Vòng tròn hợp âm
-          .chord__circle
+      include _components/_breadcrumb.pug
+      .comp-box.--padding
+        .comp-chords(data-chords)
+          .comp-chords__text Vòng tròn hợp âm
+          .comp-chords__circle
             img(src="images/cf.svg", alt="")
-          .chord__list
-            select.list-chord(name="chord")
+          .comp-chords__list
+            select.list-chords(data-list-chords name="chord")
               option(value='C' selected) C
               option(value='C#') C#
               option(value='D') D
@@ -37,7 +23,7 @@ block main-content
               option(value='A') A
               option(value='Bb') Bb
               option(value='B') B
-            select.list-tail(name="tail")
+            select.list-tail(data-list-tail name="tail")
               option(value="" selected) major
               option(value="m") minor
               option(value="6") 6
@@ -60,4 +46,4 @@ block main-content
               option(value="dim") dim
               option(value="dim7") dim7
               option(value="aug") aug
-          .chord__result
+          .comp-chords__result(data-chords-render)

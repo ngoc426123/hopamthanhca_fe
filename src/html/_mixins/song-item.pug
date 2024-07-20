@@ -1,5 +1,5 @@
 mixin songItem(data)
-  .comp-song-item
+  .comp-song-item(class=[data.pdf && '--pdf'])
     .comp-song-item__title
       h3.comp-song-item__title-text!=data.title
       span.comp-song-item__author!=data.author
@@ -9,3 +9,7 @@ mixin songItem(data)
         .comp-song-item__date!=data.date
         .comp-song-item__chord!=data.chord
     +link(data.link).comp-song-item__link
+    if data.pdf
+      .comp-song-item__downloadsheet
+        +link(data.pdf, data.title)
+          img(src="images/pdf.svg", alt='Download Sheet - Hơp Âm Thánh Ca - hopamthanhca.com')

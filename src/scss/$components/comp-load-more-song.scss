@@ -1,9 +1,10 @@
-.load-more-song {
+.comp-load-more-song {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px 0;
 
   a {
-    display: block;
+    display: inline-block;
+    padding: 12px 30px;
     font-size: 18px;
     line-height: 26px;
     color: #999999;
