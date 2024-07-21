@@ -1,50 +1,82 @@
 footer.footer
+  .footer__social
+    .comp-wrapper
+      .footer__social-text Kết nối với chúng tôi tại đây: 
+      .footer__social-list
+        ul
+          li
+            +link("")
+              i.fab.fa-facebook
+          li
+            +link("")
+              i.fab.fa-youtube
+          li
+            +link("")
+              i.fab.fa-twitter
   .footer__main
     .comp-wrapper
-      .footer__right
-        .footer__logo
-          a(href="index.html")
-            img(src="images/logo.svg", alt="logo")
-        .footer__social
-          ul
-            li
-              a(href="")
-                i.fab.fa-facebook
-            li
-              a(href="")
-                i.fab.fa-youtube
-            li
-              a(href="")
-                i.fab.fa-twitter
-      .footer__contact
-        .footer__title Hợp âm thánh ca
-        .footer__info
-          ul
-            li
-              a(href="tel:0373996947") 
-                strong PHONE: 
-                | 037.399.6947
-            li
-              a(href="mailto:minhngoc.ith@gmail.com")
-                strong EMAIL: 
-                | minhngoc.ith@gmail.com
-            li
-              a(href="#")
-                strong SITE: 
-                | hopamthanhca.com
+      .footer__grid
+        .footer__col-1.footer__col-order-logo
+          .footer__logo
+            +link("index.html")
+              img(src="images/logo.svg", alt="logo")
+        .footer__col-2.footer__col-order-contact
+          .footer__contact
+            .footer__contact-title Liên hệ với chúng tôi
+            .footer__contact-info
+              ul
+                li
+                  +link("tel:0373996947") 
+                    strong PHONE: 
+                    | 037.399.6947
+                li
+                  +link("mailto:minhngoc.ith@gmail.com")
+                    strong EMAIL: 
+                    | minhngoc.ith@gmail.com
+                li
+                  +link("#")
+                    strong SITE: 
+                    | hopamthanhca.com
+        .footer__col-3.footer__col-order-nav
+          .footer__navigation
+            ul 
+              li 
+                +link("/", " Trang chủ")
+              li 
+                +link("#", "Giới thiệu")
+              li 
+                +link("#", "Bài hát")
+              li 
+                +link("#", "Hợp âm")
+              li
+                +link("#", "Thánh ca hàng tuần")
+        .footer__col-3.footer__col-order-nav
+          .footer__navigation
+            ul 
+              li 
+                +link("#", "Mùa thường niên")
+              li 
+                +link("#", "Mùa chay")
+              li 
+                +link("#", "Mùa phục sinh")
+              li 
+                +link("#", "Mùa vọng")
+              li
+                +link("#", "Mùa giáng sinh")
+        .footer__col-3.footer__col-order-nav
+          .footer__navigation
+            ul 
+              li 
+                +link("#", "Kim Long")
+              li 
+                +link("#", "Nguyễn Duy")
+              li 
+                +link("#", "Đinh Công Huỳnh")
+              li 
+                +link("#", "Giang Tâm")
+              li
+                +link("#", "Mi Trầm")
   .footer__bottom
     .comp-wrapper
-      .footer__navigation
-        ul 
-          li 
-            a(href="/") Trang chủ
-          li 
-            a(href="#") Giới thiệu
-          li 
-            a(href="/list-song-more.html") Bài hát
-          li 
-            a(href="/chord.html") Hợp âm
-          li
-            a(href="/holy-songs-weekly.html") Thánh ca hàng tuần
       .footer__copyright Copyright 2020 by Hợp âm thánh ca
-    
+      

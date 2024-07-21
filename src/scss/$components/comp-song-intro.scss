@@ -5,12 +5,33 @@
     margin-bottom: 5px;
   }
   
-  // ATTRIBUTES
-  &__att {
-    display: block;
-    width: 100px;
+  // KEYS
+  &__keys {
+    display: flex;
+    align-items: center;
     margin-right: 10px;
-    color: $color-black-3;
+    color: $color-black-2;
+  }
+
+  &__key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 7px;
+    border: solid 1px $color-blue-2;
+    background-color: rgba($color-blue-2, 0.05);
+    
+    i {
+      font-style: normal;
+      pointer-events: none;
+    }
+    
+    + i {
+      margin: 0 10px;
+    }
   }
 
   &__ats {

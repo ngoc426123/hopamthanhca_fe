@@ -1,3 +1,7 @@
+$color-focus: $color-blue-2;
+$color-spring: $color-yellow-1;
+$color-lent: $color-purple-1;
+
 .comp-song-item {
   $this: &;
 
@@ -217,7 +221,7 @@
     }
   }
 
-  .\--spring & {
+  .\--focus & {
     &:nth-child(12n+1),
     &:nth-child(12n+3),
     &:nth-child(12n+5),
@@ -226,7 +230,7 @@
     &:nth-child(12n+12) {
       &::before {
         @include mq('xl', 'min') {
-          background-color: $color-yellow-1;
+          background-color: $color-focus;
         }
       }
 
@@ -235,6 +239,12 @@
       #{$this}__text-more {
         @include mq('xl', 'min') {
           color: $color-white-1;
+        }
+      }
+
+      #{$this}__author {
+        @include mq('xl', 'min') {
+          color: $color-gray-3;
         }
       }
     }
@@ -245,7 +255,7 @@
     &:nth-child(8n+8) {
       &::before {
         @include mqa('xl', 'lg') {
-          background-color: $color-yellow-1;
+          background-color: $color-focus;
         }
       }
 
@@ -256,16 +266,22 @@
           color: $color-white-1;
         }
       }
+
+      #{$this}__author {
+        @include mqa('xl', 'lg') {
+          color: $color-gray-3;
+        }
+      }
     }
 
     &:nth-child(2n+1) {
       &::before {
         @include mqa('lg', 'md') {
-          background-color: $color-yellow-1;
+          background-color: $color-focus;
         }
   
         @include mq('sm') {
-          background-color: $color-yellow-1;
+          background-color: $color-focus;
         }
       }
 
@@ -278,6 +294,16 @@
 
         @include mq('sm') {
           color: $color-white-1;
+        }
+      }
+
+      #{$this}__author {
+        @include mqa('lg', 'md') {
+          color: $color-gray-3;
+        }
+
+        @include mq('sm') {
+          color: $color-gray-3;
         }
       }
     }
@@ -286,7 +312,7 @@
     &:nth-child(4n+4) {
       &::before {
         @include mqa('md', 'sm') {
-          background-color: $color-yellow-1;
+          background-color: $color-focus;
         }
       }
 
@@ -295,6 +321,123 @@
       #{$this}__text-more {
         @include mqa('md', 'sm') {
           color: $color-white-1;
+        }
+      }
+
+      #{$this}__author {
+        @include mqa('md', 'sm') {
+          color: $color-gray-3;
+        }
+      }
+    }
+  }
+
+  .\--spring & {
+    &:nth-child(12n+1),
+    &:nth-child(12n+3),
+    &:nth-child(12n+5),
+    &:nth-child(12n+8),
+    &:nth-child(12n+10),
+    &:nth-child(12n+12) {
+      &::before {
+        @include mq('xl', 'min') {
+          background-color: $color-spring;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mq('xl', 'min') {
+          color: $color-white-1;
+        }
+      }
+
+      #{$this}__author {
+        @include mq('xl', 'min') {
+          color: $color-gray-3;
+        }
+      }
+    }
+
+    &:nth-child(8n+1),
+    &:nth-child(8n+3),
+    &:nth-child(8n+6),
+    &:nth-child(8n+8) {
+      &::before {
+        @include mqa('xl', 'lg') {
+          background-color: $color-spring;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('xl', 'lg') {
+          color: $color-white-1;
+        }
+      }
+
+      #{$this}__author {
+        @include mqa('xl', 'lg') {
+          color: $color-gray-3;
+        }
+      }
+    }
+
+    &:nth-child(2n+1) {
+      &::before {
+        @include mqa('lg', 'md') {
+          background-color: $color-spring;
+        }
+  
+        @include mq('sm') {
+          background-color: $color-spring;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('lg', 'md') {
+          color: $color-white-1;
+        }
+
+        @include mq('sm') {
+          color: $color-white-1;
+        }
+      }
+
+      #{$this}__author {
+        @include mqa('lg', 'md') {
+          color: $color-gray-3;
+        }
+
+        @include mq('sm') {
+          color: $color-gray-3;
+        }
+      }
+    }
+
+    &:nth-child(4n+1),
+    &:nth-child(4n+4) {
+      &::before {
+        @include mqa('md', 'sm') {
+          background-color: $color-spring;
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('md', 'sm') {
+          color: $color-white-1;
+        }
+      }
+
+      #{$this}__author {
+        @include mqa('md', 'sm') {
+          color: $color-gray-3;
         }
       }
     }
@@ -309,7 +452,7 @@
     &:nth-child(12n+12) {
       &::before {
         @include mq('xl', 'min') {
-          background-color: $color-purple-1;
+          background-color: $color-lent;
         }
       }
 
@@ -320,6 +463,12 @@
           color: $color-white-1;
         }
       }
+
+      #{$this}__author {
+        @include mq('xl', 'min') {
+          color: $color-gray-1;
+        }
+      }
     }
 
     &:nth-child(8n+1),
@@ -328,7 +477,7 @@
     &:nth-child(8n+8) {
       &::before {
         @include mqa('xl', 'lg') {
-          background-color: $color-purple-1;
+          background-color: $color-lent;
         }
       }
 
@@ -339,16 +488,22 @@
           color: $color-white-1;
         }
       }
+
+      #{$this}__author {
+        @include mqa('xl', 'lg') {
+          color: $color-gray-1;
+        }
+      }
     }
 
     &:nth-child(2n+1) {
       &::before {
         @include mqa('lg', 'md') {
-          background-color: $color-purple-1;
+          background-color: $color-lent;
         }
   
         @include mq('sm') {
-          background-color: $color-purple-1;
+          background-color: $color-lent;
         }
       }
 
@@ -361,6 +516,16 @@
 
         @include mq('sm') {
           color: $color-white-1;
+        }
+      }
+
+      #{$this}__author {
+        @include mqa('lg', 'md') {
+          color: $color-gray-1;
+        }
+
+        @include mq('sm') {
+          color: $color-gray-1;
         }
       }
     }
@@ -369,7 +534,7 @@
     &:nth-child(4n+4) {
       &::before {
         @include mqa('md', 'sm') {
-          background-color: $color-purple-1;
+          background-color: $color-lent;
         }
       }
 
@@ -378,6 +543,12 @@
       #{$this}__text-more {
         @include mqa('md', 'sm') {
           color: $color-white-1;
+        }
+      }
+
+      #{$this}__author {
+        @include mqa('md', 'sm') {
+          color: $color-gray-1;
         }
       }
     }

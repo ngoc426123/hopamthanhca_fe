@@ -30,8 +30,16 @@ export default class Search {
 
   async initAutoComplete() {
     try {
-      const dataUrl = this.$searchInput.data('url');
-      const data = await this.callAPI(dataUrl);
+      const url = this.$searchInput.data('url');
+      const options = {
+        method: 'get',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+      };
+      const response = await fetch(url, options);
+      const data = await response.json();
 
       autocomplete({
         input: this.$searchInput[0],
@@ -67,22 +75,6 @@ export default class Search {
     } catch(err) {
       console.log(err);
     }
-  }
-
-  callAPI(url) {
-    return new Promise((reslove, reject) => {
-      $.ajax({
-        url,
-        method: 'GET',
-        dataType: 'json',
-        success: (data) => {
-          reslove(data);
-        },
-        error: (error) => {
-          reject(error);
-        },
-      });
-    })
   }
 
   handleEvent () {

@@ -133,6 +133,12 @@
     }
   }
 
+  &.\--focus {
+    #{$this}__title-text {
+      color: $color-blue-2;
+    }
+  }
+
   &.\--spring {
     #{$this}__title-text {
       color: $color-yellow-1;
@@ -151,5 +157,9 @@
     @include mq('lg') {
       margin-bottom: 50px;
     }
+  }
+
+  .comp-list-song-home & {
+    margin-bottom: 25px;
   }
 }

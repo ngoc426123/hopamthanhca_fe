@@ -29,10 +29,10 @@ block main-content
           .comp-song-controls(data-song-controls)
             .comp-song-controls__group
               button.comp-song-controls__btn(data-chords-down)
-                img(src='images/flat.svg', alt='flat music')
+                +img('images/icon/flat.svg', alt='flat music')
               input.comp-song-controls__input(value='Dm' data-chords-input)
               button.comp-song-controls__btn(data-chords-up)
-                img(src='images/sharp.svg', alt='sharp music')
+                +img('images/icon/sharp.svg', alt='sharp music')
             .comp-song-controls__group
               button.comp-song-controls__btn(data-font-down) -
               input.comp-song-controls__input(data-font-input value='15px')
@@ -83,24 +83,44 @@ block main-content
                     .comp-song-intro.d-none.d-lg-block
                       ul
                         li
-                          span.comp-song-intro__att
-                            +img('images/ctrl-print.svg')
+                          span.comp-song-intro__keys
+                            span.comp-song-intro__key
+                              i Ctrl
+                            i.fa.fa-plus
+                            span.comp-song-intro__key
+                              i P
                           span.comp-song-intro__ats.comp-song-intro--up In bài hát
                         li
-                          span.comp-song-intro__att
-                            +img(src='images/right.png')
+                          span.comp-song-intro__keys
+                            span.comp-song-intro__key
+                              i Ctrl
+                            i.fa.fa-plus
+                            span.comp-song-intro__key
+                              i.fa.fa-arrow-right
                           span.comp-song-intro__ats.comp-song-intro--up Thăng 1/2 note
                         li
-                          span.comp-song-intro__att
-                            +img(src='images/left.png')
+                          span.comp-song-intro__keys
+                            span.comp-song-intro__key
+                              i Ctrl
+                            i.fa.fa-plus
+                            span.comp-song-intro__key
+                              i.fa.fa-arrow-left
                           span.comp-song-intro__ats.comp-song-intro--up Giáng 1/2 note
                         li
-                          span.comp-song-intro__att
-                            +img(src='images/up.png')
+                          span.comp-song-intro__keys
+                            span.comp-song-intro__key
+                              i Ctrl
+                            i.fa.fa-plus
+                            span.comp-song-intro__key
+                              i.fa.fa-arrow-up
                           span.comp-song-intro__ats.comp-song-intro--up Tăng 1 font size
                         li
-                          span.comp-song-intro__att
-                            +img(src='images/down.png')
+                          span.comp-song-intro__keys
+                            span.comp-song-intro__key
+                              i Ctrl
+                            i.fa.fa-plus
+                            span.comp-song-intro__key
+                              i.fa.fa-arrow-down
                           span.comp-song-intro__ats.comp-song-intro--up giảm 1 font size
                   .col-12.col-lg-4
                     .comp-song-pdf

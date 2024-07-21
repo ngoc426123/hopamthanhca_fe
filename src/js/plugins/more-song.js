@@ -28,7 +28,7 @@ export default class MoreSong {
     });
   }
 
-  handleEventLoadMore(e) {
+  async handleEventLoadMore(e) {
     e.preventDefault();
 
     const offset = parseInt(this.$cta.attr('data-offset'));
@@ -37,7 +37,7 @@ export default class MoreSong {
     const new_offset = limit + offset;
 
     try {
-      fetch(url, {
+      const options = {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -46,20 +46,18 @@ export default class MoreSong {
         body: JSON.stringify({
           offset: offset,
           limit: limit,
-        })
-      })
-      .then(response => response.json())
-      .then(dataRet => {
-        const { data, more } = dataRet;
+        }),
+      };
+      const response = await fetch(url, options);
+      const { data, more } = await response.json();
 
-        data.forEach(element => {
-          const $dataMoreSong = this.renderItemMoreSong(element);
-  
-          this.$listSong.append(`<div class="col-md-4 col-lg-3">${$dataMoreSong}</div>`);
-        });
-        !more && this.$cta.remove();
-        this.$cta.attr('data-offset', new_offset);
-      })
+      data.forEach(element => {
+        const $dataMoreSong = this.renderItemMoreSong(element);
+
+        this.$listSong.append(`<div class="col-md-4 col-lg-3">${$dataMoreSong}</div>`);
+      });
+      !more && this.$cta.remove();
+      this.$cta.attr('data-offset', new_offset);
     } catch (err) {
       console.error("Lỗi nè");
     }
