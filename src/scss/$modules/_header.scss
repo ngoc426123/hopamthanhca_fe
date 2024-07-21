@@ -116,25 +116,6 @@
   // MENU DROPDOWN
   &__menu {
     &.\--openmenu {
-      #{$this}__menuToggle {
-        span {
-          transition: top .2s ease, transform .2s ease .3s, opacity 0.2s ease;
-          &:nth-child(1) {
-            top: 15px;
-            transform: translateX(-50%) rotate(45deg);
-          }
-    
-          &:nth-child(2) {
-            opacity: 0;
-          }
-    
-          &:nth-child(3) {
-            top: 15px;
-            transform: translateX(-50%) rotate(-45deg);
-          }
-        }
-      }
-
       #{$this}__menuDropdown {
         @include mq('lg') {
           transform: translateX(0%);
@@ -150,7 +131,15 @@
   }
 
   &__menuDropdown {
+    position: relative;
     @extend %timing;
+
+    &:hover {
+      #{$this}__menuBoxover {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
 
     @include mq('lg') {
       height: 100%;
@@ -169,6 +158,7 @@
       display: flex;
       align-items: center;
       position: relative;
+      z-index: 2;
 
       @include mq('lg') {
         display: block;
@@ -199,14 +189,6 @@
       }
 
       &:hover {
-        > a {
-          background-color: $color-blue-3;
-
-          @include mq('lg') {
-            background-color: transparent;
-          }
-        }
-
         > ul {
           opacity: 1;
           visibility: visible;
@@ -316,6 +298,10 @@
         &:hover {
           a {
             background-color: $color-blue-4;
+
+            @include mq('lg') {
+              background-color: $color-gray-3;
+            }
           }
         }
       }
@@ -436,6 +422,22 @@
 
     @include mq('lg') {
       display: block;
+    }
+  }
+
+  &__menuBoxover {
+    width: 15px;
+    height: 100%;
+    background-color: $color-blue-3;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    @extend %timing;
+
+    @include mq('lg') {
+      display: none;
     }
   }
 

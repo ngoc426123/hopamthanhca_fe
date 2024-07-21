@@ -13,8 +13,9 @@
   // HTML TAG AND OTHER CLASS
   .chordsOC {
     display: inline-flex;
-    color: $color-blue-1;
     font-weight: 500;
+    line-height: 100%;
+    color: $color-blue-1;
   }
 
   p {
@@ -40,7 +41,7 @@
 
     .chords {
       position: absolute;
-      transform: translateY(-20px);
+      transform: translateY(0px);
     }
 
     .chordsPer {

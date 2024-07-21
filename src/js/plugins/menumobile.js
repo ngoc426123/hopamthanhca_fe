@@ -2,7 +2,8 @@
   options: {
     dataMenuToggle: '[data-menumobile-toggle]',
     dataMenuOverlay: '[data-menumobile-overlay]',
-    dataMenuDropdown: '[data-menumobile-toggle]',
+    dataMenuDropdown: '[data-menumobile-dropdown]',
+    dataMenuBoxover: '[data-menumobile-boxover]',
     clsOpen: '--openmenu',
     clsFreeze: '--freeze',
   }
@@ -18,11 +19,14 @@ export default class Menumobile {
       dataMenuToggle,
       dataMenuOverlay,
       dataMenuDropdown,
+      dataMenuBoxover,
     } = this.options;
 
     this.$toggle = this.$element.find(dataMenuToggle);
     this.$overlay = this.$element.find(dataMenuOverlay);
     this.$dropdown = this.$element.find(dataMenuDropdown);
+    this.$dropdownItemMenu = this.$dropdown.find('>ul>li');
+    this.$boxover = this.$element.find(dataMenuBoxover);
   }
 
   handleEvent () {
@@ -33,6 +37,10 @@ export default class Menumobile {
     });
 
     this.addEvent(this.$overlay, 'click', this.handleEventOverlay, {
+      nameSpace: PluginName,
+    });
+
+    this.addEvent(this.$dropdownItemMenu, 'mouseenter', this.handleEventMouseEnter, {
       nameSpace: PluginName,
     });
   }
@@ -51,5 +59,15 @@ export default class Menumobile {
 
     $('html')['removeClass'](clsFreeze);
     this.$element['removeClass'](clsOpen);
+  }
+
+  handleEventMouseEnter(e) {
+    const $target = $(e.currentTarget);
+    const offsetDropdown = this.$dropdown.offset().left;
+    const offsetEle = $target.offset().left;
+    const width = $target.outerWidth();
+    const left = offsetEle - offsetDropdown;
+
+    this.$boxover.css({width, left});
   }
 }
