@@ -3,6 +3,7 @@ include ../_mixins/all.pug
 block vars
   - let useHeader = true
   - let useFooter = true
+  - let useLoading = true
 
 doctype html
 html
@@ -38,6 +39,9 @@ html
       
       if useFooter
         include ../_modules/_footer.pug
+
+      if useLoading
+        include ../_modules/_loading.pug
   script. 
     const BASE_URL = 'http://localhost:3000';
   script(src='js/app.min.js' type="text/javascript")

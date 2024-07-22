@@ -35,7 +35,9 @@
   }
 
   a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 35px;
     height: 35px;
     background: $color-blue-1;

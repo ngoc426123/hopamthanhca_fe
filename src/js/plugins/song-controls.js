@@ -242,27 +242,36 @@ export default class SongControls {
     this.$songContent[isChecked ? 'addClass' : 'removeClass'](clsHideChords);
   }
 
-  handleEventLoveSong(e) {
+  async handleEventLoveSong(e) {
     e.preventDefault();
 
     const { clsActiveLove } = this.options;
     const id = this.$loveSong.data('post-id');
     const url = this.$loveSong.data('url');
     const love = this.$loveSong.data('love');
+    const value = { id, url };
+    const jsonValue = JSON.stringify(value);
+    const options = {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: jsonValue,
+    };
 
-    $.ajax({
-      url,
-      async: true,
-      type: 'POST',
-      data: { id, love },
-      success: (data) => {
-        const { love } = JSON.parse(data);
+    $('window').trigger('open-loading');
+    try {
+      const response = await fetch(url, options);
+      const { love } = await response.json();
 
-        this.$loveSong
+      this.$loveSong
           .attr('data-love', love)
           .addClass(clsActiveLove)
           .next('span').text(love);
-      }
-    });
+    } catch(error) {
+      console.log(error);
+    }
+    $('window').trigger('close-loading');
   }
 }

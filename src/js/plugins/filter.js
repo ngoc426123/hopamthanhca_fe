@@ -85,10 +85,11 @@ export default class Filter {
         'Content-Type': 'application/json'
       },
       body: jsonValue,
-    }
+    };
 
     if (!Object.keys(value).length) return;
 
+    $('window').trigger('open-loading');
     try {
       const response = await fetch(url, options);
       const { data } = await response.json();
@@ -100,6 +101,7 @@ export default class Filter {
     } catch(error) {
       console.log(error);
     }
+    $('window').trigger('close-loading');
   }
 
   getInput() {
