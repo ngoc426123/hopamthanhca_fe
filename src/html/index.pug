@@ -1,304 +1,303 @@
 extends _layout/_layout
 
 block main-content
-  .main-content
-    .comp-wrapper
-      include _components/_home-season.pug
-      .row.justify-content-center
-        .col-lg-6
-          include _components/_home-newsong.pug
-        .col-lg-6 
-          include _components/_home-mostview.pug
-      include _components/_home-category.pug
+  .comp-wrapper
+    include _components/_home-season.pug
+    .row.justify-content-center
+      .col-lg-6
+        include _components/_home-newsong.pug
+      .col-lg-6 
+        include _components/_home-mostview.pug
+    include _components/_home-category.pug
+    .row
+      .col-12.col-md-6.col-lg-4
+        .comp-box.--transparent
+          .comp-box__title
+            h3.comp-box__title-text Xem nhiều trong tuần
+          .comp-box__content.--background.--padding
+            include _components/_home-ironsong.pug
+      .col-12.col-md-6.col-lg-4
+        .comp-box.--transparent
+          .comp-box__title
+            h3.comp-box__title-text Xem nhiều trong tháng
+          .comp-box__content.--background.--padding
+            include _components/_home-ironsong.pug
+      .col-12.col-md-12.col-lg-4
+        .comp-box.--transparent
+          .comp-box__title
+            h3.comp-box__title-text Yêu thích nhất trang
+          .comp-box__content.--background.--padding
+            include _components/_home-ironsong.pug
+    include _components/_home-author.pug
+    .comp-list-song-home
       .row
-        .col-12.col-md-6.col-lg-4
-          .comp-box.--transparent
-            .comp-box__title
-              h3.comp-box__title-text Xem nhiều trong tuần
-            .comp-box__content.--background.--padding
-              include _components/_home-ironsong.pug
-        .col-12.col-md-6.col-lg-4
-          .comp-box.--transparent
-            .comp-box__title
-              h3.comp-box__title-text Xem nhiều trong tháng
-            .comp-box__content.--background.--padding
-              include _components/_home-ironsong.pug
-        .col-12.col-md-12.col-lg-4
-          .comp-box.--transparent
-            .comp-box__title
-              h3.comp-box__title-text Yêu thích nhất trang
-            .comp-box__content.--background.--padding
-              include _components/_home-ironsong.pug
-      include _components/_home-author.pug
-      .comp-list-song-home
-        .row
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') Ca vang tình yêu Chúa  
-                          span Đinh Công Huỳnh
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 9125
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') đường con đi 
-                          span Phanxico
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 148
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') đường con đi 
-                          span Phanxico
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 148
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') Ca vang tình yêu Chúa  
-                          span Đinh Công Huỳnh
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 9125
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') Ca vang tình yêu Chúa  
-                          span Đinh Công Huỳnh
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 9125
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') đường con đi 
-                          span Phanxico
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 148
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') đường con đi 
-                          span Phanxico
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 148
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') Ca vang tình yêu Chúa  
-                          span Đinh Công Huỳnh
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 9125
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') Ca vang tình yêu Chúa  
-                          span Đinh Công Huỳnh
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 9125
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') đường con đi 
-                          span Phanxico
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 148
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') đường con đi 
-                          span Phanxico
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 148
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
-          .col-12.col-lg-6
-            .comp-box.--padding.--small-spacing
-              .comp-box__content
-                .comp-song-home
-                  .comp-song-home__wrap
-                    .comp-song-home__title
-                      h3
-                        +link('song-detail.html') Ca vang tình yêu Chúa  
-                          span Đinh Công Huỳnh
-                    .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
-                    .comp-song-home__attrs
-                      .comp-song-home__attr-item
-                        span.fa-eye 9125
-                      .comp-song-home__attr-item
-                        span.fa-heart 0
-                  .comp-song-home__content
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
-                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
-                  .comp-song-home__link
-                    +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') Ca vang tình yêu Chúa  
+                        span Đinh Công Huỳnh
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 9125
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') đường con đi 
+                        span Phanxico
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 148
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') đường con đi 
+                        span Phanxico
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 148
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') Ca vang tình yêu Chúa  
+                        span Đinh Công Huỳnh
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 9125
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') Ca vang tình yêu Chúa  
+                        span Đinh Công Huỳnh
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 9125
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') đường con đi 
+                        span Phanxico
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 148
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') đường con đi 
+                        span Phanxico
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 148
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') Ca vang tình yêu Chúa  
+                        span Đinh Công Huỳnh
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 9125
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') Ca vang tình yêu Chúa  
+                        span Đinh Công Huỳnh
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 9125
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') đường con đi 
+                        span Phanxico
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 148
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') đường con đi 
+                        span Phanxico
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 148
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur distinctio neque, voluptates perferendis aliquid laborum earum obcaecati dolorem amet dicta! Quis pariatur repudiandae tempora adipisci incidunt est deserunt fugiat aliquid.
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit non itaque. Sunt rem saepe eaque nam fugiat laudantium molestiae sed, asperiores perspiciatis ea totam labore dolorem libero maiores nulla!
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam numquam corporis quo libero laudantium natus consequatur impedit dolore quos, quaerat architecto tempore doloremque eos placeat optio! Mollitia, quis minima.
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus excepturi amet nam voluptas ad nemo sit? Earum ipsum, officia, hic reprehenderit ullam odio sed quis, obcaecati aspernatur totam iusto nemo.
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias laboriosam dicta eligendi consectetur necessitatibus expedita? Totam earum ullam iure necessitatibus asperiores ipsum, commodi officiis, ad cumque maiores deserunt! Delectus, possimus.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết
+        .col-12.col-lg-6
+          .comp-box.--padding.--small-spacing
+            .comp-box__content
+              .comp-song-home
+                .comp-song-home__wrap
+                  .comp-song-home__title
+                    h3
+                      +link('song-detail.html') Ca vang tình yêu Chúa  
+                        span Đinh Công Huỳnh
+                  .comp-song-home__info Hoàng Minh Ngọc - March 23, 2020
+                  .comp-song-home__attrs
+                    .comp-song-home__attr-item
+                      span.fa-eye 9125
+                    .comp-song-home__attr-item
+                      span.fa-heart 0
+                .comp-song-home__content
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae expedita ad architecto error delectus. Atque ratione commodi totam animi laborum, aliquid quos saepe cumque sint? Sunt eos minus quos nulla?
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sequi temporibus dicta corrupti aliquam, provident quibusdam officia cumque numquam illum dolorem recusandae ullam dolor voluptate eum eos? Alias, ipsam!
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit quasi minus ab quos natus expedita earum. Inventore, temporibus odio nobis doloribus sapiente, libero quaerat ab delectus mollitia aliquam hic!
+                  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, magnam omnis, sed architecto facere atque distinctio repellat ratione, nostrum adipisci placeat recusandae blanditiis pariatur. Accusantium libero itaque provident consequatur perspiciatis.
+                .comp-song-home__link
+                  +link('song-detail.html') Xem chi tiết

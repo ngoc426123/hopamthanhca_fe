@@ -1,0 +1,220 @@
+.comp-filter {
+  $this: &;
+
+  // TOOGLE
+  &__toggle {
+    display: none;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    text-align: right;
+    border-bottom: solid 1px $color-gray-3;
+
+    button {
+      padding: 5px;
+      padding-left: 25px;
+      text-align: left;
+      border: none;
+      background-color: transparent;
+      position: relative;
+      outline: none;
+
+      &::before {
+        content: '\f0b0';
+        @extend %font-icon;
+        position: absolute;
+        font-size: 16px;
+        top: 5px;
+        left: 0;
+      }
+
+      span {
+        display: block;
+        
+
+        &:last-child {
+          font-style: italic;
+          color: $color-gray-2;
+        }
+      }
+    }
+
+    @include mq('lg') {
+      display: block;
+    }
+  }
+
+  // INNER 
+  &__inner {
+    background-color: $color-white-1;
+    @extend %timing;
+    @include scroll-design();
+
+    @include mq('lg') {
+      width: 100%;
+      max-width: 350px;
+      padding: 30px 20px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1234;
+      overflow: hidden;
+      overflow-y: auto;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateX(100%);
+    }
+  }
+
+  // BOX
+  &__box {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  // TITLE
+  &__title {
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  // INPUT
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    color: $color-blue-2;
+    border: solid 1px $color-gray-3;
+    border-radius: 7px;
+    outline: none;
+  }
+
+  // CHECKBOX
+  &__list-checkbox {
+    max-height: 200px;
+    padding: 10px;
+    border: solid 1px $color-gray-3;
+    border-radius: 7px;
+    overflow: hidden;
+    overflow-y: auto;
+    @include scroll-design();
+  }
+
+  &__checkbox {
+    display: block;
+    cursor: pointer;
+
+    span {
+      padding-left: 30px;
+      position: relative;
+  
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border: solid 1px $color-gray-3;
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+  
+      &::after {
+        content: '\f00c';
+        display: none;
+        width: 20px;
+        height: 20px;
+        color: $color-blue-2;
+        @extend %font-icon;
+        position: absolute;
+        top: 0;
+        left: 3px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    input {
+      display: none;
+
+      &:checked ~ span {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+
+  // BUTTON
+  &__button {
+    text-align: right;
+
+    button {
+      padding: 10px 15px;
+      font-size: 13px;
+      text-align: center;
+      color: #fff;
+      background-color: $color-blue-2;
+      border: solid 1px $color-blue-2;
+      border-radius: 4px;
+      @extend %timing;
+
+      &:hover {
+        color: $color-blue-1;
+        background-color: rgba($color-blue-2, 0.05);
+      }
+    }
+  }
+
+  // OVERLAY
+  &__overlay {
+    display: none;
+    background-color: rgba($color-black-1, 0.55);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1233;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    @include mq('lg') {
+      display: block;
+    }
+  }
+
+  // COUNT
+  &__count {
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 23px;
+    text-align: right;
+    color: $color-gray-2;
+  }
+
+  /**************
+  **** MODIFY ***
+  **************/
+  &.\--open {
+    #{$this}__inner {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateX(0);
+    }
+
+    #{$this}__overlay {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+}

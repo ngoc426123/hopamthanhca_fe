@@ -1,104 +1,103 @@
 extends _layout/_layout
 
 block main-content
-  .main-content
-    .comp-wrapper
-      include _components/_breadcrumb.pug
-      .comp-box.--padding
-        .comp-box__heading
-          h1.comp-box__title-text Danh mục bài hát
-          small.comp-box__title-small Bài hát được sắp xếp theo từng danh mục, từng mùa phụng vụ, dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.
-        .comp-box__content
-          .comp-five-grid
-            .comp-five-grid__grid
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Đinh Công Huỳnh',
-                  count: '47',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Nguyễn Mộng Huỳnh',
-                  count: '25',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Trần Mi Trầm',
-                  count: '5',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Nguyễn Văn Tuyên',
-                  count: '8',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Đấu Châ',
-                  count: '10',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Đinh Công Huỳnh',
-                  count: '47',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Nguyễn Mộng Huỳnh',
-                  count: '25',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Trần Mi Trầm',
-                  count: '5',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Nguyễn Văn Tuyên',
-                  count: '8',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Đấu Châ',
-                  count: '10',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Đinh Công Huỳnh',
-                  count: '47',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Nguyễn Mộng Huỳnh',
-                  count: '25',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Trần Mi Trầm',
-                  count: '5',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Nguyễn Văn Tuyên',
-                  count: '8',
-                  link: 'list-song.html',
-                })
-              .comp-five-grid__col
-                +categoryItem({
-                  name: 'Đấu Chân',
-                  count: '10',
-                  link: 'list-song.html',
-                })
-          include _components/_pagination.pug
+  .comp-wrapper
+    include _components/_breadcrumb.pug
+    .comp-box.--padding
+      .comp-box__heading
+        h1.comp-box__title-text Danh mục bài hát
+        small.comp-box__title-small Bài hát được sắp xếp theo từng danh mục, từng mùa phụng vụ, dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.
+      .comp-box__content
+        .comp-five-grid
+          .comp-five-grid__grid
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đinh Công Huỳnh',
+                count: '47',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Mộng Huỳnh',
+                count: '25',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Trần Mi Trầm',
+                count: '5',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Văn Tuyên',
+                count: '8',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đấu Châ',
+                count: '10',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đinh Công Huỳnh',
+                count: '47',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Mộng Huỳnh',
+                count: '25',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Trần Mi Trầm',
+                count: '5',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Văn Tuyên',
+                count: '8',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đấu Châ',
+                count: '10',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đinh Công Huỳnh',
+                count: '47',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Mộng Huỳnh',
+                count: '25',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Trần Mi Trầm',
+                count: '5',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Văn Tuyên',
+                count: '8',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đấu Chân',
+                count: '10',
+                link: 'list-song.html',
+              })
+        include _components/_pagination.pug

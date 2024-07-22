@@ -18,3 +18,36 @@
     @content;
   }
 }
+
+@mixin scroll-design($type: 'vertical') {
+  $scroll-color: $color-gray-1;
+  $scroll-thumb-color: $color-blue-1;
+  $scroll-thumb-color-hover: $color-blue-2;
+
+  /* width */
+  @if $type == 'vertical' {
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+  }
+
+  @if ($type == 'horizontal') {
+    &::-webkit-scrollbar {
+      height: 5px;
+    }
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $scroll-color;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $scroll-thumb-color;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $scroll-thumb-color-hover;
+  }
+}

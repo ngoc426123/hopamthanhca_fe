@@ -1,0 +1,244 @@
+extends _layout/_layout
+
+block main-content
+  .comp-wrapper
+    include _components/_breadcrumb.pug
+    .comp-box.--padding
+      .comp-box__heading
+        h1.comp-box__title-text Danh sách bài hát
+        small.comp-box__title-small Bài hát được tổng hợp toàn bộ ở đây để người dùng dễ dàng tìm kiếm hoặc muốn xem được toàn bộ bài hát của trang web
+      .comp-box__content(data-more-song)
+        .row(data-list-song)
+          .col-lg-3
+            .comp-filter__toggle
+              button(type='button' data-filter-toggle)
+                span Bộ lọc
+                span (Nhấn để mở)
+            .comp-filter(data-filter)
+              .comp-filter__overlay(data-filter-overlay)
+              .comp-filter__inner(data-filter-form data-url='')
+                .comp-filter__box(data-filter-box)
+                  .comp-filter__title Tên bài hát
+                  .comp-filter__content
+                    input.comp-filter__input(type='text' name='SongName' placeholder='Tên bài hát...')
+                .comp-filter__box(data-filter-box)
+                  .comp-filter__title Chuyên mục
+                  .comp-filter__content
+                    .comp-filter__list-checkbox
+                      label.comp-filter__checkbox(for='id1')
+                        input(type='checkbox' name='ChuyenMuc' id='id1')
+                        span Mùa thường niên
+                      label.comp-filter__checkbox(for='id2')
+                        input(type='checkbox' name='ChuyenMuc' id='id2')
+                        span Mùa chay
+                      label.comp-filter__checkbox(for='id3')
+                        input(type='checkbox' name='ChuyenMuc' id='id3')
+                        span Mùa vọng
+                      label.comp-filter__checkbox(for='id4')
+                        input(type='checkbox' name='ChuyenMuc' id='id4')
+                        span Đức Mẹ
+                      label.comp-filter__checkbox(for='id5')
+                        input(type='checkbox' name='ChuyenMuc' id='id5')
+                        span Các Thánh
+                      label.comp-filter__checkbox(for='id6')
+                        input(type='checkbox' name='ChuyenMuc' id='id6')
+                        span Tử đạo Việt Nam
+                      label.comp-filter__checkbox(for='id7')
+                        input(type='checkbox' name='ChuyenMuc' id='id7')
+                        span Hôn phối
+                      label.comp-filter__checkbox(for='id8')
+                        input(type='checkbox' name='ChuyenMuc' id='id8')
+                        span Tryền giáo
+                      label.comp-filter__checkbox(for='id9')
+                        input(type='checkbox' name='ChuyenMuc' id='id9')
+                        span Lòng thương xót
+                      label.comp-filter__checkbox(for='id10')
+                        input(type='checkbox' name='ChuyenMuc' id='id10')
+                        span cầu hồn
+                .comp-filter__box(data-filter-box)
+                  .comp-filter__title Tác giả
+                  .comp-filter__content
+                    .comp-filter__list-checkbox
+                      label.comp-filter__checkbox(for='id11')
+                        input(type='checkbox' name='TacGia' id='id11')
+                        span Nguyễn Duy
+                      label.comp-filter__checkbox(for='id12')
+                        input(type='checkbox' name='TacGia' id='id12')
+                        span Giang Ân
+                      label.comp-filter__checkbox(for='id13')
+                        input(type='checkbox' name='TacGia' id='id13')
+                        span Ân Đức
+                      label.comp-filter__checkbox(for='id14')
+                        input(type='checkbox' name='TacGia' id='id14')
+                        span Giang Tâm
+                      label.comp-filter__checkbox(for='id15')
+                        input(type='checkbox' name='TacGia' id='id15')
+                        span Đinh Công Huỳnh
+                      label.comp-filter__checkbox(for='id16')
+                        input(type='checkbox' name='TacGia' id='id16')
+                        span Đinh Minh Hoàng
+                      label.comp-filter__checkbox(for='id17')
+                        input(type='checkbox' name='TacGia' id='id17')
+                        span Huỳnh Minh Kỳ
+                      label.comp-filter__checkbox(for='id18')
+                        input(type='checkbox' name='TacGia' id='id18')
+                        span Kim Long
+                      label.comp-filter__checkbox(for='id19')
+                        input(type='checkbox' name='TacGia' id='id19')
+                        span Vũ Đình Ân
+                      label.comp-filter__checkbox(for='id20')
+                        input(type='checkbox' name='TacGia' id='id20')
+                .comp-filter__box(data-filter-box)
+                  .comp-filter__title Bảng chữ cái
+                  .comp-filter__content
+                    .comp-filter__list-checkbox
+                      label.comp-filter__checkbox(for='id21')
+                        input(type='checkbox' name='BangChuCai' id='id21')
+                        span A
+                      label.comp-filter__checkbox(for='id22')
+                        input(type='checkbox' name='BangChuCai' id='id22')
+                        span B
+                      label.comp-filter__checkbox(for='id23')
+                        input(type='checkbox' name='BangChuCai' id='id23')
+                        span C
+                      label.comp-filter__checkbox(for='id24')
+                        input(type='checkbox' name='BangChuCai' id='id24')
+                        span D
+                      label.comp-filter__checkbox(for='id25')
+                        input(type='checkbox' name='BangChuCai' id='id25')
+                        span E
+                      label.comp-filter__checkbox(for='id26')
+                        input(type='checkbox' name='BangChuCai' id='id26')
+                        span F
+                      label.comp-filter__checkbox(for='id27')
+                        input(type='checkbox' name='BangChuCai' id='id27')
+                        span G
+                      label.comp-filter__checkbox(for='id28')
+                        input(type='checkbox' name='BangChuCai' id='id28')
+                        span H
+                      label.comp-filter__checkbox(for='id29')
+                        input(type='checkbox' name='BangChuCai' id='id29')
+                        span I
+                      label.comp-filter__checkbox(for='id30')
+                        input(type='checkbox' name='BangChuCai' id='id30')
+                        span J
+                .comp-filter__box(data-filter-box)
+                  .comp-filter__title điệu bài hát
+                  .comp-filter__content
+                    .comp-filter__list-checkbox
+                      label.comp-filter__checkbox(for='id31')
+                        input(type='checkbox' name='DieuBaiHat' id='id31')
+                        span Ballad
+                      label.comp-filter__checkbox(for='id32')
+                        input(type='checkbox' name='DieuBaiHat' id='id32')
+                        span Pop
+                      label.comp-filter__checkbox(for='id33')
+                        input(type='checkbox' name='DieuBaiHat' id='id33')
+                        span Rock
+                      label.comp-filter__checkbox(for='id34')
+                        input(type='checkbox' name='DieuBaiHat' id='id34')
+                        span Cha Cha Cha
+                      label.comp-filter__checkbox(for='id35')
+                        input(type='checkbox' name='DieuBaiHat' id='id35')
+                        span Rumba
+                      label.comp-filter__checkbox(for='id36')
+                        input(type='checkbox' name='DieuBaiHat' id='id36')
+                        span March
+                      label.comp-filter__checkbox(for='id37')
+                        input(type='checkbox' name='DieuBaiHat' id='id37')
+                        span Fox
+                      label.comp-filter__checkbox(for='id38')
+                        input(type='checkbox' name='DieuBaiHat' id='id38')
+                        span Swing fox
+                      label.comp-filter__checkbox(for='id39')
+                        input(type='checkbox' name='DieuBaiHat' id='id39')
+                        span Tango
+                      label.comp-filter__checkbox(for='id40')
+                        input(type='checkbox' name='DieuBaiHat' id='id40')
+                        span Boston
+                .comp-filter__button
+                  button(type='button' name='submitFormFilter' data-filter-btn) Tìm kiếm
+          .col-lg-9
+            .comp-filter__count
+              span 10 bái hát mới nhất
+            .comp-filter__result(data-filter-result)
+              +songItem({
+                title: 'Ca vang tình yêu Chúa 4',
+                author: 'Đinh Công Huỳnh',
+                desc: 'Ngài là ánh dương soi đường dọi vào giữa nơi đêm trường. Ngài là bóng cây cao rộng phủ rợp biết bao tâm hồn. Tình Chúa như ánh trăng thanh tỏa lan trên khắp dương gian.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Ca vang tình yêu Chúa 3',
+                author: 'Đinh Công Huỳnh',
+                desc: 'Dòng suối êm đềm êm trôi, êm trôi như ân tình Chúa. Mùa xuân tinh khôi tô điểm cho đời thắm tươi rực rỡ. Dừng bước gian trần cho tâm can con nghỉ ngơi trong Ngài. Một phút bình yên tim con lâng lâng ngất ngây đêm ngày.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'đoàn con đến đây',
+                author: 'Hoài Chiên',
+                desc: 'Ðoàn con đến đây dâng lời ước nguyện. Ngày đêm mến cha cho trọn khối tình con. Ðược yêu mến Cha bao là êm đềm. Hồn con sướng vui tháng năm hết ưu phiền.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'lòng Chúa ái tuất',
+                author: 'Nguyễn Bang Hanh',
+                desc: 'Đây lòng Chúa ái tuất không bến bờ, Thương loài nhân thế đang vướng tội nhơ. Đem trót Máu Thịt nuôi dưỡng xác hồn. Ngày đêm ban xuống cho muôn ngàn ơn.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Phút Linh Thiêng',
+                author: 'Thành Tâm',
+                desc: 'Người ơi nào mau tới thờ lạy Chúa, quỳ dâng lòng tôn kính Chúa trên cao. Linh thiêng, ôi phút giây giờ đây khi đoàn con được chiêm ngắm nhan thánh Chúa chí nhân quyền uy.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Thờ Lạy Chúa',
+                author: 'Hoài Đức',
+                desc: 'Thờ lạy Chúa ! Thờ lạy Chúa ! Uy quyền khả ái trong hình bánh náu thân. Thờ lạy Chúa ! Thờ lạy Chúa ! Uy quyền khả ái nương mình dưới thế trần.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Giêsu Ở Cùng Con',
+                author: 'Chưa Rõ Tác Giả',
+                desc: 'Giêsu ơi ở cùng con luôn mãi. Chúa lìa con, con biết đâu nương nhờ? Nơi dương gian con giá lạnh hôm mai. Hãy ở lại trong cõi lòng con thơ.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Dâng',
+                author: 'Nguyễn Duy',
+                desc: 'Nguyện dâng Chúa lễ tình yêu chân thành, này tấm bánh đây rượu nho thơm ngát. Nguyện dâng Chúa đôi bàn tay con hiến, Chúa thương chấp nhận ban phước lành tháng năm.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Con Mến Yêu',
+                author: 'Chưa Rõ Tác Giả',
+                desc: 'Con mến yêu tin thờ trong lòng. Cùng chút tình ngây thơ ngắm trông, trong Thánh Thể Chúa cả càn khôn, hằng náu thân tù hãm vì con.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
+              +songItem({
+                title: 'Tâm Tình Với Chúa',
+                author: 'Giang Tâm',
+                desc: 'Lặng quỳ bên Chúa, ôi Chúa Giêsu thánh thể, hồn tràn niềm vui chẳng biết nói sao nên lời. Vì mến thương con Chúa đã hiện hữu nơi đây, nguồn suối ơn thiêng, nuôi dưỡng tháng ngày đời chúng con.',
+                date: '25/05/2020',
+                chord: 'Am',
+                link: 'song-detail.html',
+              })
