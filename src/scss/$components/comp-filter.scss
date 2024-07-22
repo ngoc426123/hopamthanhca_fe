@@ -202,6 +202,49 @@
     color: $color-gray-2;
   }
 
+  // NO RESULT
+  &__no-result {
+    display: block;
+    padding: 70px 0 100px;
+    max-width: 510px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__no-result-text {
+    margin-bottom: 10px;
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 500;
+    color: $color-blue-2;
+  }
+
+  &__no-result-img {
+    img {
+      display: inline-block;
+      max-width: 250px;
+    }
+  }
+
+  &__no-result-desc {
+    font-size: 13px;
+    line-height: 21px;
+    font-style: italic;
+    color: $color-gray-2;
+
+    p {
+      padding: 0;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $color-blue-2;
+      }
+    }
+  }
+
   /**************
   **** MODIFY ***
   **************/

@@ -15,6 +15,7 @@
 export default class Filter {
   init () {
     this.initDOM();
+    this.checkQueryParams();
     this.handleEvent();
   }
 
@@ -38,6 +39,7 @@ export default class Filter {
     this.$btn = this.$element.find(dataFilterBtn);
     this.$result = $('body').find(dataFilterResult);
     this.$overlay = this.$element.find(dataFilterOverlay);
+    this.$noResult = $();
   }
 
   handleEvent () {
@@ -87,6 +89,8 @@ export default class Filter {
       body: jsonValue,
     };
 
+    this.setQueryParams(value);
+
     if (!Object.keys(value).length) return;
 
     $('window').trigger('open-loading');
@@ -96,7 +100,17 @@ export default class Filter {
       const $result = $(this.renderResult(data));
       const count = this.renderCounter(data);
 
-      this.$counter.find('span').text(count);
+      this.$result.html('');
+      this.$noResult.remove();
+
+      if (!data.length) {
+        this.$noResult = $(this.renderNoResult());
+        this.$result.append(this.$noResult);
+        this.$counter.addClass('d-none');
+        return;
+      }
+
+      this.$counter.removeClass('d-none').find('span').text(count);
       this.$result.html('').append($result);
     } catch(error) {
       console.log(error);
@@ -119,7 +133,7 @@ export default class Filter {
           return cum;
         }
 
-        return { ...cum, [name]: [value] }
+        return { ...cum, [name]: [value.trim()] }
       }, {});
 
     return inputData;
@@ -127,7 +141,7 @@ export default class Filter {
 
   renderResult(data) {
     return data.map(({ title, cat, excerpt, date, meta: { hopamchinh }, permalink }) => {
-      const $author = cat['tac-gia'].reduce((cum, cur, idx) => cum + `${idx > 0 ? ',' : ''}` + cur.cat_name ,'');
+      const $author = cat['tac-gia'].reduce((cum, cur, idx) => cum + `${idx > 0 ? ',' : ''}` + cur.cat_name, '');
 
       return `<div class="comp-song-item">
                 <div class="comp-song-item__title">
@@ -145,7 +159,51 @@ export default class Filter {
       .join('');
   }
 
+  renderNoResult() {
+    return `
+      <div class="comp-filter__no-result">
+        <div class="comp-filter__no-result-text">Không có kết quả chính xác</div>
+        <div class="comp-filter__no-result-img">
+          <img src="images/no-result.png" alt="Không có kết quả chính xác">
+        </div>
+        <div class="comp-filter__no-result-desc">
+          <p>Có thể hệ thống vẫn chưa có bài hát nào phù hợp với mong muốn của bạn, xin thông cảm vì thiếu sốt này của đội ngũ chúng tôi.</p>
+          <p>Nếu được, bạn hãy đóng góp bài hát theo mong muốn của bạn vô địa chỉ email này: <a href="mailto: minhngoc.ith@gmail.com" title="Email liên hệ">minhngoc.ith@gmail.com</a>, chúng tôi sẽ cập nhật bài hát sớm nhất có thể.</p><p>Xin cảm ơn.</p>
+        </div>
+      </div>`;
+  }
+
   renderCounter(data) {
     return `Tìm thấy ${data.length} kết quả phù hợp với bộ lọc bạn chọn`
+  }
+
+  setQueryParams(data) {
+    const { pathname } = window.location;
+    const queryParam = Object.keys(data).reduce((cumulative, current, index) => {
+      const valueQuery = data[current]?.reduce((cum, cur, idx) => cum + `${idx > 0 ? ',' : ''}` + cur, '') || data[current];
+      
+      return`${cumulative}${index > 0 ? '&' : ''}${current}=${valueQuery}`;
+    }, '');
+    const url = pathname + '?' + queryParam;
+
+    history.pushState(null, '', url);
+  }
+
+  checkQueryParams() {
+    const { search } = window.location;
+    const params = new URLSearchParams(search);
+
+    if (!search) return;
+
+    for (const [key, value] of params.entries()) {
+      if (key === 'TenBaiHat') {
+        this.$box.find(':input').filter('[name="TenBaiHat"]').val(value);
+      } else {
+        value.split(',').map(item => {
+          this.$box.find(':input').filter(`[name="${key}"][value="${item}"]`).prop('checked', 'checked');
+        });
+      }
+    }
+    this.handleEventFilter();
   }
 }
