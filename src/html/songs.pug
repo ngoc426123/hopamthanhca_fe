@@ -16,151 +16,152 @@ block main-content
                 span (Nhấn để mở)
             .comp-filter(data-filter)
               .comp-filter__overlay(data-filter-overlay)
-              .comp-filter__inner(data-filter-form data-url='')
+              .comp-filter__inner(data-filter-form data-url='/data/filtersong.json')
                 .comp-filter__box(data-filter-box)
                   .comp-filter__title Tên bài hát
                   .comp-filter__content
-                    input.comp-filter__input(type='text' name='SongName' placeholder='Tên bài hát...')
+                    input.comp-filter__input(type='text' name='TenBaiHat' placeholder='Tên bài hát...')
                 .comp-filter__box(data-filter-box)
                   .comp-filter__title Chuyên mục
                   .comp-filter__content
                     .comp-filter__list-checkbox
                       label.comp-filter__checkbox(for='id1')
-                        input(type='checkbox' name='ChuyenMuc' id='id1')
+                        input(type='checkbox' name='ChuyenMuc' value='mua-thuong-nien' id='id1')
                         span Mùa thường niên
                       label.comp-filter__checkbox(for='id2')
-                        input(type='checkbox' name='ChuyenMuc' id='id2')
+                        input(type='checkbox' name='ChuyenMuc' value='mua-chay' id='id2')
                         span Mùa chay
                       label.comp-filter__checkbox(for='id3')
-                        input(type='checkbox' name='ChuyenMuc' id='id3')
+                        input(type='checkbox' name='ChuyenMuc' value='mua-vong' id='id3')
                         span Mùa vọng
                       label.comp-filter__checkbox(for='id4')
-                        input(type='checkbox' name='ChuyenMuc' id='id4')
+                        input(type='checkbox' name='ChuyenMuc' value='duc-me' id='id4')
                         span Đức Mẹ
                       label.comp-filter__checkbox(for='id5')
-                        input(type='checkbox' name='ChuyenMuc' id='id5')
+                        input(type='checkbox' name='ChuyenMuc' value='cac-thanh' id='id5')
                         span Các Thánh
                       label.comp-filter__checkbox(for='id6')
-                        input(type='checkbox' name='ChuyenMuc' id='id6')
+                        input(type='checkbox' name='ChuyenMuc' value='tu-dao-vn' id='id6')
                         span Tử đạo Việt Nam
                       label.comp-filter__checkbox(for='id7')
-                        input(type='checkbox' name='ChuyenMuc' id='id7')
+                        input(type='checkbox' name='ChuyenMuc' value='hon-phoi' id='id7')
                         span Hôn phối
                       label.comp-filter__checkbox(for='id8')
-                        input(type='checkbox' name='ChuyenMuc' id='id8')
+                        input(type='checkbox' name='ChuyenMuc' value='truyen-giao' id='id8')
                         span Tryền giáo
                       label.comp-filter__checkbox(for='id9')
-                        input(type='checkbox' name='ChuyenMuc' id='id9')
+                        input(type='checkbox' name='ChuyenMuc' value='long-thuong-xot' id='id9')
                         span Lòng thương xót
                       label.comp-filter__checkbox(for='id10')
-                        input(type='checkbox' name='ChuyenMuc' id='id10')
+                        input(type='checkbox' name='ChuyenMuc' value='cau-hon' id='id10')
                         span cầu hồn
                 .comp-filter__box(data-filter-box)
                   .comp-filter__title Tác giả
                   .comp-filter__content
                     .comp-filter__list-checkbox
                       label.comp-filter__checkbox(for='id11')
-                        input(type='checkbox' name='TacGia' id='id11')
+                        input(type='checkbox' name='TacGia' value='nguyen-duy' id='id11')
                         span Nguyễn Duy
                       label.comp-filter__checkbox(for='id12')
-                        input(type='checkbox' name='TacGia' id='id12')
+                        input(type='checkbox' name='TacGia' value='giang-an' id='id12')
                         span Giang Ân
                       label.comp-filter__checkbox(for='id13')
-                        input(type='checkbox' name='TacGia' id='id13')
+                        input(type='checkbox' name='TacGia' value='an-duc' id='id13')
                         span Ân Đức
                       label.comp-filter__checkbox(for='id14')
-                        input(type='checkbox' name='TacGia' id='id14')
+                        input(type='checkbox' name='TacGia' value='giang-tam' id='id14')
                         span Giang Tâm
                       label.comp-filter__checkbox(for='id15')
-                        input(type='checkbox' name='TacGia' id='id15')
+                        input(type='checkbox' name='TacGia' value='dinh-cong-huynh' id='id15')
                         span Đinh Công Huỳnh
                       label.comp-filter__checkbox(for='id16')
-                        input(type='checkbox' name='TacGia' id='id16')
+                        input(type='checkbox' name='TacGia' value='dinh-minh-hoang' id='id16')
                         span Đinh Minh Hoàng
                       label.comp-filter__checkbox(for='id17')
-                        input(type='checkbox' name='TacGia' id='id17')
+                        input(type='checkbox' name='TacGia' value='huynh-minh-ky' id='id17')
                         span Huỳnh Minh Kỳ
                       label.comp-filter__checkbox(for='id18')
-                        input(type='checkbox' name='TacGia' id='id18')
+                        input(type='checkbox' name='TacGia' value='kim-long' id='id18')
                         span Kim Long
                       label.comp-filter__checkbox(for='id19')
-                        input(type='checkbox' name='TacGia' id='id19')
+                        input(type='checkbox' name='TacGia' value='vu-dinh-an' id='id19')
                         span Vũ Đình Ân
                       label.comp-filter__checkbox(for='id20')
-                        input(type='checkbox' name='TacGia' id='id20')
+                        input(type='checkbox' name='TacGia' value='giao-kim' id='id20')
+                        span Giao Kim
                 .comp-filter__box(data-filter-box)
                   .comp-filter__title Bảng chữ cái
                   .comp-filter__content
                     .comp-filter__list-checkbox
                       label.comp-filter__checkbox(for='id21')
-                        input(type='checkbox' name='BangChuCai' id='id21')
+                        input(type='checkbox' name='BangChuCai' value='A' id='id21')
                         span A
                       label.comp-filter__checkbox(for='id22')
-                        input(type='checkbox' name='BangChuCai' id='id22')
+                        input(type='checkbox' name='BangChuCai' value='B' id='id22')
                         span B
                       label.comp-filter__checkbox(for='id23')
-                        input(type='checkbox' name='BangChuCai' id='id23')
+                        input(type='checkbox' name='BangChuCai' value='C' id='id23')
                         span C
                       label.comp-filter__checkbox(for='id24')
-                        input(type='checkbox' name='BangChuCai' id='id24')
+                        input(type='checkbox' name='BangChuCai' value='D' id='id24')
                         span D
                       label.comp-filter__checkbox(for='id25')
-                        input(type='checkbox' name='BangChuCai' id='id25')
+                        input(type='checkbox' name='BangChuCai' value='E' id='id25')
                         span E
                       label.comp-filter__checkbox(for='id26')
-                        input(type='checkbox' name='BangChuCai' id='id26')
+                        input(type='checkbox' name='BangChuCai' value='F' id='id26')
                         span F
                       label.comp-filter__checkbox(for='id27')
-                        input(type='checkbox' name='BangChuCai' id='id27')
+                        input(type='checkbox' name='BangChuCai' value='G' id='id27')
                         span G
                       label.comp-filter__checkbox(for='id28')
-                        input(type='checkbox' name='BangChuCai' id='id28')
+                        input(type='checkbox' name='BangChuCai' value='H' id='id28')
                         span H
                       label.comp-filter__checkbox(for='id29')
-                        input(type='checkbox' name='BangChuCai' id='id29')
+                        input(type='checkbox' name='BangChuCai' value='I' id='id29')
                         span I
                       label.comp-filter__checkbox(for='id30')
-                        input(type='checkbox' name='BangChuCai' id='id30')
+                        input(type='checkbox' name='BangChuCai' value='J' id='id30')
                         span J
                 .comp-filter__box(data-filter-box)
                   .comp-filter__title điệu bài hát
                   .comp-filter__content
                     .comp-filter__list-checkbox
                       label.comp-filter__checkbox(for='id31')
-                        input(type='checkbox' name='DieuBaiHat' id='id31')
+                        input(type='checkbox' name='DieuBaiHat' value='balld' id='id31')
                         span Ballad
                       label.comp-filter__checkbox(for='id32')
-                        input(type='checkbox' name='DieuBaiHat' id='id32')
+                        input(type='checkbox' name='DieuBaiHat' value='pop' id='id32')
                         span Pop
                       label.comp-filter__checkbox(for='id33')
-                        input(type='checkbox' name='DieuBaiHat' id='id33')
+                        input(type='checkbox' name='DieuBaiHat' value='rock' id='id33')
                         span Rock
                       label.comp-filter__checkbox(for='id34')
-                        input(type='checkbox' name='DieuBaiHat' id='id34')
+                        input(type='checkbox' name='DieuBaiHat' value='cha-cha-cha' id='id34')
                         span Cha Cha Cha
                       label.comp-filter__checkbox(for='id35')
-                        input(type='checkbox' name='DieuBaiHat' id='id35')
+                        input(type='checkbox' name='DieuBaiHat' value='rumba' id='id35')
                         span Rumba
                       label.comp-filter__checkbox(for='id36')
-                        input(type='checkbox' name='DieuBaiHat' id='id36')
+                        input(type='checkbox' name='DieuBaiHat' value='march' id='id36')
                         span March
                       label.comp-filter__checkbox(for='id37')
-                        input(type='checkbox' name='DieuBaiHat' id='id37')
+                        input(type='checkbox' name='DieuBaiHat' value='fox' id='id37')
                         span Fox
                       label.comp-filter__checkbox(for='id38')
-                        input(type='checkbox' name='DieuBaiHat' id='id38')
+                        input(type='checkbox' name='DieuBaiHat' value='swing-fox' id='id38')
                         span Swing fox
                       label.comp-filter__checkbox(for='id39')
-                        input(type='checkbox' name='DieuBaiHat' id='id39')
+                        input(type='checkbox' name='DieuBaiHat' value='tango' id='id39')
                         span Tango
                       label.comp-filter__checkbox(for='id40')
-                        input(type='checkbox' name='DieuBaiHat' id='id40')
+                        input(type='checkbox' name='DieuBaiHat' value='boston' id='id40')
                         span Boston
                 .comp-filter__button
                   button(type='button' name='submitFormFilter' data-filter-btn) Tìm kiếm
           .col-lg-9
-            .comp-filter__count
-              span 10 bái hát mới nhất
+            .comp-filter__count(data-filter-counter)
+              span 10 bài hát mới nhất
             .comp-filter__result(data-filter-result)
               +songItem({
                 title: 'Ca vang tình yêu Chúa 4',

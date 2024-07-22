@@ -1420,8 +1420,371 @@
           }
         ]
       }
+    },
+    {
+      "id": "3184",
+      "title": "Chúa nhật 14 thường niên - tv 65",
+      "slug": "chua-nhat-14-thuong-nien-tv-65-thai-nguyen",
+      "date": "18/07/2024 03:07:22",
+      "content": "<p>1. Toàn cầu [Am]hỡi hãy [G]reo mừng trong Thiên [C]Chúa. [E7]___ Hãy ca [Am]ngợi mừng [G]vinh quang uy danh [C]Người. [A7]___ Hãy kính dâng [Dm]Người lời [G]ca khen muôn vinh [C]hiển. [Esus4]___ Và hãy thân [E7]thưa: Vĩ đại thay sự nghiệp [Am]Chúa.</p><p>[A]ĐK. Toàn thể địa [A7]cầu hãy tung hô [D]Chúa, hãy ngợi khen [E]Đức Chúa [A]Trời.</p><p>2. Toàn cầu [Am]hỡi kính [G]tôn ngàn hiển vinh [C]Chúa. [E7]___ Hãy hát [Am]khen và [G]cao rao uy danh [C]Người. [A7]___ Hãy đến đây [Dm]coi kỳ [G]công do tay Thiên [C]Chúa. [Esus4]___ Người đã thể [E7]hiện biết bao nhiêu chuyện tuyệt [Am]luân.</p><p>3. Người đã [Am]biến biển [G]khơi thành nơi khô [C]ráo. [E7]___ Để cho [Am]ta được [G]đi ngang qua dễ [C]dàng. [A7]___ Lòng những hân [Dm]hoan ngàn [G]muôn câu ca Danh [C]Chúa. [Esus4]___ Lạy Chúa uy [E7]quyền Chúa Đấng thống trị ngàn [Am]năm.</p>",
+      "excerpt": "Toàn cầu hỡi hãy reo mừng trong Thiên Chúa. Hãy ca ngợi mừng vinh quang uy danh Người. Hãy kính dâng Người lời ca khen muôn vinh hiển. Và hãy thân thưa",
+      "author": {
+        "id": "2",
+        "email": "minhngoc.ith@gmail.com",
+        "dateregister": "10/06/2023 01:06:00",
+        "displayname": "Minhngoc.ith"
+      },
+      "status": "publish",
+      "permalink": "https://www.hopamthanhca.com/bai-hat/chua-nhat-14-thuong-nien-tv-65-thai-nguyen",
+      "meta": {
+        "seotitle": "Chúa nhật 14 thường niên - tv 65",
+        "seourl": "chua-nhat-14-thuong-nien-tv-65-thai-nguyen",
+        "seodes": "Toàn cầu hỡi hãy reo mừng trong Thiên Chúa. Hãy ca ngợi mừng vinh quang uy danh Người. Hãy kính dâng Người lời ca khen muôn vinh hiển. Và hãy thân thưa",
+        "seokeywork": "Chúa nhật 14 thường niên - tv 65, bài hát Chúa nhật 14 thường niên - tv 65, hợp âm Chúa nhật 14 thường niên - tv 65, hợp âm guitar Chúa nhật 14 thường niên - tv 65, Chúa nhật 14 thường niên - tv 65 hợp âm",
+        "pdffile": "http://www.dinh.dk/pdf/37_CN14TNC_TV65.pdf",
+        "hopamchinh": "Am",
+        "luotxem": "5",
+        "lovesong": "0"
+      },
+      "cat": {
+        "chuyen-muc": [
+          {
+            "id": "1",
+            "id_song": "3184",
+            "id_cat": "55",
+            "id_type": "1",
+            "cat_name": "thánh vịnh - đáp ca",
+            "cat_slug": "thanh-vinh-dap-ca",
+            "cat_des": "",
+            "type_name": "chuyên mục",
+            "type_slug": "chuyen-muc",
+            "desc": "Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.",
+            "permalink": "https://hopamthanhca.com/chuyen-muc/thanh-vinh-dap-ca"
+          }
+        ],
+        "tac-gia": [
+          {
+            "id": "2",
+            "id_song": "3184",
+            "id_cat": "110",
+            "id_type": "2",
+            "cat_name": "Thái Nguyên",
+            "cat_slug": "thai-nguyen",
+            "cat_des": "",
+            "type_name": "tác giả",
+            "type_slug": "tac-gia",
+            "desc": "Bài hát được sắp xếp theo từng tác giả, từng nhà soạn nhạc dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.",
+            "permalink": "https://hopamthanhca.com/tac-gia/thai-nguyen"
+          }
+        ],
+        "bang-chu-cai": [
+          {
+            "id": "3",
+            "id_song": "3184",
+            "id_cat": "154",
+            "id_type": "3",
+            "cat_name": "C",
+            "cat_slug": "c",
+            "cat_des": "",
+            "type_name": "bảng chữ cái",
+            "type_slug": "bang-chu-cai",
+            "desc": "Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.",
+            "permalink": "https://hopamthanhca.com/bang-chu-cai/c"
+          }
+        ],
+        "dieu-bai-hat": [
+          {
+            "id": "4",
+            "id_song": "3184",
+            "id_cat": "208",
+            "id_type": "4",
+            "cat_name": "Ballad",
+            "cat_slug": "ballad",
+            "cat_des": "",
+            "type_name": "điệu bài hát",
+            "type_slug": "dieu-bai-hat",
+            "desc": "Bài hát được sắp xếp theo từng điệu bài hát, từng nhà soạn nhạc dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.",
+            "permalink": "https://hopamthanhca.com/dieu-bai-hat/ballad"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3183",
+      "title": "Chúa nhật 14 thường niên - tv 65",
+      "slug": "chua-nhat-14-thuong-nien-tv-65",
+      "date": "18/07/2024 03:07:13",
+      "content": "<p>ĐK: Toàn thể đất [F]nước hãy reo [C]mừng reo [Bb]mừng [C7]Thiên [F]Chúa.</p><p>[F7]1. Toàn thể đất [Bb]nước lên tiếng [C7]reo, hãy [F]reo mừng [Am]Chúa. [D7]___ Hãy ca [Gm]ngợi vinh quang Danh [A7]Người, kính dâng [Dm]lời ngợi khen hiển [Gm]vinh. [C]___ Hãy thưa Chúa [Am]rằng: kinh ngạc [Gm]thay ôi [C7]sự nghiệp của [F]Chúa:</p><p>[F7]2. Toàn thể đất [Bb]nước hãy hát [C7]khen kính [F]thờ lạy [Am]Chúa. [D7]___ Hãy ca [Gm]mừng kính Thánh Danh [A7]Ngài, đến ngắm [Dm]nhìn sự nghiệp của [Gm]Chúa. [C]___ Chúa thi thố [Am]bao nhiêu kỳ [Gm]công kinh [C7]ngạc loài người [F]ta.</p><p>[F7]3. Người đã làm [Bb]cho biển [C7]khơi trở [F]nên cạn [Am]khô. [D7]___ Để dân [Gm]Người tiến bước qua [A7]sông, thế nên [Dm]ta mừng vui trong [Gm]Chúa. [C]___ Với quyền năng [Am]Người thống trị [Gm]mãi tới [C7]muôn đời về [F]sau.</p><p>[F7]4. Phàm ai sợ [Bb]Chúa hãy đến [C7]đây tôi [F]kể người [Am]nghe. [D7]___ Chúa đã [Gm]làm những điều trọng [A7]đại, Chúa không [Dm]chê lời tôi nguyện [Gm]xin. [C]___ Chúa không rút [Am]lại tấm lòng [Gm]rất nhân [C7]hậu dành cho [F]tôi.</p>",
+      "excerpt": "Toàn thể đất nước hãy reo mừng reo mừng Thiên Chúa. Toàn thể đất nước lên tiếng reo, hãy reo mừng Chúa. Hãy ca ngợi vinh quang Danh Người, kính dâng lời ngợi khen hiển vinh.",
+      "author": {
+        "id": "2",
+        "email": "minhngoc.ith@gmail.com",
+        "dateregister": "10/06/2023 01:06:00",
+        "displayname": "Minhngoc.ith"
+      },
+      "status": "publish",
+      "permalink": "https://www.hopamthanhca.com/bai-hat/chua-nhat-14-thuong-nien-tv-65",
+      "meta": {
+        "seotitle": "Chúa nhật 14 thường niên - tv 65",
+        "seourl": "chua-nhat-14-thuong-nien-tv-65",
+        "seodes": "Toàn thể đất nước hãy reo mừng reo mừng Thiên Chúa. Toàn thể đất nước lên tiếng reo, hãy reo mừng Chúa. Hãy ca ngợi vinh quang Danh Người, kính dâng lời ngợi khen hiển vinh.",
+        "seokeywork": "Chúa nhật 14 thường niên - tv 65, bài hát Chúa nhật 14 thường niên - tv 65, hợp âm Chúa nhật 14 thường niên - tv 65, hợp âm guitar Chúa nhật 14 thường niên - tv 65, Chúa nhật 14 thường niên - tv 65 hợp âm",
+        "pdffile": "http://www.dinh.dk/pdf/CN14CTN-tl.pdf",
+        "hopamchinh": "F",
+        "luotxem": "6",
+        "lovesong": "0"
+      },
+      "cat": {
+        "chuyen-muc": [
+          {
+            "id": "1",
+            "id_song": "3183",
+            "id_cat": "55",
+            "id_type": "1",
+            "cat_name": "thánh vịnh - đáp ca",
+            "cat_slug": "thanh-vinh-dap-ca",
+            "cat_des": "",
+            "type_name": "chuyên mục",
+            "type_slug": "chuyen-muc",
+            "desc": "Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.",
+            "permalink": "https://hopamthanhca.com/chuyen-muc/thanh-vinh-dap-ca"
+          }
+        ],
+        "tac-gia": [
+          {
+            "id": "2",
+            "id_song": "3183",
+            "id_cat": "113",
+            "id_type": "2",
+            "cat_name": "Thiên Lý",
+            "cat_slug": "thien-ly",
+            "cat_des": "",
+            "type_name": "tác giả",
+            "type_slug": "tac-gia",
+            "desc": "Bài hát được sắp xếp theo từng tác giả, từng nhà soạn nhạc dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.",
+            "permalink": "https://hopamthanhca.com/tac-gia/thien-ly"
+          }
+        ],
+        "bang-chu-cai": [
+          {
+            "id": "3",
+            "id_song": "3183",
+            "id_cat": "154",
+            "id_type": "3",
+            "cat_name": "C",
+            "cat_slug": "c",
+            "cat_des": "",
+            "type_name": "bảng chữ cái",
+            "type_slug": "bang-chu-cai",
+            "desc": "Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.",
+            "permalink": "https://hopamthanhca.com/bang-chu-cai/c"
+          }
+        ],
+        "dieu-bai-hat": [
+          {
+            "id": "4",
+            "id_song": "3183",
+            "id_cat": "217",
+            "id_type": "4",
+            "cat_name": "Blues",
+            "cat_slug": "blues",
+            "cat_des": "",
+            "type_name": "điệu bài hát",
+            "type_slug": "dieu-bai-hat",
+            "desc": "Bài hát được sắp xếp theo từng điệu bài hát, từng nhà soạn nhạc dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.",
+            "permalink": "https://hopamthanhca.com/dieu-bai-hat/blues"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3182",
+      "title": "hãy reo mừng - tv 65",
+      "slug": "hay-reo-mung-tv-65",
+      "date": "18/07/2024 02:07:20",
+      "content": "<p>ĐK: [Gm]Toàn thể đất [Cm]nước hãy [Dm]reo mừng Thiên [Gm]Chúa.</p><p>1. Toàn thể đất [Bb]nước hãy [Eb]reo vui Chúa [D7]ta, [Gm]___ hãy ca ngợi [F]Ngài mừng [Eb]vinh quang Danh [D7]Chúa. [Gm]___ Hãy dâng kính [Bb]Chúa lời [Cm]ca khen hiển [D7]vinh, [Gm]___ hãy thưa cùng [D]Ngài “Sự [D7]nghiệp Ngài quá bao [Gm]la\".</p><p>2. Toàn thể đất [Bb]nước nào [Eb]tôn vinh Chúa [D7]đi, [Gm]___ hãy ca ngợi [F]Ngài ngợi [Eb]ca khen Danh [D7]Thánh. [Gm]___ Sự nghiệp của [Bb]Chúa hãy [Cm]đến ngắm nhìn [D7]xem, [Gm]___ những chuyện kinh [D]ngạc Ngài [D7]thực hiện giữa chúng [Gm]ta.</p><p>3. Biển khơi Chúa [Bb]biến trở [Eb]nên nơi ráo [D7]khô, [Gm]___ Chúa cho đi [F]bộ người [Eb]qua sông đi [D7]tới. [Gm]___ Bởi vì lẽ [Bb]đó nào [Cm]hân hoan mừng [D7]vui, [Gm]___ với uy năng [D]Ngài thống [D7]trị trời đất muôn [Gm]năm.</p><p>4. Phần ai tin [Bb]Chúa hãy [Eb]xin nghe tiếng [D7]tôi, [Gm]___ những việc trọng [F]đại Ngài [Eb]lo cho hồn [D7]tôi. [Gm]___ Hãy ca khen [Bb]Chúa Ngài [Cm]chẳng hắt hủi [D7]tôi, [Gm]___ xót thương nhân [D]hậu nơi [D7]Ngài tỏa ngát trên [Gm]tôi.</p>",
+      "excerpt": "Toàn thể đất nước hãy reo mừng Thiên Chúa. Toàn thể đất nước hãy reo vui Chúa ta, hãy ca ngợi Ngài mừng vinh quang Danh Chúa. Hãy dâng kính Chúa lời ca khen hiển vinh hãy thưa cùng Ngài",
+      "author": {
+        "id": "2",
+        "email": "minhngoc.ith@gmail.com",
+        "dateregister": "10/06/2023 01:06:00",
+        "displayname": "Minhngoc.ith"
+      },
+      "status": "publish",
+      "permalink": "https://www.hopamthanhca.com/bai-hat/hay-reo-mung-tv-65",
+      "meta": {
+        "seotitle": "hãy reo mừng - tv 65",
+        "seourl": "hay-reo-mung-tv-65",
+        "seodes": "Toàn thể đất nước hãy reo mừng Thiên Chúa. Toàn thể đất nước hãy reo vui Chúa ta, hãy ca ngợi Ngài mừng vinh quang Danh Chúa. Hãy dâng kính Chúa lời ca khen hiển vinh hãy thưa cùng Ngài",
+        "seokeywork": "hãy reo mừng - tv 65, bài hát hãy reo mừng - tv 65, hợp âm hãy reo mừng - tv 65, hợp âm guitar hãy reo mừng - tv 65, hãy reo mừng - tv 65 hợp âm",
+        "pdffile": "http://www.dinh.dk/pdf/hayreomung-vx.pdf",
+        "hopamchinh": "Gm",
+        "luotxem": "6",
+        "lovesong": "0"
+      },
+      "cat": {
+        "chuyen-muc": [
+          {
+            "id": "1",
+            "id_song": "3182",
+            "id_cat": "62",
+            "id_type": "1",
+            "cat_name": "mùa thường niên",
+            "cat_slug": "mua-thuong-nien",
+            "cat_des": "",
+            "type_name": "chuyên mục",
+            "type_slug": "chuyen-muc",
+            "desc": "Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.",
+            "permalink": "https://hopamthanhca.com/chuyen-muc/mua-thuong-nien"
+          }
+        ],
+        "tac-gia": [
+          {
+            "id": "2",
+            "id_song": "3182",
+            "id_cat": "123",
+            "id_type": "2",
+            "cat_name": "Viễn Xứ",
+            "cat_slug": "vien-xu",
+            "cat_des": "",
+            "type_name": "tác giả",
+            "type_slug": "tac-gia",
+            "desc": "Bài hát được sắp xếp theo từng tác giả, từng nhà soạn nhạc dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.",
+            "permalink": "https://hopamthanhca.com/tac-gia/vien-xu"
+          }
+        ],
+        "bang-chu-cai": [
+          {
+            "id": "3",
+            "id_song": "3182",
+            "id_cat": "159",
+            "id_type": "3",
+            "cat_name": "H",
+            "cat_slug": "h",
+            "cat_des": "",
+            "type_name": "bảng chữ cái",
+            "type_slug": "bang-chu-cai",
+            "desc": "Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.",
+            "permalink": "https://hopamthanhca.com/bang-chu-cai/h"
+          }
+        ],
+        "dieu-bai-hat": [
+          {
+            "id": "4",
+            "id_song": "3182",
+            "id_cat": "208",
+            "id_type": "4",
+            "cat_name": "Ballad",
+            "cat_slug": "ballad",
+            "cat_des": "",
+            "type_name": "điệu bài hát",
+            "type_slug": "dieu-bai-hat",
+            "desc": "Bài hát được sắp xếp theo từng điệu bài hát, từng nhà soạn nhạc dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.",
+            "permalink": "https://hopamthanhca.com/dieu-bai-hat/ballad"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3181",
+      "title": "dù Thầy đi đâu",
+      "slug": "du-thay-di-dau",
+      "date": "17/07/2024 03:07:40",
+      "content": "<p>1. Dù Thầy đi [Am]đâu con [E7]luôn bước đi theo [Am]Thầy. Chẳng màng công [F]danh hơn [G7]thua quyền thế giữa [C]đời. [Am] Dù cho mưa [C]gió hay [E7]không có nơi tựa [Am]đầu. Rày đây mai [F]đó một [G]lòng bước đi theo [Am]Ngài.</p><p>ĐK. Lạy [C]Chúa! Xin [G]sai chúng con lên [F]đường, ra [Em]đi rắc gieo Tin [Am]Mừng, chữa [G7]lành những tâm hồn nát [C]tan. [Am]___ Lạy [Dm]Chúa! Cho [G]con náu nương trong [C]Ngài luôn [F]trung tín đi theo [Dm]Ngài, suốt cuộc [C]đời chẳng bao [Em7]giờ đổi [Am]thay.</p><p>2. Lời Ngài đã [Am]phán con [E7]nay quyết tâm thi [Am]hành. Hãy để kẻ [F]chết đem [G7]chôn kẻ chết bên [C]họ.[Am] Bởi ai theo [C]Chúa đâu [E7]lo lắng chi chuyện [Am]đời. Ngài luôn nâng [F]đỡ đổ [G]đầy phúc ân mỗi [Am]ngày.</p><p>3. Đời nhiều cám [Am]dỗ nhưng [E7]con vững tin theo [Am]Ngài. Dù nhiều chông [F]gai không [G7]lo sợ hãi hôm [C]mai.[Am] Nguyện đi theo [C]Chúa loan [E7]tin đến cho mọi [Am]người. Lòng không vương [F]vấn, đam [G]mê, luyến lưu sự [Am]đời.</p>",
+      "excerpt": "Dù Thầy đi đâu con luôn bước đi theo Thầy. Chẳng màng công danh hơn thua quyền thế giữa đời. Dù cho mưa gió hay không có nơi tựa đầu. Rày đây mai đó một lòng bước đi theo Ngài.",
+      "author": {
+        "id": "2",
+        "email": "minhngoc.ith@gmail.com",
+        "dateregister": "10/06/2023 01:06:00",
+        "displayname": "Minhngoc.ith"
+      },
+      "status": "publish",
+      "permalink": "https://www.hopamthanhca.com/bai-hat/du-thay-di-dau",
+      "meta": {
+        "seotitle": "dù Thầy đi đâu",
+        "seourl": "du-thay-di-dau",
+        "seodes": "Dù Thầy đi đâu con luôn bước đi theo Thầy. Chẳng màng công danh hơn thua quyền thế giữa đời. Dù cho mưa gió hay không có nơi tựa đầu. Rày đây mai đó một lòng bước đi theo Ngài.",
+        "seokeywork": "dù Thầy đi đâu, bài hát dù Thầy đi đâu, hợp âm dù Thầy đi đâu, hợp âm guitar dù Thầy đi đâu, dù Thầy đi đâu hợp âm",
+        "pdffile": "http://www.dinh.dk/pdf1/duThaydidau-hmkdch.pdf",
+        "hopamchinh": "Am",
+        "luotxem": "9",
+        "lovesong": "0"
+      },
+      "cat": {
+        "chuyen-muc": [
+          {
+            "id": "1",
+            "id_song": "3181",
+            "id_cat": "62",
+            "id_type": "1",
+            "cat_name": "mùa thường niên",
+            "cat_slug": "mua-thuong-nien",
+            "cat_des": "",
+            "type_name": "chuyên mục",
+            "type_slug": "chuyen-muc",
+            "desc": "Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.",
+            "permalink": "https://hopamthanhca.com/chuyen-muc/mua-thuong-nien"
+          }
+        ],
+        "tac-gia": [
+          {
+            "id": "2",
+            "id_song": "3181",
+            "id_cat": "67",
+            "id_type": "2",
+            "cat_name": "Đinh Công Huỳnh",
+            "cat_slug": "dinh-cong-huynh",
+            "cat_des": "",
+            "type_name": "tác giả",
+            "type_slug": "tac-gia",
+            "desc": "Bài hát được sắp xếp theo từng tác giả, từng nhà soạn nhạc dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.",
+            "permalink": "https://hopamthanhca.com/tac-gia/dinh-cong-huynh"
+          },
+          {
+            "id": "2",
+            "id_song": "3181",
+            "id_cat": "82",
+            "id_type": "2",
+            "cat_name": "Huỳnh Minh Kỳ",
+            "cat_slug": "huynh-minh-ky",
+            "cat_des": "",
+            "type_name": "tác giả",
+            "type_slug": "tac-gia",
+            "desc": "Bài hát được sắp xếp theo từng tác giả, từng nhà soạn nhạc dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.",
+            "permalink": "https://hopamthanhca.com/tac-gia/huynh-minh-ky"
+          }
+        ],
+        "bang-chu-cai": [
+          {
+            "id": "3",
+            "id_song": "3181",
+            "id_cat": "155",
+            "id_type": "3",
+            "cat_name": "D",
+            "cat_slug": "d",
+            "cat_des": "",
+            "type_name": "bảng chữ cái",
+            "type_slug": "bang-chu-cai",
+            "desc": "Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.",
+            "permalink": "https://hopamthanhca.com/bang-chu-cai/d"
+          }
+        ],
+        "dieu-bai-hat": [
+          {
+            "id": "4",
+            "id_song": "3181",
+            "id_cat": "208",
+            "id_type": "4",
+            "cat_name": "Ballad",
+            "cat_slug": "ballad",
+            "cat_des": "",
+            "type_name": "điệu bài hát",
+            "type_slug": "dieu-bai-hat",
+            "desc": "Bài hát được sắp xếp theo từng điệu bài hát, từng nhà soạn nhạc dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.",
+            "permalink": "https://hopamthanhca.com/dieu-bai-hat/ballad"
+          }
+        ]
+      }
     }
-  ],
-  "total": 16,
-  "more": true
+  ]
 }

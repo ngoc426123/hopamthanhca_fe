@@ -144,6 +144,8 @@
       display: none;
 
       &:checked ~ span {
+        color: $color-blue-1;
+        
         &:after {
           display: block;
         }
