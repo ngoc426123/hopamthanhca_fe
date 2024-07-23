@@ -1,5 +1,5 @@
 .comp-song-pdf {
-  @include mq(991) {
+  @include mq('lg') {
     padding-left: 65px;
     position: relative;
   }
@@ -8,7 +8,7 @@
   &__file {
     margin-bottom: 10px;
 
-    @include mq(991) {
+    @include mq('lg') {
       margin-bottom: 0;
       position: absolute;
       top: 50%;

@@ -50,10 +50,6 @@
     position: relative;
     z-index: 14;
 
-    @include mq('lg') {
-      height: 350px;
-    }
-
     input {
       width: 100%;
       height: 65px;

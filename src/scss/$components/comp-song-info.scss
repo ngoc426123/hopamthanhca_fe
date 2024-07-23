@@ -1,5 +1,5 @@
 .comp-song-info {
-  @include mq(991) {
+  @include mq('lg') {
     margin-bottom: 20px;
   }
 

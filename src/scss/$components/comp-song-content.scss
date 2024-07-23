@@ -6,7 +6,7 @@
   column-gap: 30px;
   column-rule: dashed 2px $color-gray-3;
 
-  @include mq(991) {
+  @include mq('lg') {
     margin-top: 25px;
     column-count: unset;
   }
@@ -27,6 +27,10 @@
   // SPLIT
   &__split {
     border-right: dashed 2px $color-gray-3;
+
+    @include mq('xl') {
+      border: none;
+    }
   }
 
   /**************

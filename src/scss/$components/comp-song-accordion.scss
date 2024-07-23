@@ -6,9 +6,11 @@
   position: relative;
 
   @include mq('lg') {
-    padding-top: 50px;
     margin-top: 10px;
-    margin-bottom: 0;
+  }
+
+  @include mq('md') {
+    margin-top: 50px;
   }
 
   // TOGGLE
@@ -26,12 +28,6 @@
     right: 0;
     z-index: 1;
     cursor: pointer;
-
-    @include mq(991) {
-      margin-top: 3px;
-      top: 0;
-      bottom: auto;
-    }
 
     span {
       padding-right: 15px;

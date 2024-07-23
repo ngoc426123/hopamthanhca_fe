@@ -92,6 +92,10 @@
     @include mq('lg') {
       margin-bottom: 40px;
     }
+  
+    @include mq('md') {
+      margin-bottom: 20px;
+    }
   }
 
   &__contact-title {

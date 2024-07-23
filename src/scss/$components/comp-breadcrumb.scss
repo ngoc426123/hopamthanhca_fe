@@ -14,12 +14,12 @@
     color: $color-white-1;
     position: relative;
 
-    @include mq(991) {
+    @include mq('lg') {
       display: none;
     }
 
     &:first-child {
-      @include mq(991) {
+      @include mq('lg') {
         display: block;
 
         span {
@@ -29,7 +29,7 @@
     }
 
     &:last-child {
-      @include mq(991) {
+      @include mq('lg') {
         display: block;
       }
     }
@@ -50,7 +50,7 @@
   i {
     margin-right: 10px;
 
-    @include mq(991) {
+    @include mq('lg') {
       margin-right: 0;
     }
   }

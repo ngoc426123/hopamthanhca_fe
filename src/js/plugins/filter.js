@@ -10,6 +10,7 @@
     dataFilterOverlay: '[data-filter-overlay]',
     clsOpen: '--open',
     clsFreeze: '--freeze',
+    clsFront: '--front',
   }
 })
 export default class Filter {
@@ -61,19 +62,21 @@ export default class Filter {
   }
 
   handleEventToggle() {
-    const { clsOpen, clsFreeze } = this.options;
+    const { clsOpen, clsFreeze, clsFront } = this.options;
     const isOpen = this.$element.hasClass(clsOpen);
 
     $('html')[isOpen ? 'removeClass': 'addClass'](clsFreeze);
     this.$element[isOpen ? 'removeClass': 'addClass'](clsOpen);
+    this.$mainPage[isOpen ? 'removeClass': 'addClass'](clsFront);
   }
 
   handleEventOverlay(e) {
-    const { clsOpen, clsFreeze } = this.options;
+    const { clsOpen, clsFreeze, clsFront } = this.options;
     e.stopPropagation();
 
     $('html')['removeClass'](clsFreeze);
     this.$element['removeClass'](clsOpen);
+    this.$mainPage['removeClass'](clsFront);
   }
 
   async handleEventFilter() {
@@ -141,7 +144,7 @@ export default class Filter {
 
   renderResult(data) {
     return data.map(({ title, cat, excerpt, date, meta: { hopamchinh }, permalink }) => {
-      const $author = cat['tac-gia'].reduce((cum, cur, idx) => cum + `${idx > 0 ? ',' : ''}` + cur.cat_name, '');
+      const $author = cat['tac-gia'].reduce((cum, cur, idx) => cum + `${idx > 0 ? ', ' : ''}` + cur.cat_name, '');
 
       return `<div class="comp-song-item">
                 <div class="comp-song-item__title">
