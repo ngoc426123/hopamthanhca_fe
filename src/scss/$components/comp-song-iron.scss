@@ -73,19 +73,19 @@
   /**************
   **** MODIFY ***
   **************/
-  &.\--red {
+  &:nth-child(1) {
     #{$this}__star {
       color: $color-red-1;
     }
   }
 
-  &.\--orange {
+  &:nth-child(2) {
     #{$this}__star {
       color: $color-orange-1;
     }
   }
   
-  &.\--yellow {
+  &:nth-child(3) {
     #{$this}__star {
       color: $color-yellow-1;
     }
