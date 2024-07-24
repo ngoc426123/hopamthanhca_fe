@@ -90,7 +90,8 @@ export default class Search {
       if (this._ITEMSEARCH) return;
 
       const value = this.$searchInput.val();
-      const linkSearch = `${BASE_URL}/search.html?query=${value}`;
+      const searchLink = this.$searchInput.data('action');
+      const linkSearch = `${BASE_URL}${searchLink}?query=${value}`;
 
       window.location.href = linkSearch;
     }

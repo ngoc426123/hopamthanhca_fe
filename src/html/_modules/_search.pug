@@ -3,16 +3,17 @@
     .header__search--title Cùng tìm kiếm bài hát bạn thích nhất
     .header__search--form(data-search-form)
       input(
-        type="text"
-        id="searchDesktop"
-        autocomplete="off"
-        placeholder="Nhập tên bài hát, từ khóa tìm kiếm..."
+        type='text'
+        id='searchDesktop'
+        autocomplete='off'
+        placeholder='Nhập tên bài hát, từ khóa tìm kiếm...'
         data-search-input
-        data-url="/data/searchsong.json"
+        data-action='/search.html'
+        data-url='/data/searchsong.json'
       )
       .header__search--suggess
         ul(data-suggess)
     .header__search--note
-      p Tìm với tên của bài hát: "Ca vang tình yêu Chúa", "Tình yêu Thiên Chúa"
-      p Tìm với lời đầu tiên của bài hát: "Đời con là những nốt nhạc thiêng"
+      p Tìm với tên của bài hát: 'Ca vang tình yêu Chúa', 'Tình yêu Thiên Chúa'
+      p Tìm với lời đầu tiên của bài hát: 'Đời con là những nốt nhạc thiêng'
       p Nhập bài hát đầy đủ dấu và chữ, không ghi tắt.
