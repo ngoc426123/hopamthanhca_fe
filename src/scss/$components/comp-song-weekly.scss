@@ -110,7 +110,9 @@
   }
 
   &__phase-song {
+    padding-right: 35px;
     margin-bottom: 10px;
+    position: relative;
   }
   
   &__phase-song-detail {
@@ -127,6 +129,12 @@
 
       &:hover {
         color: $color-blue-1;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 0;
       }
     }
 
