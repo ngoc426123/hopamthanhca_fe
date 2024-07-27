@@ -21,23 +21,35 @@
 
   &__col-1 {
     padding: 0 15px;
-    width: 15%;
+    width: 40%;
+
+    @include mq('xl') {
+      width: 40%;
+    }
 
     @include mq('lg') {
-      width: 100%;
+      width: 40%;
+    }
+
+    @include mq('md') {
+      width: 110%;
     }
   }
 
   &__col-2 {
     padding: 0 15px;
-    width: 40%;
+    width: 15%;
 
     @include mq('xl') {
-      width: 25%;
+      width: 100%;
     }
 
     @include mq('lg') {
-      width: 100%;
+      width: 60%;
+    }
+
+    @include mq('md') {
+      width: 110%;
     }
   }
 
@@ -54,19 +66,19 @@
     }
   }
 
-  &__col-order-logo {
-    order: 5;
-
-    @include mq('lg') {
-      order: 1
-    }
-  }
-
   &__col-order-contact {
     order: 1;
 
     @include mq('lg') {
-      order: 2;
+      order: 1;
+    }
+  }
+
+  &__col-order-quote {
+    order: 3;
+
+    @include mq('lg') {
+      order: 2
     }
   }
 
@@ -105,14 +117,12 @@
     font-weight: bold;
 
     @include mq('lg') {
-      font-size: 20px;
-      line-height: 28px;
-      text-align: center;
+      display: none;
     }
   }
 
   &__contact-info {
-    @include mq('lg') {
+    @include mq('md') {
       text-align: center;
     }
 
@@ -130,17 +140,38 @@
     }
   }
 
+  // QUOTE
+  &__quote {
+    color: $color-gray-2;
+    font-style: italic;
+
+    @include mq('xl') {
+      margin-top: 35px;
+    }
+
+    @include mq('lg') {
+      text-align: right;
+    }
+
+    @include mq('md') {
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+
   // LOGO
   &__logo {
     margin-bottom: 20px;
-    text-align: right;
     
     img {
       width: 170px;
     }
 
     @include mq('lg') {
-      margin-bottom: 40px;
+      margin-bottom: 10px;
+    }
+
+    @include mq('md') {
       text-align: center;
     }
   }
@@ -198,8 +229,12 @@
 
   // NAVIGATION
   &__navigation {
+    @include mq('xl') {
+      margin-top: 35px;
+    }
+
     @include mq('lg') {
-      margin-bottom: 10px;
+      margin-top: 0px;
       text-align: center;
     }
 
