@@ -1,104 +1,47 @@
-[
-  {
-    "id": "3217",
-    "title": "ra đi làm nhân chứng",
-    "excerpt": "Ra đi làm nhân chứng tình yêu Chúa cho muôn người, đi rao truyền lời Chúa lời nuôi dưỡng linh hồn tôi. Được dự tiệc cao sang vào đời làm chứng tá, rắc gieo Phúc Âm gần xa",
-    "slug": "ra-di-lam-nhan-chung",
-    "meta": {
-      "pdffile": "http://www.dinh.dk/pdf/radilamnhanchung-dch.pdf"
-    },
-    "cat": {
-      "tac-gia": [
+{
+  "data": [
+    {
+      "id": "3175",
+      "title": "Chúa là gia nghiệp - tv 15",
+      "slug": "chua-la-gia-nghiep",
+      "excerpt": "Lạy Chúa! Chúa là phần gia nghiệp của tôi. Xin bảo loàn tôi vì tôi tìm nương tựa Chúa, tôi thưa cùng Chúa: “Ngài là Chúa Tể tôi Chúa là phần gia nghiệp và phần chén của tôi chính tay Ngài nắm giữ vận mạng của tôi\".",
+      "author": [
         {
-          "type_slug": "tac-gia",
-          "cat_name": "Đinh Công Huỳnh"
+          "id": "260",
+          "cat_name": "Mi Giáng",
+          "cat_slug": "mi-giang",
+          "id_song": "3175"
+        }
+      ]
+    },
+    {
+      "id": "2283",
+      "title": "Chúa là gia nghiệp con",
+      "slug": "chua-la-gia-nghiep-con",
+      "excerpt": "Chúa là gia nghiệp đời con, là Cha nhân ái nguồn mến yêu nguồn sống hy vọng của con. Chúa là gia nghiệp đời con, giờ đây tận hiến",
+      "author": [
+        {
+          "id": "324",
+          "cat_name": "Hoàng Ngô",
+          "cat_slug": "hoang-ngo",
+          "id_song": "2283"
+        }
+      ]
+    },
+    {
+      "id": "986",
+      "title": "Chúa là gia nghiệp",
+      "slug": "chua-la-gia-nghiep",
+      "excerpt": "Chúa là gia nghiệp đời con. Xin Ngài bảo toàn thân con, vì ngoài Chúa ra con tìm đâu thấy hạnh phúc, và ở bên Chúa con tìm thấy được niềm vui, Chúa là gia nghiệp đời con.",
+      "author": [
+        {
+          "id": "88",
+          "cat_name": "Mi Trầm",
+          "cat_slug": "mi-tram",
+          "id_song": "986"
         }
       ]
     }
-  },
-  {
-    "id": "3216",
-    "title": "chúa trong cuộc đời",
-    "excerpt": "Có Chúa trong cuộc đời lòng con bao sướng vui. Có Chúa trong cuộc đời niềm vui như bất tận. con đi trên đường đời có Chúa bên cạnh con",
-    "slug": "chua-trong-cuoc-doi",
-    "meta": {
-      "pdffile": "http://www.dinh.dk/pdf/Chuatrongcuocdoi-vda.pdf"
-    },
-    "cat": {
-      "tac-gia": [
-        {
-          "type_slug": "tac-gia",
-          "cat_name": "Vũ Đình Ân"
-        }
-      ]
-    }
-  },
-  {
-    "id": "3215",
-    "title": "chỉ một điều cần",
-    "excerpt": "Mat - ta ơi! Sao chị băn khoăn lo lắng nhiều chuyện quá! Hãy xem em của chị đây Ma - ri - a đã chọn phần nhất này. Một điều cần, một thức ăn cần nơi bàn ăn Đức Ki - tô muốn phục vụ ta.",
-    "slug": "chi-mot-dieu-can",
-    "meta": {
-      "pdffile": "http://www.dinh.dk/pdf/chimotdieucan-kl.pdf"
-    },
-    "cat": {
-      "tac-gia": [
-        {
-          "type_slug": "tac-gia",
-          "cat_name": "Kim Long"
-        }
-      ]
-    }
-  },
-  {
-    "id": "3214",
-    "title": "chọn phần tốt nhất",
-    "excerpt": "Con xin chọn phần tốt nhất là lắng nghe tiếng Chúa dạy chiều hôm sớm mai. Con xin chọn phần tốt nhất (là) làm trẻ thơ dưới ánh mắt Ngài được ở trong tình thương của Ngài.",
-    "slug": "chon-phan-tot-nhat",
-    "meta": {
-      "pdffile": "http://www.dinh.dk/pdf1/chonphantotnhat-trs.pdf"
-    },
-    "cat": {
-      "tac-gia": [
-        {
-          "type_slug": "tac-gia",
-          "cat_name": "Têrêsa"
-        }
-      ]
-    }
-  },
-  {
-    "id": "3213",
-    "title": "chỉ có một điều cần",
-    "excerpt": "Chỉ có một điều cần thôi là được gặp Chúa trong mỗi ngày đời con. Chỉ có một điều cần thôi là lắng nghe tiếng Ngài từng giây phút đời con. Khi bị phủ vây vì muôn tiếng ồn ào, xin cho con được vào trong thinh lặng",
-    "slug": "chi-co-mot-dieu-can",
-    "meta": {
-      "pdffile": "http://www.dinh.dk/pdf/chicomotdieucan-tn.pdf"
-    },
-    "cat": {
-      "tac-gia": [
-        {
-          "type_slug": "tac-gia",
-          "cat_name": "Thái Nguyên"
-        }
-      ]
-    }
-  },
-  {
-    "id": "3212",
-    "title": "lễ vật cung tiến",
-    "excerpt": "Của lễ kính tiến Ngài đây là rượu bánh gói ghém tình yêu. Đoàn con sớm hôm dãi dầu, chỉ mong ước trở nên lễ dâng. Thành kính tiến Chúa từ nhân từng ngày tháng khốn khó lầm than",
-    "slug": "le-vat-cung-tien",
-    "meta": {
-      "pdffile": "http://www.dinh.dk/pdf/levatcungtien-dch.pdf"
-    },
-    "cat": {
-      "tac-gia": [
-        {
-          "type_slug": "tac-gia",
-          "cat_name": "Đinh Công Huỳnh"
-        }
-      ]
-    }
-  }
-]
+  ],
+  "count": 3
+}

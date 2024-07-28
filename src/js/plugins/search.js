@@ -1,5 +1,6 @@
 import autocomplete from "autocompleter";
 import { fetchAPI } from "../utils/http";
+import { convertAuthorfromArray } from "../utils/string";
 
 @Plugin({
   options: {
@@ -46,17 +47,19 @@ export default class Search {
         that.$element.addClass(clsLoading);
 
         const response = await fetchAPI(url, { keywork }, 'post');
-        const data = await response.json();
+        const { data } = await response.json();
 
         that.$element.removeClass(clsLoading);
-  
+
         update(data.slice(0, 6));
       },
       render: (item) => {
+        const author = convertAuthorfromArray(item.author);
+
         return $(`<div class="autocomplete__item">
-          <div class="autocomplete__song">${item.title} - <span>${item.cat['tac-gia'][0].cat_name}</span></div>
-          <div class="autocomplete__excerpt">${item.excerpt}</<span></div>
-        </div>`)[0];
+                <div class="autocomplete__song">${item.title} - <span>${author}</span></div>
+                <div class="autocomplete__excerpt">${item.excerpt}</<span></div>
+              </div>`)[0];
       },
       onSelect: (item) => {
         this._ITEMSEARCH = item;
