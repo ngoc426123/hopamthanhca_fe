@@ -1,3 +1,5 @@
+import { fetchAPI } from "../utils/http";
+
 @Plugin({
   options: {
     dataChordsUp: '[data-chords-up]',
@@ -248,30 +250,22 @@ export default class SongControls {
     const { clsActiveLove } = this.options;
     const id = this.$loveSong.data('post-id');
     const url = this.$loveSong.data('url');
-    const love = this.$loveSong.data('love');
     const value = { id, url };
-    const jsonValue = JSON.stringify(value);
-    const options = {
-      method: 'post',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: jsonValue,
-    };
 
     $('window').trigger('open-loading');
+
     try {
-      const response = await fetch(url, options);
+      const response = await fetchAPI(url, value, 'post');
       const { love } = await response.json();
 
       this.$loveSong
-          .attr('data-love', love)
-          .addClass(clsActiveLove)
-          .next('span').text(love);
+        .attr('data-love', love)
+        .addClass(clsActiveLove)
+        .next('span').text(love);
     } catch(error) {
       console.log(error);
     }
+
     $('window').trigger('close-loading');
   }
 }

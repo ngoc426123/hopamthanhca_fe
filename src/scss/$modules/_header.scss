@@ -40,7 +40,7 @@
     }
   }
 
-  // search
+  // SEARCH
   &__search {
     display: flex;
     align-items: center;
@@ -72,35 +72,50 @@
       }
     }
 
-    &--title {
-      margin-bottom: 20px;
-      font-size: 25px;
-      line-height: 33px;
-      text-align: center;
-      font-weight: 600;
-      color: $color-white-1;
-
-      @include mq('lg') {
-        font-size: 20px;
-        line-height: 30px;;
+    &.\--loading {
+      #{$this}__search-loading {
+        display: block;
       }
     }
+  }
 
-    &--note {
-      font-size: 12px;
-      line-height: 20px;
-      color: $color-white-2;
+  &__search-title {
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 33px;
+    text-align: center;
+    font-weight: 600;
+    color: $color-white-1;
 
-      p {
-        padding: 0;
-        margin: 0;
-      }
+    @include mq('lg') {
+      font-size: 20px;
+      line-height: 30px;;
     }
+  }
 
-    &--form {
-      margin-bottom: 20px;
-      position: relative;
+  &__search-note {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-white-2;
+
+    p {
+      padding: 0;
+      margin: 0;
     }
+  }
+
+  &__search-form {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__search-loading {
+    display: none;
+    max-width: 40px;
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    z-index: 17;
   }
 
   // TOOLS

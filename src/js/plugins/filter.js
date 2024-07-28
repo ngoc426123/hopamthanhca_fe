@@ -1,3 +1,5 @@
+import { fetchAPI } from "../utils/http";
+
 @Plugin({
   options: {
     dataMainPage: '[data-main-page]',
@@ -81,24 +83,16 @@ export default class Filter {
 
   async handleEventFilter() {
     const value = this.getInput();
-    const jsonValue = JSON.stringify(value);
     const url = this.$form.data('url');
-    const options = {
-      method: 'post',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: jsonValue,
-    };
 
     this.setQueryParams(value);
 
     if (!Object.keys(value).length) return;
 
     $('window').trigger('open-loading');
+  
     try {
-      const response = await fetch(url, options);
+      const response = await fetchAPI(url, value, 'post');
       const { data } = await response.json();
       const $result = $(this.renderResult(data));
       const count = this.renderCounter(data);
@@ -118,6 +112,7 @@ export default class Filter {
     } catch(error) {
       console.log(error);
     }
+
     $('window').trigger('close-loading');
   }
 
