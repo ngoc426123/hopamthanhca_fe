@@ -62,7 +62,10 @@ export default class Filter {
     });
 
     // FILTER FUNCTION
-    this.addEvent(this.$btn, 'click', this.handleEventFilter, {
+    this.addEvent(this.$btn, 'click', async () => {
+      this.$box.find(':input').filter('[name="Page"]').val(1);
+      await this.handleEventFilter ();
+    }, {
       nameSpace: PluginName,
     });
 
@@ -120,7 +123,6 @@ export default class Filter {
 
       this.$counter.removeClass('d-none').find('span').text(count);
       this.$result.html('').append($result);
-      this.$box.find(':input').filter('[name="Page"]').val(1);
     } catch(error) {
       console.log(error);
     }
@@ -206,8 +208,8 @@ export default class Filter {
     if (!search) return;
 
     for (const [key, value] of params.entries()) {
-      if (key === 'TenBaiHat') {
-        this.$box.find(':input').filter('[name="TenBaiHat"]').val(value);
+      if (['TenBaiHat', 'Page'].includes(key)) {
+        this.$box.find(':input').filter(`[name="${key}"]`).val(value);
       } else {
         value.split(',').map(item => {
           this.$box.find(':input').filter(`[name="${key}"][value="${item}"]`).prop('checked', 'checked');
