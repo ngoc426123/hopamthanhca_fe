@@ -1,4 +1,5 @@
 import { fetchAPI } from "../utils/http";
+import { convertAuthorfromArray } from "../utils/string";
 
 @Plugin({
   options: {
@@ -10,6 +11,7 @@ import { fetchAPI } from "../utils/http";
     dataFilterCounter: '[data-filter-counter]',
     dataFilterResult: '[data-filter-result]',
     dataFilterOverlay: '[data-filter-overlay]',
+    dataFilterPaginationRender: '[data-filter-pagination-render]',
     clsOpen: '--open',
     clsFreeze: '--freeze',
     clsFront: '--front',
@@ -32,6 +34,7 @@ export default class Filter {
       dataFilterCounter,
       dataFilterResult,
       dataFilterOverlay,
+      dataFilterPaginationRender,
     } = this.options;
 
     this.$mainPage = $('body').find(dataMainPage);
@@ -42,6 +45,7 @@ export default class Filter {
     this.$btn = this.$element.find(dataFilterBtn);
     this.$result = $('body').find(dataFilterResult);
     this.$overlay = this.$element.find(dataFilterOverlay);
+    this.$paginationRender = $('body').find(dataFilterPaginationRender);
     this.$noResult = $();
   }
 
@@ -60,6 +64,12 @@ export default class Filter {
     // FILTER FUNCTION
     this.addEvent(this.$btn, 'click', this.handleEventFilter, {
       nameSpace: PluginName,
+    });
+
+    // PAGINATION
+    this.addEvent($('body'), 'click', this.handleEventSelectPage, {
+      nameSpace: PluginName,
+      delegate: '[data-page-number]'
     });
   }
 
@@ -93,12 +103,13 @@ export default class Filter {
   
     try {
       const response = await fetchAPI(url, value, 'post');
-      const { data } = await response.json();
+      const { data, total, pagination } = await response.json();
       const $result = $(this.renderResult(data));
-      const count = this.renderCounter(data);
+      const count = this.renderCounter(total);
 
       this.$result.html('');
       this.$noResult.remove();
+      this.$paginationRender.html(pagination);
 
       if (!data.length) {
         this.$noResult = $(this.renderNoResult());
@@ -109,6 +120,7 @@ export default class Filter {
 
       this.$counter.removeClass('d-none').find('span').text(count);
       this.$result.html('').append($result);
+      this.$box.find(':input').filter('[name="Page"]').val(1);
     } catch(error) {
       console.log(error);
     }
@@ -138,20 +150,20 @@ export default class Filter {
   }
 
   renderResult(data) {
-    return data.map(({ title, cat, excerpt, date, meta: { hopamchinh }, permalink }) => {
-      const $author = cat['tac-gia'].reduce((cum, cur, idx) => cum + `${idx > 0 ? ', ' : ''}` + cur.cat_name, '');
+    return data.map(({ title, author, excerpt, date, meta: { hopamchinh }, slug }) => {
+      const authorConvert = convertAuthorfromArray(author);
 
       return `<div class="comp-song-item">
                 <div class="comp-song-item__title">
                   <h3 class="comp-song-item__title-text">${title}</h3>
-                  <span class="comp-song-item__author">${$author}</span>
+                  <span class="comp-song-item__author">${authorConvert}</span>
                 </div>
                 <div class="comp-song-item__desc">${excerpt}</div>
                 <div class="comp-song-item__info">
                   <div class="comp-song-item__date">${date}</div>
                   <div class="comp-song-item__chord">${hopamchinh}</div>
                 </div>
-                <a class="comp-song-item__link" href="${permalink}" title="${title}"></a>
+                <a class="comp-song-item__link" href="${BASE_URL+'/bai-hat/'+slug}" title="${title}"></a>
               </div>`
       })
       .join('');
@@ -171,8 +183,8 @@ export default class Filter {
       </div>`;
   }
 
-  renderCounter(data) {
-    return `Tìm thấy ${data.length} kết quả phù hợp với bộ lọc bạn chọn`
+  renderCounter(num) {
+    return `Tìm thấy ${num} kết quả phù hợp với bộ lọc bạn chọn`
   }
 
   setQueryParams(data) {
@@ -202,6 +214,17 @@ export default class Filter {
         });
       }
     }
+
+    this.handleEventFilter();
+  }
+
+  handleEventSelectPage(e) {
+    e.preventDefault();
+
+    const $target = $(e.currentTarget);
+    const pageNumber = $target.attr('data-page-number');
+
+    this.$box.find(':input').filter('[name="Page"]').val(pageNumber);
     this.handleEventFilter();
   }
 }
