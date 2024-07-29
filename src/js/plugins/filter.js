@@ -179,7 +179,7 @@ export default class Filter {
           <img src="images/no-result.png" alt="Không có kết quả chính xác">
         </div>
         <div class="comp-filter__no-result-desc">
-          <p>Có thể hệ thống vẫn chưa có bài hát nào phù hợp với mong muốn của bạn, xin thông cảm vì thiếu sốt này của đội ngũ chúng tôi.</p>
+          <p>Có thể hệ thống vẫn chưa có bài hát nào phù hợp với mong muốn của bạn, xin thông cảm vì thiếu sót này của đội ngũ chúng tôi.</p>
           <p>Nếu được, bạn hãy đóng góp bài hát theo mong muốn của bạn vô địa chỉ email này: <a href="mailto: minhngoc.ith@gmail.com" title="Email liên hệ">minhngoc.ith@gmail.com</a>, chúng tôi sẽ cập nhật bài hát sớm nhất có thể.</p><p>Xin cảm ơn.</p>
         </div>
       </div>`;
