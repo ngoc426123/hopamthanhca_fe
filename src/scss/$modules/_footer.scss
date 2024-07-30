@@ -142,6 +142,7 @@
 
   // QUOTE
   &__quote {
+    margin-top: 35px;
     color: $color-gray-2;
     font-style: italic;
 
@@ -229,9 +230,7 @@
 
   // NAVIGATION
   &__navigation {
-    @include mq('xl') {
-      margin-top: 35px;
-    }
+    margin-top: 35px;
 
     @include mq('lg') {
       margin-top: 0px;

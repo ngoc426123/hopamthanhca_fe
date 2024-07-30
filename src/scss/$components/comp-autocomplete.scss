@@ -1,8 +1,13 @@
 .autocomplete {
+  margin-top: -7px;
   border: none;
   background-color: $color-white-1;
   box-shadow: 0 3px 15px 0 rgba($color-black-1, 0.45);
   z-index: 15;
+  
+  @include mq('lg') {
+    margin-top: -5px;
+  }
 
   &__item {
     padding: 8px 15px;

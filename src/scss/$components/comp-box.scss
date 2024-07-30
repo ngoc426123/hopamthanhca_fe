@@ -24,6 +24,7 @@
     margin-top: 5px;
     font-size: 14px;
     line-height: 22px;
+    font-weight: 300;
     color: $color-gray-2;
 
     a {
@@ -117,19 +118,25 @@
   }
 
   &.\--season {
-    #{$this}__title {
-      padding: 20px;
-      margin-bottom: 0;
-
-      span {
-        color: $color-black-3;
-      }
-    }
-
     #{$this}__content {
-      display: flex;
-      align-items: stretch;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+
+      @include mq('xl') {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include mq('lg') {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include mq('md') {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mq('sm') {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
   }
 
