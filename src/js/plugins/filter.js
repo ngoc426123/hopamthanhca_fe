@@ -105,7 +105,7 @@ export default class Filter {
     $('window').trigger('open-loading');
   
     try {
-      const response = await fetchAPI(url, value, 'post');
+      const response = await fetchAPI(url, value, 'get');
       const { data, total, pagination } = await response.json();
       const $result = $(this.renderResult(data));
       const count = this.renderCounter(total);
