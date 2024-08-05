@@ -46,7 +46,7 @@ export default class Search {
 
         that.$element.addClass(clsLoading);
 
-        const response = await fetchAPI(url, { keywork }, 'get');
+        const response = await fetchAPI(url, { keywork }, 'post');
         const { data } = await response.json();
 
         that.$element.removeClass(clsLoading);
