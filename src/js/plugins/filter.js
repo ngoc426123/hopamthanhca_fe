@@ -96,7 +96,7 @@ export default class Filter {
 
   async handleEventFilter() {
     const value = this.getInput();
-    const url = this.$form.data('url');
+    const url = ENDPOINT.filter;
 
     this.setQueryParams(value);
 

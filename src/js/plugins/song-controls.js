@@ -249,7 +249,7 @@ export default class SongControls {
 
     const { clsActiveLove } = this.options;
     const id = this.$loveSong.data('post-id');
-    const url = this.$loveSong.data('url');
+    const url = ENDPOINT.updatelove;
     const value = { id, url };
 
     $('window').trigger('open-loading');

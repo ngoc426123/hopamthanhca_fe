@@ -42,7 +42,7 @@ export default class Search {
       debounceWaitMs: 300,
       fetch: async (text, update) => {
         const keywork = text.toLowerCase();
-        const url = this.$searchInput.data('url');
+        const url = ENDPOINT.search;
 
         that.$element.addClass(clsLoading);
 
