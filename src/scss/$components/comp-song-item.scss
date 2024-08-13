@@ -136,15 +136,6 @@ $color-lent: $color-purple-1;
     position: relative;
     transition: all .2s linear;
 
-    &:hover {
-      z-index: 1;
-
-      &::before {
-        transform: scale(1.1);
-        box-shadow: 0 3px 8px 0 rgba($color-black-1, 0.45);
-      }
-    }
-
     &.--more {
       display: flex;
       align-items: center;
@@ -190,6 +181,53 @@ $color-lent: $color-purple-1;
       bottom: 0;
       left: 0;
       z-index: 1;
+    }
+
+    &:nth-child(12n+1),
+    &:nth-child(12n+3),
+    &:nth-child(12n+5),
+    &:nth-child(12n+8),
+    &:nth-child(12n+10),
+    &:nth-child(12n+12) {
+      @include mq('xl', 'min') {
+        margin-right: -1px;
+        margin-bottom: -1px;
+        z-index: 1;
+      }
+    }
+
+    &:nth-child(8n+1),
+    &:nth-child(8n+3),
+    &:nth-child(8n+6),
+    &:nth-child(8n+8) {
+      @include mqa('xl', 'lg') {
+        margin-right: -1px;
+        margin-bottom: -1px;
+        z-index: 1;
+      }
+    }
+
+    &:nth-child(2n+1) {
+      @include mqa('lg', 'md') {
+        margin-right: -1px;
+        margin-bottom: -1px;
+        z-index: 1;
+      }
+
+      @include mq('sm') {
+        margin-right: -1px;
+        margin-bottom: -1px;
+        z-index: 1;
+      }
+    }
+
+    &:nth-child(4n+1),
+    &:nth-child(4n+4) {
+      @include mqa('md', 'sm') {
+        margin-right: -1px;
+        margin-bottom: -1px;
+        z-index: 1;
+      }
     }
   }
 
