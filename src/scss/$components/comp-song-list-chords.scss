@@ -1,0 +1,12 @@
+.comp-song-list-chords {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  .chord {
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

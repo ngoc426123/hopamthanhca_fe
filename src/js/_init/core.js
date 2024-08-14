@@ -14,10 +14,10 @@ export default function Plugin (Param) {
         // ADD EVENT METHOD
         plugin.addEvent = ($ele, event, callback, opts) => {
           const { nameSpace, delegate } = opts;
-          const eventName = `${event}.${nameSpace}`;
+          const eventName = `${event}.${nameSpace || ''}`;
   
           $ele
-            .off(eventName, delegate)
+            .off(eventName)
             .on(eventName, delegate, callback.bind(plugin));
         };
 

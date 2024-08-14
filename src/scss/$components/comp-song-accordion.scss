@@ -1,0 +1,71 @@
+.comp-song-accordion {
+  $this: &;
+
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+
+  @include mq('lg') {
+    margin-top: 10px;
+  }
+
+  @include mq('md') {
+    margin-top: 50px;
+  }
+
+  // TOGGLE
+  &__toggle {
+    margin-bottom: -2px;
+    padding: 15px 25px 10px;
+    background-color: $color-white-1;
+    border: solid 1px rgba($color-black-1, .1);
+    border-bottom: none;
+    border-radius: 6px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+
+    span {
+      padding-right: 15px;
+      position: relative;
+
+      &:before {
+        content: "\f0d7";
+        @extend %font-icon;
+        @extend %prr;
+        top: 45%;
+      }
+    }
+  }
+
+  // DROPDOWN
+  &__dropdown {
+    display: none;
+  }
+
+  // WRAP
+  &__wrap {
+    padding: 20px 25px;
+    background-color: $color-white-1;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border: solid 1px rgba($color-black-1, .1);
+  }
+
+  /**************
+  **** MODIFY ***
+  **************/
+  &.\--active {
+    #{$this}__toggle {
+      span {
+        &:before {
+          content: "\f0d8";
+        }
+      }
+    }
+  }
+}

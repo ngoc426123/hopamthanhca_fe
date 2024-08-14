@@ -1,0 +1,464 @@
+.header {
+  $this: &;
+
+  background-color: $color-blue-1;
+  position: relative;
+
+  // MAIN
+  &__main {
+    padding: 25px 0 0;
+    padding-right: 0;
+    position: relative;
+    z-index: 20;
+
+    @include mq('lg') {
+      padding: 10px 0px;
+    }
+  }
+
+  // LEFT
+  &__left {
+    display: flex;
+    align-items: center;
+
+    @include mq('lg') {
+      width: calc(100% - 45px)
+    }
+  }
+
+  // LOGO
+  &__logo {
+    max-width: 130px;
+    margin-right: 15px;
+
+    img {
+      height: 80px;
+
+      @include mq('lg') {
+        height: 60px;
+      }
+    }
+  }
+
+  // SEARCH
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 460px;
+    padding-bottom: 70px;
+    position: relative;
+    z-index: 14;
+
+    input {
+      width: 100%;
+      height: 65px;
+      padding-left: 15px;
+      font-size: 16px;
+      line-height: 24px;
+      border: none;
+      border-radius: 7px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 16;
+      @extend %timing;
+      
+      @include mq('lg') {
+        height: 50px;
+      }
+
+      &:focus {
+        outline: none;
+        background-color: $color-white-1;
+      }
+    }
+
+    &.\--loading {
+      #{$this}__search-loading {
+        display: block;
+      }
+    }
+  }
+
+  &__search-title {
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 33px;
+    text-align: center;
+    font-weight: 600;
+    color: $color-white-1;
+
+    @include mq('lg') {
+      font-size: 20px;
+      line-height: 30px;;
+    }
+  }
+
+  &__search-note {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-white-2;
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__search-form {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__search-loading {
+    display: none;
+    max-width: 40px;
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    z-index: 17;
+  }
+
+  // TOOLS
+  &__tools {
+    display: flex;
+    align-items: center;
+  }
+
+  // MENU DROPDOWN
+  &__menu {
+    &.\--openmenu {
+      #{$this}__menuDropdown {
+        @include mq('lg') {
+          transform: translateX(0%);
+        }
+      }
+
+      #{$this}__menuOverlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &__menuDropdown {
+    position: relative;
+    @extend %timing;
+
+    &:hover {
+      #{$this}__menuBoxover {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @include mq('lg') {
+      height: 100%;
+      background-color: $color-white-2;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 350px;
+      z-index: 1234;
+      transform: translateX(100%);
+      overflow: hidden;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      @include scroll-design();
+
+      @include mq('lg') {
+        display: block;
+        max-height: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+
+        &:-webkit-scrollbar {
+          width: 1em;
+        }
+         
+        &:-webkit-scrollbar-track {
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+         
+        &:-webkit-scrollbar-thumb {
+          background-color: darkgrey;
+          outline: 1px solid slategrey;
+        }
+      }
+    }
+    
+    li {
+      position: relative;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        > ul {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+      }
+
+      &.noPos {
+        position: static;
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $color-white-1;
+      padding: 10px 20px;
+
+      @include mq("1200") {
+        font-size: 12px;
+      }
+
+      @include mq('lg') {
+        color: $color-black-2;
+        padding: 10px 20px;
+      }
+
+      span {
+        padding-right: 20px;
+        position: relative;
+
+        @include mq("1200") {
+          padding-right: 15px;
+        }
+
+        @include mq('lg') {
+          padding-right: 0;
+        }
+
+        &::before {
+          content: "\f107";
+          @extend %font-icon;
+          @extend %prr;
+
+          @include mq('lg') {
+            display: none;
+          }
+        }
+      }
+    }
+
+    ul ul {
+      display: block;
+      width: 200px;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 1;
+      background-color: $color-blue-3;
+      opacity: 0;
+      visibility: hidden;
+      @extend %timing;
+      pointer-events: none;
+
+      @include mq('lg') {
+        width: 100%;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        background-color: $color-gray-3;
+      }
+      
+      li {
+        border: none;
+        border-bottom: 1px solid rgba($color-white-1, .1);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:before {
+          @include mq('lg') {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            border-left: 1px dashed rgba($color-black-1, .45);
+          }
+        }
+
+        &:after {
+          @include mq('lg') {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 21px;
+            width: 13px;
+            border-bottom: 1px dashed rgba($color-black-1, .45);
+          }
+        }
+
+        &:hover {
+          a {
+            background-color: $color-blue-4;
+
+            @include mq('lg') {
+              background-color: $color-gray-3;
+            }
+          }
+        }
+      }
+
+      a {
+        padding: 15px 10px;
+
+        @include mq('lg') {
+          padding: 10px 20px;
+          padding-left: 35px;
+          font-weight: normal;
+          text-transform: none;
+        }
+      }
+    }
+
+    ul.menuMega {
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 15px 25px;
+      padding-bottom: 5px;
+      right: 0;
+      left: 0;
+
+      @include mq('lg') {
+        padding: 0;
+        display: block;
+      }
+
+      li {
+        width: 33.333333%;
+        margin: 0;
+        border-bottom: none;
+        margin-bottom: 10px;
+
+        @include mq('lg') {
+          width: 100%;
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        padding: 0;
+        @include mq('lg') {
+          padding: 15px 20px;
+          padding-left: 35px;
+        }
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        span {
+          padding: 0;
+          padding-left: 15px;
+          position: relative;
+
+          @include mq('lg') {
+            padding: 0;
+          }
+
+          &::before {
+            content: "\f0da";
+            @extend %font-icon;
+            @extend %pll;
+          }
+        }
+      }
+    }
+  }
+
+  &__menuToggle {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+    span {
+      width: 30px;
+      height: 2px;
+      background-color: $color-white-1;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: transform .2s ease, top .2s ease .3s, opacity 0.2s ease;
+
+      &:nth-child(1) {
+        top: 7px;
+      }
+
+      &:nth-child(2) {
+        top: 15px;
+      }
+
+      &:nth-child(3) {
+        top: 23px;
+      }
+    }
+
+    @include mq('lg') {
+      display: block;
+    }
+  }
+
+  &__menuOverlay {
+    display: none;
+    background-color: rgba($color-black-1, .55);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    @include mq('lg') {
+      display: block;
+    }
+  }
+
+  &__menuBoxover {
+    width: 15px;
+    height: 100%;
+    background-color: $color-blue-3;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    @extend %timing;
+
+    @include mq('lg') {
+      display: none;
+    }
+  }
+
+  // NOTIFICATION
+  &__notification {
+    background-color: $color-black-2;
+    box-shadow: 0 4px 20px 0 rgba($color-black-1, 0.45), 0 7px 10px -5px rgba($color-black-1, 0.45);
+    padding: 10px 0;
+    color: #ffffff;
+  }
+}

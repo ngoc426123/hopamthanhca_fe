@@ -1,0 +1,55 @@
+.comp-slide-design {
+  &__arrow {
+    width: 65px;
+    height: 65px;
+    background-color: rgba($color-white-1, 0.78);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    @include mq('sm') {
+      width: 45px;
+    }
+
+    &::before {
+      @extend %font-icon;
+      font-size: 40px;
+      color: $color-black-1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include mq('sm') {
+        font-size: 30px;
+      }
+    }
+
+    &.\--prev {
+      margin-left: -15px;
+      left: 0;
+
+      &::before {
+        content: "\f104";
+      }
+    }
+
+    &.\--next {
+      margin-right: -15px;
+      right: 0;
+
+      &::before {
+        content: "\f105";
+      }
+    }
+
+    &.swiper-button-disabled {
+      display: none;
+    }
+  }
+}

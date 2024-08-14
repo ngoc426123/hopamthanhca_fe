@@ -3,6 +3,7 @@ const app = express();
 const { src, staticPath } = require('../gulpsrc/config/directories.js');
 const viewsSrc = `${src}/html`;
 const { STATIC_PORT } = require('../gulpsrc/config/port');
+const fs = require('node:fs');
 
 // ROUTER
 app.get('/', (req, res) => {
@@ -19,6 +20,17 @@ app.post('/*.html', (req, res) => {
   const file = /[/]?(.+)\.html/.exec(url)
 
   res.render(file[1]);
+});
+app.post('/*/*.json', (req, res) => {
+  const { path: url } = req;
+  const filePath = src + url;
+
+  try {
+    const data = fs.readFileSync(filePath);
+    res.send(data);
+  } catch (error) {
+    res.json({ error: 'Can not find file' });
+  }
 });
 
 // SETTER

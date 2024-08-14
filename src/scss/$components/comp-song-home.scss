@@ -1,0 +1,89 @@
+.comp-song-home {
+  // WRAP
+  &__wrap{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #e5e5e5;
+  }
+
+  // TITLE
+  &__title {
+	  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    h3 {
+      padding: 0;
+    }
+
+    a {
+      display: block;
+      font-size: 18px;
+      line-height: 26px;
+      text-transform: uppercase;
+
+      span {
+        font-size: 12px;
+        line-height: 20px;
+        color:$color-black-4;
+        text-transform: capitalize;
+      }
+
+      &:hover {
+        color: $color-blue-1;
+      }
+    }
+  }
+
+  // INFO
+  &__info {
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+  }
+
+  // ATTRIBUTES
+  &__attrs {
+    display: flex;
+    align-items: center;
+  }
+
+  &__attr-item{
+    padding-right: 10px;
+    font-size: 10px;
+    line-height: 18px;
+    color: #666666;
+
+    span{
+      padding-left: 15px;
+      color: $color-blue-2;
+      position: relative;
+
+      &::before{
+        @extend %font-icon;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  // CONTENT
+  &__content{
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  // LINK
+  &__link {
+    text-align: right;
+
+    a {
+      display: block;
+      font-size: 12px;
+      line-height: 20px;
+      color:#006193;
+    }
+  }
+}

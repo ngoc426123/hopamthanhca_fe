@@ -1,0 +1,91 @@
+extends _layout/_layout
+
+block main-content
+  .comp-wrapper
+    include _components/_breadcrumb.pug
+    .comp-box.--padding
+      .comp-box__heading
+        h1.comp-box__title-text Mục lục
+        small.comp-box__title-small Lựa chọn danh mục bạn cần tham khảo, liên hệ với chúng tôi nếu cần sự giúp đỡ
+      .comp-box__content
+        .row
+          .col-md-6.col-lg-3
+            .comp-catalogue
+              .comp-catalogue__head
+                .comp-catalogue__counter 55
+                .comp-catalogue__name Chuyên mục
+              .comp-catalogue__body
+                .comp-catalogue__list
+                  ul
+                    li 
+                      +link('#', 'Mùa thường niên')
+                    li 
+                      +link('#', 'Mùa chay')
+                    li 
+                      +link('#', 'Mùa phục sinh')
+                    li 
+                      +link('#', 'Đức Mẹ')
+                    li 
+                      +link('#', 'Thánh Giuse')
+                .comp-catalogue__cta
+                  +link('category-cat.html', 'Xem thêm')
+          .col-md-6.col-lg-3
+            .comp-catalogue
+              .comp-catalogue__head
+                .comp-catalogue__counter 72
+                .comp-catalogue__name Tác giả
+              .comp-catalogue__body
+                .comp-catalogue__list
+                  ul
+                    li 
+                      +link('#', 'Đinh Công Huỳnh')
+                    li 
+                      +link('#', 'Giang Tâm')
+                    li 
+                      +link('#', 'Mai Hoàng Công')
+                    li 
+                      +link('#', 'Giang Ân')
+                    li 
+                      +link('#', 'Huỳnh Minh Kỳ')
+                .comp-catalogue__cta
+                  +link('category-cat.html', 'Xem thêm')
+          .col-md-6.col-lg-3
+            .comp-catalogue
+              .comp-catalogue__head
+                .comp-catalogue__counter 26
+                .comp-catalogue__name Bảng Chữ cái
+              .comp-catalogue__body
+                .comp-catalogue__list
+                  ul
+                    li 
+                      +link('#', 'chữ A')
+                    li 
+                      +link('#', 'chữ B')
+                    li 
+                      +link('#', 'chữ C')
+                    li 
+                      +link('#', 'chữ D')
+                    li 
+                      +link('#', 'chữ E')
+                .comp-catalogue__cta
+                  +link('category-alphabet.html', 'Xem thêm')
+          .col-md-6.col-lg-3
+            .comp-catalogue
+              .comp-catalogue__head
+                .comp-catalogue__counter 24
+                .comp-catalogue__name điệu bài hát
+              .comp-catalogue__body
+                .comp-catalogue__list
+                  ul
+                    li 
+                      +link('#', 'Ballab')
+                    li 
+                      +link('#', 'Disco')
+                    li 
+                      +link('#', 'Pop')
+                    li 
+                      +link('#', 'Valse')
+                    li 
+                      +link('#', 'Boston')
+                .comp-catalogue__cta
+                  +link('category-cat.html', 'Xem thêm')

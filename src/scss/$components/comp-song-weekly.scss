@@ -1,0 +1,198 @@
+.comp-song-weekly {
+  $this: &;
+
+  display: flex;
+  margin-bottom: 45px;
+  border-radius: 7px;
+  overflow: hidden;
+
+  @include mq('sm') {
+    display: block;
+  }
+
+  // TITLE
+  &__title {
+    width: 140px;
+    padding: 20px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    color: $color-white-1;
+    text-align: center;
+    background-color: $color-blue-2;
+    flex-shrink: 0;
+
+    @include mq('sm') {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  // LIST
+  &__list {
+    width: 100%;
+    padding: 20px;
+    background-color: $color-white-2;
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    a {
+      display: block;
+      padding-left: 15px;
+      position: relative;
+
+      &::before {
+        content: "\f0da";
+        @extend %font-icon;
+        color: $color-blue-2;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+
+      &:hover {
+        color: $color-blue-1;
+      }
+    }
+  }
+
+  // PHASE
+  &__phase {
+    display: flex;
+    align-items: stretch;
+    max-width: 768px;
+    margin: 0 auto;
+    background-color: $color-white-2;
+    border-radius: 7px;
+    overflow: hidden;
+    
+    @include mq('md') {
+      display: block;
+    }
+    
+    &:not(:last-child) {
+      margin-bottom: 5px;
+
+      @include mq('lg') {
+        margin-bottom: 10px;
+      }
+    }
+
+    &.\--no-flex {
+      display: block;
+    }
+  }
+
+  &__phase-wrap {
+    max-width: 768px;
+    margin: 0 auto;
+
+    @include mq('md') {
+      max-width: 100%;
+    }
+  }
+
+  &__phase-name {
+    width: 230px;
+    padding: 15px 20px;
+    font-weight: bold;
+    color: $color-white-1;
+    background-color: $color-blue-2;
+    flex-shrink: 0;
+
+    @include mq('md') {
+      width: 100%;
+    }
+  }
+
+  &__phase-detail {
+    width: 100%;
+    padding: 15px;
+    padding-left: 20px;
+  }
+
+  &__phase-song {
+    padding-right: 35px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  &__phase-song-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      display: block;
+
+      &:first-child {
+        font-weight: bold;
+      }
+
+      &:hover {
+        color: $color-blue-1;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    img {
+      max-width: 20px;
+    }
+  }
+
+  &__phase-song-desc {
+    font-size: 13px;
+    line-height: 20px;
+    font-style: italic;
+    color: $color-black-3;
+  }
+
+  /**************
+  **** MODIFY ***
+  **************/
+  &.\--vertical {
+    display: block;
+
+    #{$this}__title {
+      width: 100%;
+      text-align: left;
+    }
+
+    #{$this}__list {
+      ul {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+      }
+  
+      li {
+        width: 25%;
+        padding: 0 10px;
+  
+        @include mq('xl') {
+          width: 33.333333%;
+        }
+  
+        @include mq('lg') {
+          width: 50%;
+        }
+  
+        @include mq('md') {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

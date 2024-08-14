@@ -1,0 +1,77 @@
+.comp-song-content {
+  font-family: "Noto Serif", serif;
+  font-size: 15px;
+  line-height: 190%;
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: dashed 2px $color-gray-3;
+
+  @include mq('lg') {
+    margin-top: 25px;
+    column-count: unset;
+  }
+
+  // HTML TAG AND OTHER CLASS
+  .chordsOC {
+    display: inline-flex;
+    // font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 100%;
+    color: $color-blue-1;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  // SPLIT
+  &__split {
+    border-right: dashed 2px $color-gray-3;
+
+    @include mq('xl') {
+      border: none;
+    }
+  }
+
+  /**************
+  **** MODIFY ***
+  **************/
+  &.\--inline {
+    line-height: 350%;
+
+    .chordsOC {
+      display: inline;
+      margin-right: 0;
+      position: relative;
+    }
+
+    .chords {
+      position: absolute;
+      transform: translateY(0px);
+    }
+
+    .chordsPer {
+      display: none;
+    }
+
+    .chordsStuck {
+      margin-right: 3px;
+
+      .chords {
+        display: inline-block;
+        transform: translateY(-20px);
+        position: relative;
+      }
+    }
+  }
+
+  &.\--hide-chords {
+    .chordsOC {
+      display: none;
+    }
+  }
+
+  &.\--flat {
+    column-count: unset;
+  }
+}

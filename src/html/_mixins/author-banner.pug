@@ -1,0 +1,5 @@
+mixin authorBanner(data)
+  .comp-author-banner
+    +link(data.link, data.name)
+      +img(data.image, data.name)
+      span!=data.name

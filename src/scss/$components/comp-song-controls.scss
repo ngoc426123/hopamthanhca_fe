@@ -1,0 +1,102 @@
+.comp-song-controls {
+  $this: &;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 13px;
+
+  // GROUP
+  &__group {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    margin-right: 10px;
+    background-color: rgba($color-blue-1, .05);
+    border: solid 1px $color-blue-1;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+
+    label {
+      margin-bottom: 0;
+      color: $color-blue-1;
+      cursor: pointer;
+    }
+  }
+
+  // BUTTON
+  &__btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $color-blue-1;
+    border: none;
+    border-right: solid 1px $color-blue-1;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    img {
+      max-width: 7px;
+      transform: translateY(-2px);
+    }
+
+    & ~ #{$this}__btn {
+      border-right: none;
+      border-left: solid 1px $color-blue-1;
+    }
+  }
+
+  // INPUT
+  &__input {
+    width: 50px;
+    height: 35px;
+    color: $color-blue-1;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+  }
+
+  // TEXT
+  &__text {
+    height: 35px;
+    padding: 0 3px;
+    padding-left: 50px;
+    padding-right: 15px;
+    line-height: 35px;
+
+    &::before {
+      content: "";
+      width: 35px;
+      height: 35px;
+      border-right: solid 1px $color-blue-1;
+      @extend %pll;
+    }
+
+    &::after {
+      display: none;
+      content: "\f00c";
+      font-size: 15px;
+      left: 12px;
+      @extend %font-icon;
+      @extend %pll;
+    }
+  }
+
+  // CHECKBOX
+  &__checkbox {
+    display: none;
+
+    &:checked + #{$this}__text {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}

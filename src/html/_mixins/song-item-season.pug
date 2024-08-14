@@ -1,0 +1,6 @@
+mixin songItemSeason(data)
+  .comp-song-item
+    h3.comp-song-item__title-text!=data.title
+    span.comp-song-item__author!=data.author
+    .comp-song-item__desc!=data.desc
+    +link(data.link).comp-song-item__link

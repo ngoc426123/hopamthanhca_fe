@@ -1,0 +1,36 @@
+.comp-song-pdf {
+  @include mq('lg') {
+    padding-left: 65px;
+    position: relative;
+  }
+
+  // FILE
+  &__file {
+    margin-bottom: 10px;
+
+    @include mq('lg') {
+      margin-bottom: 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    img {
+      max-width: 50px;
+    }
+  }
+
+  // NOTE
+  &__note {
+    font-size: 12px;
+    line-height: 20px;
+    color: $color-black-3;
+
+    span,
+    a {
+      display: inline-block;
+      color: $color-blue-1;
+    }
+  }
+}

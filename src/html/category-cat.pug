@@ -1,167 +1,103 @@
 extends _layout/_layout
 
 block main-content
-  .main-content
-    .wrapper
-      .breadcrumb
-        ul 
-          li
-            a(href='##')
-              i.fa.fa-home
-              span Trang chủ
-          li 
-            a(href='##')
-              span Chuyên mục
-          li 
-            a(href='##')
-              span Danh mục con
-          li 
-            a(href='##')
-              span Bài viết
-      .box.padding
-        .box-title
-          h1 Danh mục bài hát
-          small Bài hát được sắp xếp theo từng danh mục, từng mùa phụng vụ, dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.
-        .box-content
-          .category-list-cat
-            ul
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Đinh Công Huỳnh
-                  .item__count 47 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Nguyễn Mộng Huỳnh
-                  .item__count 25 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Trần Mi Trầm
-                  .item__count 5 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Nguyễn Văn Tuyên
-                  .item__count 8 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Đấu Chân
-                  .item__count 10 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Đinh Công Huỳnh
-                  .item__count 47 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Nguyễn Mộng Huỳnh
-                  .item__count 25 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Trần Mi Trầm
-                  .item__count 5 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Nguyễn Văn Tuyên
-                  .item__count 8 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Đấu Chân
-                  .item__count 10 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Đinh Công Huỳnh
-                  .item__count 47 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Nguyễn Mộng Huỳnh
-                  .item__count 25 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Trần Mi Trầm
-                  .item__count 5 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Nguyễn Văn Tuyên
-                  .item__count 8 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Đấu Chân
-                  .item__count 10 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Đinh Công Huỳnh
-                  .item__count 47 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Nguyễn Mộng Huỳnh
-                  .item__count 25 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Trần Mi Trầm
-                  .item__count 5 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Nguyễn Văn Tuyên
-                  .item__count 8 bài
-                  a(href="list-song.html").item__link
-              li
-                .item
-                  .item__sp Tác giả
-                  .item__title Đấu Chân
-                  .item__count 10 bài
-                  a(href="list-song.html").item__link
-          .pagination
-            ul
-              li
-                a(href="")
-                  span 1
-              li.active
-                a(href="")
-                  span 2
-              li
-                a(href="")
-                  span 3
-              li
-                a(href="")
-                  span 4
-              li
-                a(href="")
-                  span 5
-              li
-                a(href="")
-                  span 6
+  .comp-wrapper
+    include _components/_breadcrumb.pug
+    .comp-box.--padding
+      .comp-box__heading
+        h1.comp-box__title-text Danh mục bài hát
+        small.comp-box__title-small Bài hát được sắp xếp theo từng danh mục, từng mùa phụng vụ, dễ dàng cho việc tìm kiếm, tra cứu các bài hát, tiện lợi cho việc sử dụng của người dùng.
+      .comp-box__content
+        .comp-five-grid
+          .comp-five-grid__grid
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đinh Công Huỳnh',
+                count: '47',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Mộng Huỳnh',
+                count: '25',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Trần Mi Trầm',
+                count: '5',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Văn Tuyên',
+                count: '8',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đấu Châ',
+                count: '10',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đinh Công Huỳnh',
+                count: '47',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Mộng Huỳnh',
+                count: '25',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Trần Mi Trầm',
+                count: '5',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Văn Tuyên',
+                count: '8',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đấu Châ',
+                count: '10',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đinh Công Huỳnh',
+                count: '47',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Mộng Huỳnh',
+                count: '25',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Trần Mi Trầm',
+                count: '5',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Nguyễn Văn Tuyên',
+                count: '8',
+                link: 'list-song.html',
+              })
+            .comp-five-grid__col
+              +categoryItem({
+                name: 'Đấu Chân',
+                count: '10',
+                link: 'list-song.html',
+              })
+        include _components/_pagination.pug

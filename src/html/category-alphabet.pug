@@ -1,105 +1,90 @@
 extends _layout/_layout
 
 block main-content
-  .main-content
-    .wrapper
-      .breadcrumb
-        ul 
-          li
-            a(href='##')
-              i.fa.fa-home
-              span Trang chủ
-          li 
-            a(href='##')
-              span Chuyên mục
-          li 
-            a(href='##')
-              span Danh mục con
-          li 
-            a(href='##')
-              span Bài viết
-      .box.padding
-        .box-title
-          h1 Bảng chữ cái
-          small Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.
-        .box-content
-          .category-list-alphabet
-            ul
-              li
-                a(href="list-song.html")
-                  span a
-              li
-                a(href="list-song.html")
-                  span b
-              li
-                a(href="list-song.html")
-                  span c
-              li
-                a(href="list-song.html")
-                  span d
-              li
-                a(href="list-song.html")
-                  span e
-              li
-                a(href="list-song.html")
-                  span f
-              li
-                a(href="list-song.html")
-                  span g
-              li
-                a(href="list-song.html")
-                  span h
-              li
-                a(href="list-song.html")
-                  span i
-              li
-                a(href="list-song.html")
-                  span j
-              li
-                a(href="list-song.html")
-                  span k
-              li
-                a(href="list-song.html")
-                  span l
-              li
-                a(href="list-song.html")
-                  span m
-              li
-                a(href="list-song.html")
-                  span n
-              li
-                a(href="list-song.html")
-                  span o
-              li
-                a(href="list-song.html")
-                  span p
-              li
-                a(href="list-song.html")
-                  span q
-              li
-                a(href="list-song.html")
-                  span r
-              li
-                a(href="list-song.html")
-                  span s
-              li
-                a(href="list-song.html")
-                  span t
-              li
-                a(href="list-song.html")
-                  span u
-              li
-                a(href="list-song.html")
-                  span v
-              li
-                a(href="list-song.html")
-                  span w
-              li
-                a(href="list-song.html")
-                  span x
-              li
-                a(href="list-song.html")
-                  span y
-              li
-                a(href="list-song.html")
-                  span z
+  .comp-wrapper
+    include _components/_breadcrumb.pug
+    .comp-box.--padding
+      .comp-box__heading
+        h1.comp-box__title-text Bảng chữ cái
+        small.comp-box__title-small Danh sách bài hát được lọc theo bảng chữ cái, thuận tiện cho việc tìm kiếm các bài hát theo các mẫu tự.
+      .comp-box__content
+        .comp-alphabet
+          ul
+            li
+              +link("list-song.html", "alphabet")
+                span a
+            li
+              +link("list-song.html", "alphabet")
+                span b
+            li
+              +link("list-song.html", "alphabet")
+                span c
+            li
+              +link("list-song.html", "alphabet")
+                span d
+            li
+              +link("list-song.html", "alphabet")
+                span e
+            li
+              +link("list-song.html", "alphabet")
+                span f
+            li
+              +link("list-song.html", "alphabet")
+                span g
+            li
+              +link("list-song.html", "alphabet")
+                span h
+            li
+              +link("list-song.html", "alphabet")
+                span i
+            li
+              +link("list-song.html", "alphabet")
+                span j
+            li
+              +link("list-song.html", "alphabet")
+                span k
+            li
+              +link("list-song.html", "alphabet")
+                span l
+            li
+              +link("list-song.html", "alphabet")
+                span m
+            li
+              +link("list-song.html", "alphabet")
+                span n
+            li
+              +link("list-song.html", "alphabet")
+                span o
+            li
+              +link("list-song.html", "alphabet")
+                span p
+            li
+              +link("list-song.html", "alphabet")
+                span q
+            li
+              +link("list-song.html", "alphabet")
+                span r
+            li
+              +link("list-song.html", "alphabet")
+                span s
+            li
+              +link("list-song.html", "alphabet")
+                span t
+            li
+              +link("list-song.html", "alphabet")
+                span u
+            li
+              +link("list-song.html", "alphabet")
+                span v
+            li
+              +link("list-song.html", "alphabet")
+                span w
+            li
+              +link("list-song.html", "alphabet")
+                span x
+            li
+              +link("list-song.html", "alphabet")
+                span y
+            li
+              +link("list-song.html", "alphabet")
+                span z

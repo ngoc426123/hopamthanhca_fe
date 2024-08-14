@@ -1,0 +1,98 @@
+header.header
+  .header__main
+    .comp-wrapper
+      .header__left
+        .header__logo
+          +link('index.html', 'logo')
+            +img('images/logo.svg', 'logo')
+      .header__tools
+        .header__menu(data-menumobile)
+          .header__menuToggle(data-menumobile-toggle)
+            span
+            span
+            span
+          .header__menuOverlay(data-menumobile-overlay)
+          .header__menuDropdown(data-menumobile-dropdown)
+            span.header__menuBoxover(data-menumobile-boxover)
+            ul
+              li
+                a(href='index.html') Trang chủ
+              li
+                a(href='about.html') Giới thiệu
+              li
+                a(href='catalogue.html')
+                  span Danh mục
+                ul
+                  li
+                    a(href='category-alphabet.html') Bảng chữ cái
+                  li
+                    a(href='category-cat.html') Danh mục
+                  li
+                    a(href='category-cat.html') Tác giả
+              li.noPos
+                a(href='index.html') 
+                  span Điệu nhạc
+                ul.menuMega
+                  li
+                    a(href='list-song.html') 
+                      span Ballad
+                  li
+                    a(href='list-song.html') 
+                      span Rock
+                  li
+                    a(href='list-song.html') 
+                      span Pop
+                  li
+                    a(href='list-song.html') 
+                      span ChaChaCha
+                  li
+                    a(href='list-song.html') 
+                      span Rhumbar
+                  li
+                    a(href='list-song.html') 
+                      span Tango
+                  li
+                    a(href='list-song.html') 
+                      span Jum
+                  li
+                    a(href='list-song.html') 
+                      span Valse
+                  li
+                    a(href='list-song.html') 
+                      span Boston
+                  li
+                    a(href='list-song.html') 
+                      span Ballad
+                  li
+                    a(href='list-song.html') 
+                      span Rock
+                  li
+                    a(href='list-song.html') 
+                      span Pop
+                  li
+                    a(href='list-song.html') 
+                      span ChaChaCha
+                  li
+                    a(href='list-song.html') 
+                      span Rhumbar
+                  li
+                    a(href='list-song.html') 
+                      span Tango
+                  li
+                    a(href='list-song.html') 
+                      span Jum
+                  li
+                    a(href='list-song.html') 
+                      span Valse
+                  li
+                    a(href='list-song.html') 
+                      span Boston
+              li
+                a(href='holy-songs-weekly.html') Thánh ca hàng tuần
+              li
+                a(href='pdf.html') SHEET NHẠC
+              li.d-block.d-md-none
+                a(href='songs.html') Bài hát
+              li.d-block.d-md-none
+                a(href='chord.html') Hợp âm
+  include _search.pug

@@ -1,0 +1,8 @@
+mixin categoryItem(data)
+  .comp-category-item
+    .comp-category-item__title Tác giả
+    .comp-category-item__name!=data.name
+    .comp-category-item__count
+      span!=data.count
+      | bài
+    a(href="list-song.html").comp-category-item__link

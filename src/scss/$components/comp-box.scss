@@ -1,0 +1,172 @@
+.comp-box {
+  $this: &;
+
+  margin-bottom: 75px;
+  border-radius: 10px;
+  background-color: $color-white-1;
+
+  @include mq('lg') {
+    margin-bottom: 50px;
+  }
+
+  // HEADING
+  &__heading {
+    margin-bottom: 40px;
+  }
+
+  // TITLE
+  &__title {
+    margin-bottom: 20px; 
+  }
+
+  &__title-small {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: $color-gray-2;
+
+    a {
+      color: $color-blue-1;
+
+      &:hover {
+        color: $color-blue-2;
+      }
+    }
+  }
+
+  &__title-text {
+    padding: 0;
+    font-family: 'UTM Avo';
+    font-size: 28px;
+    line-height: 36px;
+    text-transform: capitalize;
+
+    @include mq('md') {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  // CONTENT
+  &__content {
+    border-radius: 10px;
+
+    &.\--background {
+      background-color: $color-white-1;
+    }
+
+    &.\--padding {
+      padding: 20px;
+    }
+  }
+
+  /**************
+  **** MODIFY ***
+  **************/
+  &.\--transparent {
+    background-color: transparent;
+  }
+
+  &.\--padding {
+    padding: 20px;
+  }
+
+  &.\--detail {
+    #{$this}__heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include mq('md') {
+        display: block;
+      }
+    }
+
+    #{$this}__title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 30px;
+      line-height: 40px;
+
+      @include mq('md') {
+        margin-bottom: 15px;
+      }
+    }
+
+    #{$this}__title-text {
+      padding: 0;
+      margin-right: 5px;
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      color: $color-blue-1;
+    }
+
+    #{$this}__title-author {
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 300;
+      transform: translateY(6px);
+
+      &:hover {
+        color: $color-blue-1;
+      }
+    }
+  }
+
+  &.\--season {
+    #{$this}__content {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+
+      @include mq('xl') {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include mq('lg') {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include mq('md') {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mq('sm') {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  &.\--focus {
+    #{$this}__title-text {
+      color: $color-blue-2;
+    }
+  }
+
+  &.\--spring {
+    #{$this}__title-text {
+      color: $color-yellow-1;
+    }
+  }
+
+  &.\--lent {
+    #{$this}__title-text {
+      color: $color-purple-1;
+    }
+  }
+
+  &.\--small-spacing {
+    margin-bottom: 25px;
+
+    @include mq('lg') {
+      margin-bottom: 50px;
+    }
+  }
+
+  .comp-list-song-home & {
+    margin-bottom: 25px;
+  }
+}

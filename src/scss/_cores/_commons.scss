@@ -1,5 +1,7 @@
-html.openmenu {
-  overflow: hidden !important;
+html {
+  &.\--freeze {
+    overflow: hidden !important;
+  }
 }
 
 h1,
@@ -39,10 +41,4 @@ li {
 
 img {
   max-width: 100%;
-}
-
-.wrapper {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 15px;
 }

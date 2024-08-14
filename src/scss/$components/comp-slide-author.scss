@@ -1,0 +1,15 @@
+.comp-slide-author {
+  position: relative;
+
+  .swiper {
+    height: 500px;
+
+    @include mq('lg') {
+      height: auto;
+    }
+  }
+
+  .swiper-slide {
+    height: 50%;
+  }
+}

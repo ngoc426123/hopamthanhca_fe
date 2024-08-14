@@ -1,0 +1,101 @@
+.comp-alphabet {
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    width: 10%;
+
+    @include mq('xl') {
+      width: 14.2857%;
+    }
+    
+    @include mq('lg') {
+      width: 16.666666%;
+    }
+
+    @include mq('md') {
+      width: 20%;
+    }
+
+    &:nth-child(20n+2),
+    &:nth-child(20n+4),
+    &:nth-child(20n+6),
+    &:nth-child(20n+8),
+    &:nth-child(20n+10),
+    &:nth-child(20n+11),
+    &:nth-child(20n+13),
+    &:nth-child(20n+15),
+    &:nth-child(20n+17),
+    &:nth-child(20n+19) {
+      a {
+        @include mq('xl', 'min'){
+          color: $color-white-1;
+          background-color: $color-black-4;
+        }
+      }
+    }
+
+    &:nth-child(14n+2),
+    &:nth-child(14n+4),
+    &:nth-child(14n+6),
+    &:nth-child(14n+8),
+    &:nth-child(14n+10),
+    &:nth-child(14n+12),
+    &:nth-child(14n+14) {
+      a {
+        @include mqa('xl', 'lg'){
+          color: $color-white-1;
+          background-color: $color-black-4;
+        }
+      }
+    }
+
+    &:nth-child(12n+2),
+    &:nth-child(12n+4),
+    &:nth-child(12n+6),
+    &:nth-child(12n+7),
+    &:nth-child(12n+9),
+    &:nth-child(12n+11) {
+      a {
+        @include mqa('lg', 'md'){
+          color: $color-white-1;
+          background-color: $color-black-4;
+        }
+      }
+    }
+  
+    &:nth-child(2n) {
+      a {
+        @include mq('md'){
+          color: $color-white-1;
+          background-color: $color-black-4;
+        }
+      }
+    }
+  }
+
+  a {
+    display: block;
+    padding-top: 100%;
+    font-size: 28px;
+    line-height: 36px;
+    text-transform: uppercase;
+    background-color: $color-gray-3;
+    position: relative;
+
+    &:hover {
+      span {
+        transform: translate(-50%, -50%) scale(1.3);
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    @extend %pcc;
+    @extend %timing;
+  }
+}

@@ -1,0 +1,93 @@
+.comp-song-iron {
+  $this: &;
+
+  padding-left: 15px;
+  margin-bottom: 10px;
+  position: relative;
+
+  // STAR
+  &__star {
+    width: 17px;
+    height: 17px;
+    font-size: 14px;
+    color: $color-black-4;
+    font-weight: bold;
+    text-align: right;
+    position: absolute;
+    left: -8px;
+    top: -1px;
+
+    &::before {
+      content: "\f005";
+      @extend %font-icon;
+    }
+  }
+
+  // TITLE
+  &__title {
+    h3 {
+      padding: 0;
+    }
+
+    a {
+      display: block;
+      font-size: 14px;
+      line-height: 22px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-transform: capitalize;
+
+      &:hover {
+        color:$color-blue-1;
+      }
+    }
+  }
+
+  // ATTRIBUTES
+  &__attr {
+    display: flex;
+    align-items: center;
+  }
+
+  &__attr-item {
+    padding-right: 10px;
+    font-size: 10px;
+    line-height: 18px;
+    color: $color-black-3;
+    
+    span {
+      padding-left: 15px;
+      position: relative;
+
+      &::before {
+        @extend %font-icon;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  /**************
+  **** MODIFY ***
+  **************/
+  &:nth-child(1) {
+    #{$this}__star {
+      color: $color-red-1;
+    }
+  }
+
+  &:nth-child(2) {
+    #{$this}__star {
+      color: $color-orange-1;
+    }
+  }
+  
+  &:nth-child(3) {
+    #{$this}__star {
+      color: $color-yellow-1;
+    }
+  }
+}
