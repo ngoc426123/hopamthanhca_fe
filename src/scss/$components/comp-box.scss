@@ -78,6 +78,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       @include mq('md') {
         display: block;
@@ -88,12 +89,19 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      width: calc(100% - 190px);
       font-size: 30px;
       line-height: 40px;
 
       @include mq('md') {
+        width: 100%;
         margin-bottom: 15px;
       }
+    }
+
+    .comp-song-share {
+      width: 190px;
+      flex-shrink: 0;
     }
 
     #{$this}__title-text {
