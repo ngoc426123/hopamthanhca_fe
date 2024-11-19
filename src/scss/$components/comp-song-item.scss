@@ -1,6 +1,8 @@
 $color-focus: $color-blue-2;
 $color-spring: $color-yellow-1;
 $color-lent: $color-purple-1;
+$color-wine: $color-red-2;
+$color-tea: $color-green-1;
 
 .comp-song-item {
   $this: &;
@@ -562,6 +564,230 @@ $color-lent: $color-purple-1;
       #{$this}__text-more {
         @include mqa('md', 'sm') {
           color: $color-lent;
+        }
+      }
+    }
+  }
+
+  .\--wine & {
+    &:nth-child(12n+1),
+    &:nth-child(12n+3),
+    &:nth-child(12n+5),
+    &:nth-child(12n+8),
+    &:nth-child(12n+10),
+    &:nth-child(12n+12) {
+      @include mq('xl', 'min') {
+        border-color: $color-wine;
+        background-color: rgba($color-wine, .05);
+      }
+
+      &:hover {
+        @include mq('xl', 'min') {
+          background-color: rgba($color-wine, .1);
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__author,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mq('xl', 'min') {
+          color: $color-wine;
+        }
+      }
+    }
+
+    &:nth-child(8n+1),
+    &:nth-child(8n+3),
+    &:nth-child(8n+6),
+    &:nth-child(8n+8) {
+      @include mqa('xl', 'lg') {
+        border-color: $color-wine;
+        background-color: rgba($color-wine, .05);
+      }
+
+      &:hover {
+        @include mqa('xl', 'lg') {
+          background-color: rgba($color-wine, .1);
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__author,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('xl', 'lg') {
+          color: $color-wine;
+        }
+      }
+    }
+
+    &:nth-child(2n+1) {
+      @include mqa('lg', 'md') {
+        border-color: $color-wine;
+        background-color: rgba($color-wine, .05);
+      }
+
+      @include mq('sm') {
+        border-color: $color-wine;
+        background-color: rgba($color-wine, .05);
+      }
+
+      &:hover {
+        @include mqa('lg', 'md') {
+          background-color: rgba($color-wine, .1);
+        }
+  
+        @include mq('sm') {
+          background-color: rgba($color-wine, .1);
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__author,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('lg', 'md') {
+          color: $color-wine;
+        }
+  
+        @include mq('sm') {
+          color: $color-wine;
+        }
+      }
+    }
+
+    &:nth-child(4n+1),
+    &:nth-child(4n+4) {
+      @include mqa('md', 'sm') {
+        border-color: $color-wine;
+        background-color: rgba($color-wine, .05);
+      }
+
+      &:hover {
+        @include mqa('md', 'sm') {
+          background-color: rgba($color-wine, .1);
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__author,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('md', 'sm') {
+          color: $color-wine;
+        }
+      }
+    }
+  }
+
+  .\--tea & {
+    &:nth-child(12n+1),
+    &:nth-child(12n+3),
+    &:nth-child(12n+5),
+    &:nth-child(12n+8),
+    &:nth-child(12n+10),
+    &:nth-child(12n+12) {
+      @include mq('xl', 'min') {
+        border-color: $color-tea;
+        background-color: rgba($color-tea, .05);
+      }
+
+      &:hover {
+        @include mq('xl', 'min') {
+          background-color: rgba($color-tea, .1);
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__author,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mq('xl', 'min') {
+          color: $color-tea;
+        }
+      }
+    }
+
+    &:nth-child(8n+1),
+    &:nth-child(8n+3),
+    &:nth-child(8n+6),
+    &:nth-child(8n+8) {
+      @include mqa('xl', 'lg') {
+        border-color: $color-tea;
+        background-color: rgba($color-tea, .05);
+      }
+
+      &:hover {
+        @include mqa('xl', 'lg') {
+          background-color: rgba($color-tea, .1);
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__author,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('xl', 'lg') {
+          color: $color-tea;
+        }
+      }
+    }
+
+    &:nth-child(2n+1) {
+      @include mqa('lg', 'md') {
+        border-color: $color-tea;
+        background-color: rgba($color-tea, .05);
+      }
+
+      @include mq('sm') {
+        border-color: $color-tea;
+        background-color: rgba($color-tea, .05);
+      }
+
+      &:hover {
+        @include mqa('lg', 'md') {
+          background-color: rgba($color-tea, .1);
+        }
+  
+        @include mq('sm') {
+          background-color: rgba($color-tea, .1);
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__author,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('lg', 'md') {
+          color: $color-tea;
+        }
+  
+        @include mq('sm') {
+          color: $color-tea;
+        }
+      }
+    }
+
+    &:nth-child(4n+1),
+    &:nth-child(4n+4) {
+      @include mqa('md', 'sm') {
+        border-color: $color-tea;
+        background-color: rgba($color-tea, .05);
+      }
+
+      &:hover {
+        @include mqa('md', 'sm') {
+          background-color: rgba($color-tea, .1);
+        }
+      }
+
+      #{$this}__title-text,
+      #{$this}__author,
+      #{$this}__desc,
+      #{$this}__text-more {
+        @include mqa('md', 'sm') {
+          color: $color-tea;
         }
       }
     }

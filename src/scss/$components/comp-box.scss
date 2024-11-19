@@ -166,6 +166,18 @@
     }
   }
 
+  &.\--wine {
+    #{$this}__title-text {
+      color: $color-red-2;
+    }
+  }
+
+  &.\--tea {
+    #{$this}__title-text {
+      color: $color-green-1;
+    }
+  }
+
   &.\--small-spacing {
     margin-bottom: 25px;
 
